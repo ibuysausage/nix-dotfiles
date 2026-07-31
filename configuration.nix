@@ -21,6 +21,12 @@
     efi.canTouchEfiVariables = true;
   };
 
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 7d";
+  };
+
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
   time.timeZone = "America/New_York";
