@@ -54,6 +54,7 @@
     wl-clipboard
     fastfetch
     tuxedo
+    keepassxc
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
