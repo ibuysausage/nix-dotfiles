@@ -20,42 +20,20 @@
   };
 
   networking.hostName = "nixos";
-
   networking.networkmanager.enable = true;
-
   time.timeZone = "America/New_York";
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
   i18n.defaultLocale = "en_US.UTF-8";
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us";
-  #   useXkbConfig = true; # use xkb.options in tty.
-  # };
 
-  # Enable the X11 windowing system.
-  # services.xserver.enable = true;
-
-  # Configure keymap in X11
-  # services.xserver.xkb.layout = "us";
-  # services.xserver.xkb.options = "eurosign:e,caps:escape";
+  programs.sway = {
+    enable = true;
+    extraPackages = with pkgs; [ brightnessctl grim swayidle swaylock pulseaudio ];   
+  };
+  programs.firefox.enable = true;
 
   services.printing.enable = true;
+  services.openssh.enable = true;
 
-  # services.pulseaudio.enable = true;
-  # services.pipewire = {
-  #   enable = true;
-  #   pulse.enable = true;
-  # };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.libinput.enable = true;
-
-  programs.sway.enable = true;
-  programs.firefox.enable = true;
+  security.doas.enable = true;
 
   users.users.byte = {
     isNormalUser = true;
@@ -71,9 +49,10 @@
     wget
     curl
     git
-    doas
     kitty
     rofi
+    wl-clipboard
+    fastfetch
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -83,11 +62,6 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
