@@ -44,8 +44,6 @@
   services.printing.enable = true;
   services.openssh.enable = true;
 
-  security.doas.enable = true;
-
   users.defaultUserShell = pkgs.zsh;
   users.users.byte = {
     isNormalUser = true;

@@ -32,6 +32,10 @@
     source = ./omp/omp.toml;
   };
 
+  home.file.".config/librewolf/librewolf/profiles.ini" = {
+    source = ./librewolf/profiles.ini;
+  };
+
   home.username = "byte";
   home.homeDirectory = "/home/byte";
 
