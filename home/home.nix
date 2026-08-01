@@ -4,6 +4,7 @@
 
   imports = [
     ./sway.nix
+    ./swaylock.nix
     ./git.nix
     ./zsh.nix
     ./kitty.nix

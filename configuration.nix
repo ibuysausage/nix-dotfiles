@@ -34,7 +34,7 @@
 
   programs.sway = {
     enable = true;
-    extraPackages = with pkgs; [ brightnessctl grim swayidle swaylock pulseaudio swaybg swaylock playerctl ];   
+    extraPackages = with pkgs; [ brightnessctl grim swayidle swaylock-effects pulseaudio swaybg swaylock playerctl ];   
   };
 
   programs.firefox.enable = true;
