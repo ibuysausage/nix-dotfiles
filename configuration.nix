@@ -34,7 +34,7 @@
 
   programs.sway = {
     enable = true;
-    extraPackages = with pkgs; [ brightnessctl grim swayidle swaylock pulseaudio ];   
+    extraPackages = with pkgs; [ brightnessctl grim swayidle swaylock pulseaudio swaybg swaylock playerctl ];   
   };
   programs.firefox.enable = true;
 
@@ -57,12 +57,17 @@
     wget
     curl
     git
-    kitty
-    rofi
     wl-clipboard
     fastfetch
     tuxedo
     keepassxc
+    rofi
+    kitty
+    home-manager
+  ];
+
+  fonts.packages = with pkgs; [
+    nerd-fonts.caskaydia-cove
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

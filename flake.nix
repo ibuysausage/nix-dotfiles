@@ -20,7 +20,7 @@
             useGlobalPkgs = true;
             useUserPackages = true;
 	    extraSpecialArgs = { inherit inputs; };
-            users.byte = import ./home.nix;
+            users.byte = import ./home/home.nix;
           };
         }
       ];
