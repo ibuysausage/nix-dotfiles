@@ -10,6 +10,13 @@
     # pkgs.hello
   ];
 
+  home.file = {
+    "Pictures/Wallpapers" = {
+      source = ./wallpapers;
+      recursive = true;
+    };
+  };
+
   programs.home-manager.enable = true;
   
   programs.git = {
