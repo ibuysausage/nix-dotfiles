@@ -36,13 +36,17 @@
     enable = true;
     extraPackages = with pkgs; [ brightnessctl grim swayidle swaylock pulseaudio swaybg swaylock playerctl ];   
   };
+
   programs.firefox.enable = true;
+  programs.git.enable = true;
+  programs.zsh.enable = true;
 
   services.printing.enable = true;
   services.openssh.enable = true;
 
   security.doas.enable = true;
 
+  users.defaultUserShell = pkgs.zsh;
   users.users.byte = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmgr" ];
@@ -56,7 +60,6 @@
     vim
     wget
     curl
-    git
     wl-clipboard
     fastfetch
     tuxedo
@@ -64,6 +67,7 @@
     rofi
     kitty
     home-manager
+    librewolf
   ];
 
   fonts.packages = with pkgs; [
