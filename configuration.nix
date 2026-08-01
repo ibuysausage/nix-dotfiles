@@ -68,6 +68,9 @@
     kitty
     home-manager
     librewolf
+    fzf
+    oh-my-posh
+    eza
   ];
 
   fonts.packages = with pkgs; [

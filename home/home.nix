@@ -5,6 +5,8 @@
   imports = [
     ./sway.nix
     ./git.nix
+    ./zsh.nix
+    ./kitty.nix
   ];  
 
   home.packages = with pkgs; [
@@ -23,6 +25,10 @@
 
   home.file.".config/rofi" = {
     source = ./themes/rofi;
+  };
+
+  home.file.".config/ohmyposh/omp.toml" = {
+    source = ./omp/omp.toml;
   };
 
   home.username = "byte";
