@@ -4,6 +4,12 @@
 
   programs.kitty = {
     enable = true;
+    shellIntegration.enableZshIntegration = true;
+
+    font = {
+      name = "CaskaydiaCove Nerd Font Mono";
+      size = 11;
+    };
 
     autoThemeFiles = {
       dark = "purpurite";
