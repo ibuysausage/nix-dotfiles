@@ -16,6 +16,10 @@
       light = "purpurite";
       noPreference = "purpurite";
     };
+
+    extraConfig = ''
+      background_opacity 0.95
+    '';
   };
 
 }
