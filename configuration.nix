@@ -39,6 +39,7 @@
 
   programs.git.enable = true;
   programs.zsh.enable = true;
+  programs.neovim.enable = true;
 
   services.printing.enable = true;
   services.openssh.enable = true;
@@ -54,7 +55,6 @@
 
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
-    vim
     wget
     curl
     wl-clipboard
