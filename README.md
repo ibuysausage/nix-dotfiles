@@ -1,1 +1,1 @@
-Im back on NixOS for real this time
+the librewolf theme is forked from [https://github.com/nuclearcodecat/shimmer](https://github.com/nuclearcodecat/shimmer)

@@ -39,6 +39,19 @@
     source = ./librewolf/profiles.ini;
   };
 
+  home.file.".config/librewolf/librewolf/default/chrome/userChrome.css" = {
+    source = ./librewolf/userChrome.css;
+  };
+
+  home.file.".config/librewolf/librewolf/default/chrome/userContent.css" = {
+    source = ./librewolf/userContent.css;
+  };
+
+  home.file.".config/librewolf/librewolf/default/chrome/assets" = {
+    source = ./librewolf/assets;
+    recursive = true;
+  };
+
   home.username = "byte";
   home.homeDirectory = "/home/byte";
 
