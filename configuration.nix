@@ -81,6 +81,8 @@
     feh
     yt-dlp
     btop
+    nixpkgs-fmt
+    nixfmt
   ];
 
   fonts.packages = with pkgs; [
