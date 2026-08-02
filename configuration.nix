@@ -6,6 +6,7 @@
   config,
   lib,
   pkgs,
+  inputs,
   ...
 }:
 
@@ -18,6 +19,9 @@
     "nix-command"
     "flakes"
   ];
+
+  # NixD LSP
+  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
   boot.loader = {
     grub = {
@@ -102,8 +106,8 @@
     feh
     yt-dlp
     btop
-    nixpkgs-fmt
     nixfmt
+    nixd
   ];
 
   fonts.packages = with pkgs; [
