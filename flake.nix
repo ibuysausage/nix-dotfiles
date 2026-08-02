@@ -13,29 +13,37 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nur, ... }@inputs: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      specialArgs = {
-        inherit inputs;
-      };
-      system = "x86_64-linux";
-      modules = [
-        ./configuration.nix
-        home-manager.nixosModules.home-manager
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      nur,
+      ...
+    }@inputs:
+    {
+      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit inputs;
+        };
+        system = "x86_64-linux";
+        modules = [
+          ./configuration.nix
+          home-manager.nixosModules.home-manager
           {
             nixpkgs.overlays = [
-            inputs.nur.overlays.default
+              inputs.nur.overlays.default
             ];
           }
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-	    extraSpecialArgs = { inherit inputs; };
-            users.byte = import ./home/home.nix;
-          };
-        }
-      ];
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = { inherit inputs; };
+              users.byte = import ./home/home.nix;
+            };
+          }
+        ];
+      };
     };
-  };
 }

@@ -7,13 +7,13 @@
     enableCompletion = true;
 
     shellAliases = {
-      ff="clear; fastfetch";
-      c="clear";
+      ff = "clear; fastfetch";
+      c = "clear";
       ls = "eza --icons";
       tree = "eza -T --icons";
       dockerclean = "docker system prune -a --volumes";
     };
-    
+
     history = {
       path = "${config.home.homeDirectory}/.histfile";
       size = 100;

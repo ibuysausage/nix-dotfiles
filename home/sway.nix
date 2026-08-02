@@ -80,7 +80,7 @@
             statusline = "#ffffff";
             background = "#323232";
             inactiveWorkspace = {
-              border = "#32323200"; 
+              border = "#32323200";
               background = "#32323200";
               text = " 5c5c5c";
             };
@@ -97,19 +97,19 @@
           natural_scroll = "enabled";
           middle_emulation = "enabled";
         };
-        
+
         "type:keyboard" = {
           xkb_layout = "us";
         };
       };
-      
+
       output = {
         "*" = {
           bg = "${config.home.homeDirectory}/Pictures/Wallpapers/fractal.png fill";
         };
 
         eDP-1 = {
-          mode = "1920x1080";        
+          mode = "1920x1080";
         };
       };
 
@@ -124,9 +124,9 @@
     extraConfig = ''
       set $mod Mod1
       floating_modifier $mod normal
-      
+
       bindswitch --reload --locked lid:on exec swaylock -f
-      
+
       bindsym $mod+1 workspace number 1
       bindsym $mod+2 workspace number 2
       bindsym $mod+3 workspace number 3
@@ -149,4 +149,4 @@
       bindsym $mod+Shift+0 move container to workspace number 10
     '';
   };
-} 
+}

@@ -11,7 +11,7 @@
     ./kitty.nix
     ./librewolf.nix
     ./nvim.nix
-  ];  
+  ];
 
   # Add pkgs to top
   home.packages = with pkgs; [

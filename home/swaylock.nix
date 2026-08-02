@@ -5,7 +5,7 @@
   programs.swaylock = {
     enable = true;
     package = pkgs.swaylock-effects;
-    
+
     settings = {
       image = "${config.home.homeDirectory}/Pictures/Wallpapers/fractal.png";
       font = "CaskaydiaCove Nerd Font Mono";
