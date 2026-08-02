@@ -24,7 +24,7 @@
  # };
 
   home.file.".librewolf/default/chrome/walls.css" = {
-    source = ~/.librewolf/walls.css;  
+    source = ./librewolf/walls.css;  
   };
 
   home.file.".librewolf/default/chrome/userChrome.css" = {

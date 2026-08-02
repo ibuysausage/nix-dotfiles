@@ -34,7 +34,7 @@
 
   programs.sway = {
     enable = true;
-    extraPackages = with pkgs; [ brightnessctl grim swayidle swaylock-effects pulseaudio swaybg swaylock playerctl ];   
+    extraPackages = with pkgs; [ brightnessctl grim swayidle swaynotificationcenter swaylock-effects pulseaudio swaybg swaylock playerctl ];   
   };
 
   programs.git.enable = true;
@@ -69,6 +69,7 @@
     oh-my-posh
     eza
     ripgrep
+    feh
   ];
 
   fonts.packages = with pkgs; [

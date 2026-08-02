@@ -7,7 +7,7 @@
     shellIntegration.enableZshIntegration = true;
 
     font = {
-      name = "CaskaydiaCove Nerd Font Mono";
+      name = "CaskaydiaCove Nerd Font";
       size = 11;
     };
 

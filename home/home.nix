@@ -10,7 +10,6 @@
     ./zsh.nix
     ./kitty.nix
     ./librewolf.nix
-    ./firefox.nix
   ];  
 
   # Add pkgs to top
