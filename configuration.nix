@@ -44,10 +44,19 @@
   services.printing.enable = true;
   services.openssh.enable = true;
 
+  virtualisation.docker = {
+    enable = true;
+
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+  };
+
   users.defaultUserShell = pkgs.zsh;
   users.users.byte = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmgr" ];
+    extraGroups = [ "wheel" "networkmgr" "docker" ];
     packages = with pkgs; [
       tree
     ];
@@ -70,6 +79,8 @@
     eza
     ripgrep
     feh
+    yt-dlp
+    btop
   ];
 
   fonts.packages = with pkgs; [

@@ -11,6 +11,7 @@
       c="clear";
       ls = "eza --icons";
       tree = "eza -T --icons";
+      dockerclean = "docker system prune -a --volumes";
     };
     
     history = {
