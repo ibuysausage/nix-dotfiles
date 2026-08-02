@@ -37,7 +37,6 @@
     extraPackages = with pkgs; [ brightnessctl grim swayidle swaylock-effects pulseaudio swaybg swaylock playerctl ];   
   };
 
-  programs.firefox.enable = true;
   programs.git.enable = true;
   programs.zsh.enable = true;
 
