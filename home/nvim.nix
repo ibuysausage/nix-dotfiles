@@ -4,10 +4,17 @@
 
   programs.neovim = {
     enable = true;
+    defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
 
     extraConfig = ''
-      set number
     '';
+  };
+
+  xdg.configFile."nvim" = {
+    source = ./nvim;
+    recursive = true;
   };
 
 }
