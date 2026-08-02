@@ -68,6 +68,7 @@
     fzf
     oh-my-posh
     eza
+    ripgrep
   ];
 
   fonts.packages = with pkgs; [
