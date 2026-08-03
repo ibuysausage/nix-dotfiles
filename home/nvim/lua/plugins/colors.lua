@@ -1,3 +1,4 @@
+-- Change to "tokyonight", or "rose-pine"
 local theme = "tokyonight"
 
 local function enable_transparency()
