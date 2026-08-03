@@ -1,0 +1,14 @@
+{
+  "commands": {
+    "nixos": {
+      "name": "NixOS rebuild",
+      "description": "Run nixos-rebuild switch",
+      "cmd": "sudo nixos-rebuild switch --flake /etc/nixos"
+    },
+    "update": {
+      "name": "Update flake inputs",
+      "description": "Update nix flake",
+      "cmd": "nix flake update /etc/nixos"
+    }
+  }
+}
