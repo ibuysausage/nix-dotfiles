@@ -115,6 +115,8 @@
     gnumake
     luaPackages.tree-sitter-cli
     gcc
+    # 100% leagly aquired media
+    qbittorrent
   ];
 
   fonts.packages = with pkgs; [
