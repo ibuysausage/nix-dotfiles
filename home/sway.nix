@@ -82,7 +82,7 @@
             inactiveWorkspace = {
               border = "#32323200";
               background = "#32323200";
-              text = " 5c5c5c";
+              text = "#5c5c5c";
             };
           };
         }
