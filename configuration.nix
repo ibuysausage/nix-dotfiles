@@ -4,12 +4,10 @@
 
 {
   config,
-  lib,
-  pkgs,
+  lib, pkgs,
   inputs,
   ...
 }:
-
 {
   imports = [
     ./hardware-configuration.nix
@@ -19,9 +17,6 @@
     "nix-command"
     "flakes"
   ];
-
-  # NixD LSP
-  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
   boot.loader = {
     grub = {
@@ -55,6 +50,7 @@
       swaybg
       swaylock
       playerctl
+      fd
     ];
   };
 
@@ -66,6 +62,12 @@
 
   services.printing.enable = true;
   services.openssh.enable = true;
+
+  services.logind.settings.Login = {
+    HandleLidSwitch = "ignore";
+    HandleLidSwitchExternalPower = "ignore";
+    HandleLidSwitchDocked = "ignore";
+  };
 
   virtualisation.docker = {
     enable = true;
@@ -110,6 +112,9 @@
     btop
     nixfmt
     nixd
+    gnumake
+    luaPackages.tree-sitter-cli
+    gcc
   ];
 
   fonts.packages = with pkgs; [

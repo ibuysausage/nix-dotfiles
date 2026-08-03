@@ -12,9 +12,9 @@
     };
 
     autoThemeFiles = {
-      dark = "purpurite";
-      light = "purpurite";
-      noPreference = "purpurite";
+      dark = "tokyo_night_night";
+      light = "tokyo_night_night";
+      noPreference = "tokyo_night_night";
     };
 
     extraConfig = ''
@@ -27,7 +27,7 @@
       confirm_os_window_close 0
       tab_bar_style powerline
       tab_powerline_style round
-      background_opacity 0.95
+      background_opacity 0.70
       shell_integration enabled
       kitty_mod ctrl+shift
       font_size 11
