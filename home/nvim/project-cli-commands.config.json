@@ -6,9 +6,9 @@
       "cmd": "sudo nixos-rebuild switch --flake /etc/nixos"
     },
     "update": {
-      "name": "Update flake inputs",
+      "name": "Nix flake update",
       "description": "Update nix flake",
-      "cmd": "nix flake update /etc/nixos"
+      "cmd": "nix flake update --flake /etc/nixos"
     }
   }
 }
