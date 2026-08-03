@@ -17,6 +17,8 @@ return {
             "nix",
             "cpp",
             "dockerfile",
+	    "vim",
+	    "vimdoc",
         })
     end,
 }
