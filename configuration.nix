@@ -33,6 +33,10 @@
     options = "--delete-older-than 7d";
   };
 
+  boot.kernel.sysctl = {
+  "net.ipv4.ip_unprivileged_port_start" = 80;
+};
+
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
   time.timeZone = "America/New_York";
@@ -62,6 +66,13 @@
 
   services.printing.enable = true;
   services.openssh.enable = true;
+
+  #services.qbittorrent = {
+  #  enable = true;
+  #  webuiPort = 8080;
+  #  user = "byte";
+  #  group = "users";
+  #};
 
   services.logind.settings.Login = {
     HandleLidSwitch = "ignore";
@@ -115,8 +126,7 @@
     gnumake
     luaPackages.tree-sitter-cli
     gcc
-    # 100% leagly aquired media
-    qbittorrent
+    libnotify
   ];
 
   fonts.packages = with pkgs; [
