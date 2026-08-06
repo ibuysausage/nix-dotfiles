@@ -4,7 +4,8 @@
 
 {
   config,
-  lib, pkgs,
+  lib,
+  pkgs,
   inputs,
   ...
 }:
@@ -34,8 +35,15 @@
   };
 
   boot.kernel.sysctl = {
-  "net.ipv4.ip_unprivileged_port_start" = 80;
-};
+    "net.ipv4.ip_unprivileged_port_start" = 80;
+  };
+
+  # Needed for jellyfin
+  networking.firewall.allowedTCPPorts = [
+    26099
+    26101
+    8096
+  ];
 
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
