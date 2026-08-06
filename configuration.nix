@@ -1,6 +1,5 @@
 # Edit this configuration file to define what should be installed on
-# your system. Help is available in the configuration.nix(5) man page, on
-# https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
+# your system. Help is available in the configuration.nix(5) man page, on https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
 {
   config,
@@ -38,12 +37,27 @@
     "net.ipv4.ip_unprivileged_port_start" = 80;
   };
 
-  # Needed for jellyfin
+  # Needed for Jellyfin
   networking.firewall.allowedTCPPorts = [
     26099
     26101
     8096
   ];
+
+  # Hardware acceleration Jellyfin
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [
+      intel-media-driver # For Broadwell (2014) or newer processors (iHD driver)
+      intel-vaapi-driver # Fallback / older processors (i965 driver)
+      intel-compute-runtime # OpenCL support for advanced filters/tonemapping
+      vpl-gpu-rt # QuickSync on 11th Gen or newer
+    ];
+  };
+
+  environment.sessionVariables = {
+    LIBVA_DRIVER_NAME = "iHD";
+  };
 
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
@@ -71,16 +85,6 @@
   programs.git.enable = true;
   programs.zsh.enable = true;
   programs.neovim.enable = true;
-
-  services.printing.enable = true;
-  services.openssh.enable = true;
-
-  #services.qbittorrent = {
-  #  enable = true;
-  #  webuiPort = 8080;
-  #  user = "byte";
-  #  group = "users";
-  #};
 
   services.logind.settings.Login = {
     HandleLidSwitch = "ignore";
