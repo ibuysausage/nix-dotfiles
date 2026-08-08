@@ -8,7 +8,18 @@
   };
 
   home.file.".config/sway/status.sh" = {
+    executable = true;
     source = ./scripts/status.sh;
+  };
+
+  home.file.".config/sway/volume.sh" = {
+    executable = true;
+    source = ./scripts/volume.sh;
+  };
+
+  home.file.".config/sway/brightness.sh" = {
+    executable = true;
+    source = ./scripts/brightness.sh;
   };
 
   home.file.".config/rofi" = {

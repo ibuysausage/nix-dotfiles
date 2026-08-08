@@ -72,8 +72,8 @@
       brightnessctl
       grim
       swayidle
-      swaynotificationcenter
       swaylock-effects
+      # swaynotificationcenter
       pulseaudio
       swaybg
       swaylock

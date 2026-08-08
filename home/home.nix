@@ -19,6 +19,18 @@
     # hello
   ];
 
+  services.swaync = {
+    enable = true;
+    settings = {
+      positionX = "right";
+      positionY = "top";
+      timeout = 10;
+      timeout-low = 5;
+      timeout-critical = 0;
+    };
+  };
+
+
   home.username = "byte";
   home.homeDirectory = "/home/byte";
 
