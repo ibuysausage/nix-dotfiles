@@ -73,7 +73,7 @@
       grim
       swayidle
       swaylock-effects
-      # swaynotificationcenter
+      swaynotificationcenter
       pulseaudio
       swaybg
       swaylock
@@ -142,6 +142,7 @@
     libnotify
     fd
     unzip
+    adwaita-icon-theme
   ];
 
   fonts.packages = with pkgs; [

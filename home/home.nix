@@ -19,25 +19,6 @@
     # hello
   ];
 
-  services.swaync = {
-    enable = true;
-    settings = {
-      positionX = "right";
-      positionY = "top";
-      timeout = 10;
-      timeout-low = 5;
-      timeout-critical = 0;
-    };
-  };
-
-  gtk = {
-    enable = true;
-    iconTheme = {
-      package = pkgs.adwaita-icon-theme;
-      name = "Adwaita";
-    };
-  };
-
   home.username = "byte";
   home.homeDirectory = "/home/byte";
 
