@@ -12,6 +12,8 @@ time=$(date "+%H:%M:%S")
 
 sys_info=$(uname -ar | cut -d " " -f 1,3)
 
+disk_info=$(df -h | grep '/' | head -1 | awk -F' ' '{print $5, $3}')
+
 if [[ $OSTYPE == "freebsd"* ]]; then
     battery_status="$(acpiconf -i 0 | grep 'Remaining capacity' | awk -F' ' '{print $3}') <span weight=\"bold\">$(acpiconf -i 0 | grep 'State' | awk -F' ' '{print $2}')</span>"
 else
@@ -25,4 +27,4 @@ else
     private_ip=$(ip -4 addr show wlo1 | awk '/inet / {print $2}' | cut -d/ -f1,2)
 fi
 
-echo "$sep  $sys_info  $sep  $private_ip  $sep  $date  $sep  $battery_status  $sep  $time  $sep"
+echo "$sep  $disk_info  $sep  $sys_info  $sep  $private_ip  $sep  $date  $sep  $battery_status  $sep  $time  $sep"
