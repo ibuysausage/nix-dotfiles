@@ -56,6 +56,7 @@
     ];
   };
 
+  # IDK just keep. Think it is needed
   environment.sessionVariables = {
     LIBVA_DRIVER_NAME = "iHD";
   };
@@ -77,7 +78,6 @@
       swaybg
       swaylock
       playerctl
-      fd
     ];
   };
 
@@ -140,6 +140,7 @@
     luaPackages.tree-sitter-cli
     gcc
     libnotify
+    fd
     unzip
   ];
 
