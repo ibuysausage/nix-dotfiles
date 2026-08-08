@@ -30,6 +30,13 @@
     };
   };
 
+  gtk = {
+    enable = true;
+    iconTheme = {
+      package = pkgs.adwaita-icon-theme;
+      name = "Adwaita";
+    };
+  };
 
   home.username = "byte";
   home.homeDirectory = "/home/byte";
