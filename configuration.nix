@@ -11,6 +11,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ./sleep.nix
   ];
 
   nix.settings.experimental-features = [
@@ -139,6 +140,7 @@
     luaPackages.tree-sitter-cli
     gcc
     libnotify
+    unzip
   ];
 
   fonts.packages = with pkgs; [
