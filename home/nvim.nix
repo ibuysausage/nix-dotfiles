@@ -8,8 +8,7 @@
     viAlias = true;
     vimAlias = true;
 
-    extraConfig = ''
-    '';
+    extraConfig = "";
   };
 
   xdg.configFile."nvim" = {

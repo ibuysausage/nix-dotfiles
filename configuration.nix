@@ -136,7 +136,6 @@
     yt-dlp
     btop
     nixfmt
-    nixd
     gnumake
     luaPackages.tree-sitter-cli
     gcc
@@ -144,9 +143,8 @@
     fd
     unzip
     adwaita-icon-theme
-    discord
-    go
     jellyfin-tui
+    ffmpeg
   ];
 
   fonts.packages = with pkgs; [
