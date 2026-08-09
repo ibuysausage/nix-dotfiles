@@ -86,6 +86,7 @@
   programs.git.enable = true;
   programs.zsh.enable = true;
   programs.neovim.enable = true;
+  programs.firefox.enable = true;
 
   services.logind.settings.Login = {
     HandleLidSwitch = "ignore";
@@ -143,11 +144,16 @@
     fd
     unzip
     adwaita-icon-theme
+    discord
+    go
+    jellyfin-tui
   ];
 
   fonts.packages = with pkgs; [
     nerd-fonts.caskaydia-cove
   ];
+
+  nixpkgs.config.allowUnfree = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

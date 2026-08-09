@@ -92,10 +92,11 @@
         "type:touchpad" = {
           accel_profile = "flat";
           pointer_accel = "0.9";
-          dwt = "enabled";
+          dwt = "disabled";
           tap = "enabled";
           natural_scroll = "enabled";
           middle_emulation = "enabled";
+
         };
 
         "type:keyboard" = {
