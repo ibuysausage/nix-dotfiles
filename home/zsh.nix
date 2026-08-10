@@ -20,9 +20,13 @@
       save = 100;
     };
 
+    # I have no clue about the unsetopt
+    # Without it !! would be ls
+
     initContent = ''
       fastfetch
       bindkey -v
+      unsetopt BANG_HIST
     '';
   };
 

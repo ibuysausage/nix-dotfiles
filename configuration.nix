@@ -18,7 +18,6 @@
     "nix-command"
     "flakes"
   ];
-
   boot.loader = {
     grub = {
       enable = true;
@@ -145,6 +144,8 @@
     adwaita-icon-theme
     jellyfin-tui
     ffmpeg
+    nix-init
+    inputs.my-nur.packages.${pkgs.system}.crdl
   ];
 
   fonts.packages = with pkgs; [
