@@ -61,4 +61,13 @@
     recursive = true;
   };
 
+  xdg.configFile."hypr" = {
+    source = ./hyprland;
+  };
+
+  home.file.".config/hypr/scripts/launch.sh" = {
+    source = ./hyprland/scripts/launch.sh;
+    executable = true;
+  };
+
 }

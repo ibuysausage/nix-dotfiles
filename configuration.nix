@@ -30,9 +30,7 @@
   nix.gc = {
     automatic = true;
     dates = "weekly";
-    options = "--delete-older-than 7d";
-  };
-
+    options = "--delete-older-than 7d"; };
   boot.kernel.sysctl = {
     "net.ipv4.ip_unprivileged_port_start" = 80;
   };
@@ -86,6 +84,7 @@
   programs.zsh.enable = true;
   programs.neovim.enable = true;
   programs.firefox.enable = true;
+  programs.hyprland.enable = true;
 
   services.logind.settings.Login = {
     HandleLidSwitch = "ignore";
