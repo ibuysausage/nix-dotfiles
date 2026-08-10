@@ -22,8 +22,9 @@
     source = ./scripts/brightness.sh;
   };
 
-  home.file.".config/rofi" = {
-    source = ./themes/rofi;
+  xdg.configFile."rofi" = {
+    source = ./rofi;
+    recursive = true;
   };
 
   home.file.".config/ohmyposh/omp.toml" = {
@@ -54,20 +55,6 @@
   xdg.configFile."nvim" = {
     source = ./nvim;
     recursive = true;
-  };
-
-  xdg.configFile."waybar" = {
-    source = ./waybar;
-    recursive = true;
-  };
-
-  xdg.configFile."hypr" = {
-    source = ./hyprland;
-  };
-
-  home.file.".config/hypr/scripts/launch.sh" = {
-    source = ./hyprland/scripts/launch.sh;
-    executable = true;
   };
 
 }
