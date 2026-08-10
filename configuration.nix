@@ -146,6 +146,10 @@
     ffmpeg
     nix-init
     inputs.my-nur.packages.${pkgs.system}.crdl
+    waybar
+    (python3.withPackages (python-pkgs: with python-pkgs; [
+      requests
+    ]))
   ];
 
   fonts.packages = with pkgs; [

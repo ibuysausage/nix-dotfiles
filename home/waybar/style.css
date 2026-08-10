@@ -1,0 +1,194 @@
+@import "colors.css";
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: CaskaydiaCoveNerdFont;
+    font-size: 14px;
+    border: none;
+    border-radius: 20;
+}
+
+window#waybar {
+    background-color: transparent;
+    border-bottom: none;
+    box-shadow: none;
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#custom-updates:hover,
+#custom-weather:hover,
+#network:hover,
+#battery:hover,
+#clock:hover {
+    color: @primary;
+}
+
+#workspaces button {
+    padding: 0 10px;
+    margin: 0 5px;
+    background-color: @on_secondary;
+    color: #ffffff;
+}
+
+#workspaces button:hover {
+    background: @inverse_secondary;
+    box-shadow: inherit; /* removes white tint */
+    text-shadow: inherit; /* removes white tint */
+}
+
+#workspaces button.focused, #workspaces button.active {
+    background-color: @inverse_primary;
+}
+
+#cpu,
+#memory,
+#disk,
+#custom-updates,
+#custom-weather,
+#network,
+#temperature,
+#pulseaudio,
+#backlight,
+#battery,
+#clock {
+    padding: 0 13px;
+    padding-right: 17px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: @source_color;
+    margin: 0 1px;
+    background-color: @background;
+}
+
+#clock {
+    padding-right: 15px;
+}
+
+#custom-power {
+    padding: 1 13px;
+    padding-right: 8px;
+    color: @source_color;
+    margin: 0 1px;
+    background-color: @background;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+@keyframes blink {
+    to {
+        color: #ffffff;
+    }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#network.disconnected {
+    background-color: @on_error;
+}
+
+#temperature.critical {
+    background-color: @on_error;
+}
+
+#tray {
+    background-color: #2980b9;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+#mpd {
+    background-color: #66cc99;
+    color: #2a5c45;
+}
+
+#mpd.disconnected {
+    background-color: #f53c3c;
+}
+
+#mpd.stopped {
+    background-color: #90b1b1;
+}
+
+#mpd.paused {
+    background-color: #51a37a;
+}
+
+#language {
+    background: #00b093;
+    color: #740864;
+    padding: 0 5px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state {
+    background: #97e1ad;
+    color: #000000;
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad.empty {
+	background-color: transparent;
+}
+
+#privacy {
+    padding: 0;
+}
+
+#privacy-item {
+    padding: 0 5px;
+    color: white;
+}
+
+#privacy-item.screenshare {
+    background-color: #cf5700;
+}
+
+#privacy-item.audio-in {
+    background-color: #1ca000;
+}
+
+#privacy-item.audio-out {
+    background-color: #0069d4;
+}

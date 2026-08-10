@@ -51,4 +51,14 @@
     recursive = true;
   };
 
+  xdg.configFile."nvim" = {
+    source = ./nvim;
+    recursive = true;
+  };
+
+  xdg.configFile."waybar" = {
+    source = ./waybar;
+    recursive = true;
+  };
+
 }
