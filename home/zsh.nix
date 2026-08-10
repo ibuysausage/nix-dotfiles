@@ -25,7 +25,6 @@
 
     initContent = ''
       fastfetch
-      bindkey -v
       unsetopt BANG_HIST
     '';
   };
