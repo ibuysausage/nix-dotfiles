@@ -16,10 +16,10 @@
       path = "default";
 
       settings = {
-        #toolkit.legacyUserProfileCustomizations.stylesheets = true;
-        #svg.context-properties.content.enabled = true;
-        #browser.urlbar.scotchBonnet.enableOverride = true;
-        #sidebar.revamp = false;
+        toolkit.legacyUserProfileCustomizations.stylesheets = true;
+        svg.context-properties.content.enabled = true;
+        browser.urlbar.scotchBonnet.enableOverride = true;
+        sidebar.revamp = false;
       };
     };
 

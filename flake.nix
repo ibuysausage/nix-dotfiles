@@ -3,15 +3,15 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    nur = {
-      url = "github:nix-community/NUR";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    my-nur = {
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    byte-nur = {
       url = "github:ibuysausage/nur-packages";
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -34,11 +34,7 @@
         modules = [
           ./configuration.nix
           home-manager.nixosModules.home-manager
-          {
-            nixpkgs.overlays = [
-              inputs.nur.overlays.default
-            ];
-          }
+	  nur.modules.nixos.default
           {
             home-manager = {
               useGlobalPkgs = true;
