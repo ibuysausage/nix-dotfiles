@@ -7,8 +7,11 @@
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
+    waylandSupport = true;
 
-    extraConfig = "";
+    extraConfig = ''
+      vim.opt.clipboard = "unnamedplus"
+    '';
   };
 
 }
