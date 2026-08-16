@@ -1,0 +1,50 @@
+{ config, ... }:
+
+{
+
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 7d";
+  };
+
+  nix.optimise = {
+    automatic = true;
+    dates = [ "12:00" ];
+  };
+
+  networking.hostName = "nixos";
+  networking.networkmanager.enable = true;
+  time.timeZone = "America/New_York";
+  i18n.defaultLocale = "en_US.UTF-8";
+
+  services.logind.settings.Login = {
+    HandleLidSwitch = "ignore";
+    HandleLidSwitchExternalPower = "ignore";
+    HandleLidSwitchDocked = "ignore";
+  };
+
+  # IDK just keep. Think it is needed
+  environment.sessionVariables = {
+    LIBVA_DRIVER_NAME = "iHD";
+  };
+
+  # Hardware acceleration Jellyfin
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [
+      intel-media-driver # For Broadwell (2014) or newer processors (iHD driver)
+      intel-vaapi-driver # Fallback / older processors (i965 driver)
+      intel-compute-runtime # OpenCL support for advanced filters/tonemapping
+      vpl-gpu-rt # QuickSync on 11th Gen or newer
+    ];
+  };
+
+  environment.variables.EDITOR = "nvim";
+
+}
