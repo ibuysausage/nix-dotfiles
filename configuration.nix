@@ -31,6 +31,12 @@
     dates = "weekly";
     options = "--delete-older-than 7d";
   };
+
+  nix.optimise = {
+    automatic = true;
+    dates = [ "12:00" ];
+  };
+
   boot.kernel.sysctl = {
     "net.ipv4.ip_unprivileged_port_start" = 80;
   };

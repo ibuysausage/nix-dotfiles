@@ -35,6 +35,7 @@
     nix-init
     haruna
     wl-clicker
+    vvvvvv
     inputs.byte-nur.packages.${pkgs.system}.crdl
     inputs.byte-nur.packages.${pkgs.system}.waifufetch
   ];
