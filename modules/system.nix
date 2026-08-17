@@ -45,6 +45,11 @@
     ];
   };
 
+  security.sudo = {
+    enable = true;
+    wheelNeedsPassword = false;
+  };
+
   environment.variables.EDITOR = "nvim";
 
 }
