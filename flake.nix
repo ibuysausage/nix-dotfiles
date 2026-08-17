@@ -15,6 +15,9 @@
       url = "github:ibuysausage/nur-packages";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -23,6 +26,7 @@
       nixpkgs,
       home-manager,
       nur,
+      disko,
       ...
     }@inputs:
     {
@@ -35,6 +39,8 @@
           ./configuration.nix
           home-manager.nixosModules.home-manager
 	  nur.modules.nixos.default
+	  disko.nixosModules.disko
+	  ./disko.nix
           {
             home-manager = {
               useGlobalPkgs = true;
