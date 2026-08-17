@@ -37,6 +37,7 @@
     wl-clicker
     vvvvvv
     tree
+    just
     inputs.byte-nur.packages.${pkgs.system}.crdl
     inputs.byte-nur.packages.${pkgs.system}.waifufetch
   ];
