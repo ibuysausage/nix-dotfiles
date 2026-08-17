@@ -16,3 +16,9 @@ git string:
     git add .
     git commit -m '{{string}}'
     git push
+
+permissions:
+    sudo find ./ -type d -exec chmod 0755 {} +
+    sudo find ./ -type f -name '*.sh' -exec chmod 0755 {} +
+    sudo find ./ -type f ! -name '*.sh' -exec chmod 0644 {} +
+    sudo chown -R 1000:100 ./
