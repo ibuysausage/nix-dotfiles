@@ -1,6 +1,9 @@
 # Justfile
 
+default: update rebuild clean
+
 rebuild:
+    git add .
     sudo nixos-rebuild switch --flake
 
 update:
@@ -8,3 +11,7 @@ update:
 
 clean:
     nix store gc && nix store optimise
+
+commit string:
+    git add .
+    git commit -m '{{string}}'
