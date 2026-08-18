@@ -3,7 +3,7 @@
 {
 
   wayland.windowManager.niri = {
-    enable = true;  
+    enable = true;
   };
 
 }

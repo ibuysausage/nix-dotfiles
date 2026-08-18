@@ -313,6 +313,10 @@ window-rule {
     clip-to-geometry true
 }
 
+switch-events {
+    lid-close { spawn "swaylock"; }
+}
+
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 

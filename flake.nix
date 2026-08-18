@@ -30,7 +30,15 @@
       disko,
       ...
     }@inputs:
+    let
+      system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        inherit system;
+      };
+    in
     {
+      formatter.${system} = pkgs.nixfmt-tree;
+
       nixosConfigurations.wildfire = nixpkgs.lib.nixosSystem {
         specialArgs = {
           inherit inputs;
@@ -39,9 +47,9 @@
         modules = [
           ./configuration.nix
           home-manager.nixosModules.home-manager
-	  nur.modules.nixos.default
-	  disko.nixosModules.disko
-	  ./disko.nix
+          nur.modules.nixos.default
+          disko.nixosModules.disko
+          ./disko.nix
           {
             home-manager = {
               useGlobalPkgs = true;

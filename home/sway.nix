@@ -102,11 +102,11 @@
         "type:keyboard" = {
           xkb_layout = "us";
         };
-	
-	"type:mouse" = {
-	    accel_profile = "flat";
-	    pointer_accel = "0.9";
-	};
+
+        "type:mouse" = {
+          accel_profile = "flat";
+          pointer_accel = "0.9";
+        };
       };
 
       output = {

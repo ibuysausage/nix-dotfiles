@@ -58,4 +58,9 @@
     recursive = true;
   };
 
+  xdg.configFile."noctalia" = {
+    source = ./noctalia;
+    recursive = true;
+  };
+
 }

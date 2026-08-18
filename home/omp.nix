@@ -3,7 +3,7 @@
 {
 
   programs.oh-my-posh = {
-    enable = true;    
+    enable = true;
     enableZshIntegration = true;
     configFile = "~/.config/ohmyposh/omp.toml";
   };

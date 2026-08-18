@@ -3,8 +3,12 @@
 {
 
   # Jellyfin docker ports
-  networking.firewall.allowedTCPPorts = [ 26099 26101 8096 ];
-  
+  networking.firewall.allowedTCPPorts = [
+    26099
+    26101
+    8096
+  ];
+
   virtualisation.docker = {
     enable = true;
 
