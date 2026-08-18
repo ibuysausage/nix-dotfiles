@@ -10,7 +10,7 @@
       ff = "clear; fastfetch";
       c = "clear";
       ls = "eza --icons";
-      tree = "eza -T --icons";
+      tree = "eza -T --icons always";
       dockerclean = "docker system prune -a --volumes";
     };
 
