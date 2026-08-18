@@ -21,7 +21,7 @@
     feh
     yt-dlp
     btop
-    nixfmt
+s   nixfmt
     # nvim plugin
     gnumake
     luaPackages.tree-sitter-cli
@@ -32,7 +32,6 @@
     adwaita-icon-theme
     jellyfin-tui
     ffmpeg
-    nix-init
     haruna
     vvvvvv
     tree
