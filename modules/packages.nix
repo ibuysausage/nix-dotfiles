@@ -36,6 +36,7 @@
     vvvvvv
     tree
     just
+    lazygit
     inputs.byte-nur.packages.${pkgs.system}.crdl
     inputs.byte-nur.packages.${pkgs.system}.waifufetch
   ];
