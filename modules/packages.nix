@@ -34,7 +34,6 @@
     ffmpeg
     nix-init
     haruna
-    wl-clicker
     vvvvvv
     tree
     just
