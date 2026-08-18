@@ -16,6 +16,7 @@
     ./modules/programs.nix
     ./modules/user.nix
     ./modules/network.nix
+    ./modules/sway.nix
   ];
 
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
