@@ -3,7 +3,7 @@
 default: update rebuild clean
 
 rebuild:
-    git add .
+    git add --all
     sudo nixos-rebuild switch --flake
 
 update:
