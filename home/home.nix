@@ -12,6 +12,7 @@
     ./librewolf.nix
     ./nvim.nix
     ./omp.nix
+    ./niri.nix
   ];
 
   # Add pkgs to top

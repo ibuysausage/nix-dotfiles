@@ -4,6 +4,7 @@ default: update rebuild clean
 
 rebuild:
     git add --all
+    niri validate -c ./home/niri/config.kdl
     sudo nixos-rebuild switch --flake
 
 update:

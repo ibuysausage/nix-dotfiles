@@ -31,10 +31,6 @@
     source = ./omp/omp.toml;
   };
 
-  # home.file.".librewolf/profiles.ini" = {
-  #   source = ./librewolf/profiles.ini;
-  # };
-
   home.file.".librewolf/default/chrome/walls.css" = {
     source = ./librewolf/walls.css;
   };
@@ -54,6 +50,11 @@
 
   xdg.configFile."nvim" = {
     source = ./nvim;
+    recursive = true;
+  };
+
+  xdg.configFile."niri" = {
+    source = ./niri;
     recursive = true;
   };
 
