@@ -9,7 +9,7 @@
     shellAliases = {
       ff = "clear; fastfetch";
       c = "clear";
-      ls = "eza --icons";
+      ls = "eza --icons always";
       tree = "eza -T --icons always";
       dockerclean = "docker system prune -a --volumes";
     };
