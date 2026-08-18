@@ -13,7 +13,7 @@ clean:
     nix store gc && nix store optimise
 
 git string:
-    git add .
+    git add --all
     git commit -m '{{string}}'
     git push
 
