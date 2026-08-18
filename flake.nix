@@ -31,7 +31,7 @@
       ...
     }@inputs:
     {
-      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.wildfire = nixpkgs.lib.nixosSystem {
         specialArgs = {
           inherit inputs;
         };

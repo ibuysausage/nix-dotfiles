@@ -18,7 +18,7 @@
     dates = [ "12:00" ];
   };
 
-  networking.hostName = "nixos";
+  networking.hostName = "wildfire";
   networking.networkmanager.enable = true;
   time.timeZone = "America/New_York";
   i18n.defaultLocale = "en_US.UTF-8";

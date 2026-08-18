@@ -21,7 +21,7 @@
     feh
     yt-dlp
     btop
-s   nixfmt
+    nixfmt
     # nvim plugin
     gnumake
     luaPackages.tree-sitter-cli
