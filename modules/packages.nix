@@ -37,7 +37,10 @@
     noctalia
     alejandra
     # nvim junk
-    luaPackages.jsregexp
+    # lua have to be 5.1
+    # lua51Packages.jsregexp
+    # lua snip
+    tree-sitter
     gnumake
     luaPackages.tree-sitter-cli
     lua5_1
