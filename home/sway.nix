@@ -1,4 +1,4 @@
-{ config, ... }: {
+{config, ...}: {
   wayland.windowManager.sway = {
     enable = true;
     checkConfig = false;
@@ -59,7 +59,7 @@
       };
 
       fonts = {
-        names = [ "Caskaydia Nerd Font Mono" ];
+        names = ["Caskaydia Nerd Font Mono"];
         size = 10.0;
       };
 
@@ -69,7 +69,7 @@
           statusCommand = "while ~/.config/sway/status.sh; do sleep 1; done";
 
           fonts = {
-            names = [ "CaskaydiaCove Nerd Font Mono" ];
+            names = ["CaskaydiaCove Nerd Font Mono"];
             size = 11.0;
           };
 

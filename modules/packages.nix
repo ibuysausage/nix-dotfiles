@@ -2,8 +2,7 @@
   pkgs,
   inputs,
   ...
-}:
-{
+}: {
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
     wget
@@ -40,9 +39,6 @@
     just
     lazygit
     noctalia
-    # nixfmt. fmt-tree is needed for no gc
-    nixfmt
-    nixfmt-tree
     alejandra
     # nvim lsp
     nixd

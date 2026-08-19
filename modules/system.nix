@@ -3,8 +3,7 @@
   pkgs,
   inputs,
   ...
-}:
-{
+}: {
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
@@ -18,10 +17,10 @@
 
   nix.optimise = {
     automatic = true;
-    dates = [ "12:00" ];
+    dates = ["12:00"];
   };
 
-  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+  nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
 
   networking.hostName = "wildfire";
   networking.networkmanager.enable = true;

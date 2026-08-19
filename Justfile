@@ -25,7 +25,7 @@ permissions:
     sudo chown -R 1000:100 ./
 
 fmt:
-    nix fmt
+    alejandra *
 
 flake-lock:
     git add --all

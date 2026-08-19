@@ -1,4 +1,4 @@
-{ config, ... }: {
+{config, ...}: {
   # Jellyfin docker ports
   networking.firewall.allowedTCPPorts = [
     26099
