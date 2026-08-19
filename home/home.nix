@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{...}: {
   imports = [
     ./homefile.nix
     ./sway.nix
@@ -10,10 +10,6 @@
     ./nvim.nix
     ./omp.nix
     ./niri.nix
-  ];
-
-  # Add pkgs to top
-  home.packages = with pkgs; [
   ];
 
   home.username = "byte";
