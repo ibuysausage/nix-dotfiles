@@ -40,6 +40,8 @@
     noctalia
     # nvim
     python3
+    # flake nix fmt
+    nixfmt-tree
     inputs.byte-nur.packages.${pkgs.system}.crdl
     inputs.byte-nur.packages.${pkgs.system}.waifufetch
   ];
