@@ -8,11 +8,15 @@
       size = 11;
     };
 
-    autoThemeFiles = {
-      dark = "tokyo_night_night";
-      light = "tokyo_night_night";
-      noPreference = "tokyo_night_night";
-    };
+    # Found purple theme ive been waiting to find
+    # its from noctalia btw
+    # Gonna be whole rice color scheme
+
+    # autoThemeFiles = {
+    #   dark = "tokyo_night_night";
+    #   light = "tokyo_night_night";
+    #   noPreference = "tokyo_night_night";
+    # };
 
     extraConfig = ''
       cursor_shape beam
