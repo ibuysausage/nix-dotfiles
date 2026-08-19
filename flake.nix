@@ -34,7 +34,6 @@
       inherit system;
     };
   in {
-
     nixosConfigurations.wildfire = nixpkgs.lib.nixosSystem {
       specialArgs = {
         inherit inputs;
