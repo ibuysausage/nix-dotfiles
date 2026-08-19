@@ -45,6 +45,7 @@
     nixd
     lua-language-server
     clang-tools
+    cmake-language-server
     inputs.byte-nur.packages.${pkgs.system}.crdl
     inputs.byte-nur.packages.${pkgs.system}.waifufetch
   ];

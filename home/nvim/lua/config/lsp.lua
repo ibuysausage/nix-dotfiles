@@ -10,7 +10,31 @@ vim.lsp.config('lua_ls', {
   },
 })
 
-vim.lsp.enable({ 'lua_ls', 'nixd', 'clangd', })
+vim.lsp.config("nixd", {
+  cmd = { "nixd" },
+  filetypes = { "nix" },
+  root_markers = { "flake.nix", ".git" },
+  settings = {
+    nixd = {
+      nixpkgs = {
+        expr = "import <nixpkgs> { }",
+      },
+      formatting = {
+        command = { "alejandra" },
+      },
+      options = {
+        nixos = {
+          expr = '(builtins.getFlake (toString /etc/nixos)).nixosConfigurations.wildfire.options',
+        },
+        home_manager = {
+          expr = '(builtins.getFlake (toString /etc/nixos)).homeConfigurations."byte@wildfire".options',
+        },
+      },
+    },
+  },
+})
+
+vim.lsp.enable({ 'lua_ls', 'nixd', 'clangd', 'cmake', })
 
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)
