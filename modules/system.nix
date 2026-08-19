@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  inputs,
   ...
 }:
 {
@@ -19,6 +20,8 @@
     automatic = true;
     dates = [ "12:00" ];
   };
+
+  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
   networking.hostName = "wildfire";
   networking.networkmanager.enable = true;
