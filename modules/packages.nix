@@ -14,6 +14,7 @@
     rofi
     kitty
     home-manager
+    firefox
     librewolf
     fzf
     oh-my-posh
