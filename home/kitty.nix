@@ -32,6 +32,8 @@
       shell_integration enabled
       kitty_mod ctrl+shift
       font_size 11
+
+      include ${./kitty-themes/rice-purple.conf}
     '';
   };
 }

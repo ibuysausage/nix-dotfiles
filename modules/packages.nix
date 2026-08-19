@@ -37,6 +37,7 @@
     noctalia
     alejandra
     # nvim junk
+    luaPackages.jsregexp
     gnumake
     luaPackages.tree-sitter-cli
     lua5_1
