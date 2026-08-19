@@ -19,7 +19,6 @@ return {
             "dockerfile",
 	    "vim",
 	    "vimdoc",
-	    "kld",
         })
     end,
 }
