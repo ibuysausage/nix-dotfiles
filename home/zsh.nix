@@ -1,7 +1,4 @@
-{ config, ... }:
-
-{
-
+{ config, ... }: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -28,5 +25,4 @@
       unsetopt BANG_HIST
     '';
   };
-
 }

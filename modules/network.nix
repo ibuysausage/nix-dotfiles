@@ -1,7 +1,4 @@
-{ config, ... }:
-
-{
-
+{ config, ... }: {
   # Jellyfin docker ports
   networking.firewall.allowedTCPPorts = [
     26099
@@ -26,5 +23,4 @@
       setSocketVariable = true;
     };
   };
-
 }

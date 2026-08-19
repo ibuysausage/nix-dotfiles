@@ -1,9 +1,5 @@
-{ config, ... }:
-
-{
-
+{ config, ... }: {
   wayland.windowManager.niri = {
     enable = true;
   };
-
 }

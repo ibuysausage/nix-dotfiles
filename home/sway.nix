@@ -1,7 +1,4 @@
-{ config, ... }:
-
-{
-
+{ config, ... }: {
   wayland.windowManager.sway = {
     enable = true;
     checkConfig = false;
@@ -96,7 +93,6 @@
           tap = "enabled";
           natural_scroll = "enabled";
           middle_emulation = "enabled";
-
         };
 
         "type:keyboard" = {

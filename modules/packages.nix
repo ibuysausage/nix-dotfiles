@@ -1,7 +1,9 @@
-{ pkgs, inputs, ... }:
-
 {
-
+  pkgs,
+  inputs,
+  ...
+}:
+{
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
     wget
@@ -21,10 +23,10 @@
     feh
     yt-dlp
     btop
-    nixfmt
     # nvim plugin
     gnumake
     luaPackages.tree-sitter-cli
+    #
     gcc
     libnotify
     fd
@@ -40,8 +42,12 @@
     noctalia
     # nvim
     python3
-    # flake nix fmt
+    # nixfmt. fmt-tree is needed for no gc
+    nixfmt
     nixfmt-tree
+    alejandra
+    # nvim lsp
+    nixd
     inputs.byte-nur.packages.${pkgs.system}.crdl
     inputs.byte-nur.packages.${pkgs.system}.waifufetch
   ];
@@ -51,5 +57,4 @@
   ];
 
   nixpkgs.config.allowUnfree = true;
-
 }

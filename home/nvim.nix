@@ -1,7 +1,4 @@
-{ config, ... }:
-
-{
-
+{ config, ... }: {
   programs.neovim = {
     enable = true;
     defaultEditor = true;
@@ -13,5 +10,4 @@
       vim.opt.clipboard = "unnamedplus"
     '';
   };
-
 }

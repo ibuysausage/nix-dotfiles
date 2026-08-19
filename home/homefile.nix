@@ -1,7 +1,9 @@
-{ config, pkgs, ... }:
-
 {
-
+  config,
+  pkgs,
+  ...
+}:
+{
   home.file."Pictures/Wallpapers" = {
     source = ./wallpapers;
     recursive = true;
@@ -62,5 +64,4 @@
     source = ./noctalia;
     recursive = true;
   };
-
 }

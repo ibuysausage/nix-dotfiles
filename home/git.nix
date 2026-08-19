@@ -1,7 +1,4 @@
-{ config, ... }:
-
-{
-
+{ config, ... }: {
   programs.git = {
     enable = true;
 
@@ -10,5 +7,4 @@
       user.email = "bannansmooth68@proton.me";
     };
   };
-
 }

@@ -1,7 +1,9 @@
-{ config, pkgs, ... }:
-
 {
-
+  config,
+  pkgs,
+  ...
+}:
+{
   programs.sway = {
     enable = true;
     extraPackages = with pkgs; [
@@ -17,5 +19,4 @@
       autotiling
     ];
   };
-
 }

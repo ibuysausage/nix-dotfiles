@@ -1,7 +1,4 @@
-{ config, ... }:
-
-{
-
+{ config, ... }: {
   programs.kitty = {
     enable = true;
     shellIntegration.enableZshIntegration = true;
@@ -33,5 +30,4 @@
       font_size 11
     '';
   };
-
 }

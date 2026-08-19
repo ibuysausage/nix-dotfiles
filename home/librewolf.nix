@@ -4,9 +4,7 @@
   inputs,
   ...
 }:
-
 {
-
   programs.librewolf = {
     enable = true;
 
@@ -29,5 +27,4 @@
       sidebery
     ];
   };
-
 }

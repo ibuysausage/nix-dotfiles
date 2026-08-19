@@ -1,7 +1,9 @@
-{ config, pkgs, ... }:
-
 {
-
+  config,
+  pkgs,
+  ...
+}:
+{
   users.defaultUserShell = pkgs.zsh;
   users.users.byte = {
     isNormalUser = true;
@@ -12,5 +14,4 @@
       "input"
     ];
   };
-
 }
