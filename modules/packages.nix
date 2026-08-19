@@ -22,9 +22,6 @@
     feh
     yt-dlp
     btop
-    # nvim plugin
-    gnumake
-    luaPackages.tree-sitter-cli
     gcc
     libnotify
     fd
@@ -39,10 +36,15 @@
     lazygit
     noctalia
     alejandra
-    # nvim lsp
+    # nvim junk
+    gnumake
+    luaPackages.tree-sitter-cli
     lua5_1
     luarocks
+    # nvim language servers
     nixd
+    lua-language-server
+    clang-tools
     inputs.byte-nur.packages.${pkgs.system}.crdl
     inputs.byte-nur.packages.${pkgs.system}.waifufetch
   ];
