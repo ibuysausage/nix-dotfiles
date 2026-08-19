@@ -5,6 +5,7 @@
     viAlias = true;
     vimAlias = true;
     waylandSupport = true;
+    withPython3 = true;
 
     extraConfig = ''
       vim.opt.clipboard = "unnamedplus"

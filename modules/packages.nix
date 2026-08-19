@@ -40,8 +40,8 @@
     just
     lazygit
     noctalia
-    # nvim
-    python3
+    # nvim python3 client
+    python3Packages.pynvim
     # nixfmt. fmt-tree is needed for no gc
     nixfmt
     nixfmt-tree
