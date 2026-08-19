@@ -27,7 +27,8 @@ vim.lsp.config("nixd", {
           expr = '(builtins.getFlake (toString /etc/nixos)).nixosConfigurations.wildfire.options',
         },
         home_manager = {
-          expr = '(builtins.getFlake (toString /etc/nixos)).homeConfigurations."byte@wildfire".options',
+          -- expr = '(builtins.getFlake (toString /etc/nixos)).homeConfigurations."byte@wildfire".options',
+	  expr = '(builtins.getFlake (builtins.toString /etc/nixos)).nixosConfigurations.wildfire.options.home-manager.users.type.getSubOptions []',
         },
       },
     },
