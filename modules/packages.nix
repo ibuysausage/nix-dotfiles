@@ -14,7 +14,6 @@
     rofi
     kitty
     home-manager
-    firefox
     librewolf
     fzf
     oh-my-posh
@@ -26,7 +25,6 @@
     # nvim plugin
     gnumake
     luaPackages.tree-sitter-cli
-    #
     gcc
     libnotify
     fd
@@ -42,6 +40,8 @@
     noctalia
     alejandra
     # nvim lsp
+    lua5_1
+    luarocks
     nixd
     inputs.byte-nur.packages.${pkgs.system}.crdl
     inputs.byte-nur.packages.${pkgs.system}.waifufetch
