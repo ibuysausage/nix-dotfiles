@@ -1,6 +1,7 @@
 {...}: {
   imports = [
     ./homefile.nix
+    ./single.nix
     ./sway.nix
     ./swaylock.nix
     ./git.nix
@@ -10,7 +11,6 @@
     ./nvim.nix
     ./omp.nix
     ./niri.nix
-    ./btop.nix
   ];
 
   home.username = "byte";
