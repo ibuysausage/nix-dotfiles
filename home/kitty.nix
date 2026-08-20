@@ -33,7 +33,7 @@
       kitty_mod ctrl+shift
       font_size 11
 
-      include ${./kitty-themes/rice-purple.conf}
+      include ${./kitty-themes/noctalia.conf}
     '';
   };
 }

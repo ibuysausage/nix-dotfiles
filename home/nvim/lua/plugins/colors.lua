@@ -1,5 +1,5 @@
--- Change to "tokyonight", or "rose-pine"
-local theme = "tokyonight"
+-- Change to "tokyonight", "rose-pine", or "lavender"
+local theme = "noctalia"
 
 local function enable_transparency()
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -33,5 +33,27 @@ return {
 	opts = {
 	   theme = 'tokyonight',
 	},
-    },	
+    },
+    {
+	"https://codeberg.org/jthvai/lavender.nvim",
+	branch = "stable",
+	lazy = false,
+	config = function ()
+	    if theme == "lavender" then
+	    	vim.cmd.colorscheme("lavender")
+		enable_transparency()
+	    end
+	end
+    },
+    {
+	"keremimo/noctalia.nvim",
+	main = "noctalia",
+	lazy = false,
+	config = function ()
+	    if theme == "noctalia" then
+	    	vim.cmd.colorscheme("noctalia")
+		enable_transparency ()
+	    end
+	end
+    },
 }
