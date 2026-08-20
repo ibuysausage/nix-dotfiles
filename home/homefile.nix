@@ -45,8 +45,8 @@
     recursive = true;
   };
 
-  xdg.configFile."nvim" = {
-    source = ./nvim;
+  xdg.configFile."nvim/lua" = {
+    source = ./nvim/lua;
     recursive = true;
   };
 

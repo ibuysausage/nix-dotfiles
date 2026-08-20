@@ -16,7 +16,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   spec = {
-    -- import your plugins
     { import = "plugins" },
+  },
+  performance = {
+    reset_packpath = false,
+    rtp = {
+      reset = false,
+    },
   },
 })

@@ -7,9 +7,7 @@
     waylandSupport = true;
     withPython3 = true;
 
-    extraConfig = ''
-      vim.opt.clipboard = "unnamedplus"
-      vim.opt.termguicolors = true
-    '';
+    initLua = builtins.readFile ./nvim/init.lua;
+
   };
 }
