@@ -19,6 +19,10 @@
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -27,6 +31,7 @@
     home-manager,
     nur,
     disko,
+    stylix,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -45,6 +50,7 @@
         nur.modules.nixos.default
         disko.nixosModules.disko
         ./disko.nix
+	stylix.nixosModules.stylix
         {
           home-manager = {
             useGlobalPkgs = true;
