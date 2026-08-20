@@ -50,7 +50,7 @@
         nur.modules.nixos.default
         disko.nixosModules.disko
         ./disko.nix
-	stylix.nixosModules.stylix
+        stylix.nixosModules.stylix
         {
           home-manager = {
             useGlobalPkgs = true;

@@ -3,21 +3,6 @@
     enable = true;
     shellIntegration.enableZshIntegration = true;
 
-    font = {
-      name = "CaskaydiaCove Nerd Font";
-      size = 11;
-    };
-
-    # Found purple theme ive been waiting to find
-    # its from noctalia btw
-    # Gonna be whole rice color scheme
-
-    # autoThemeFiles = {
-    #   dark = "tokyo_night_night";
-    #   light = "tokyo_night_night";
-    #   noPreference = "tokyo_night_night";
-    # };
-
     extraConfig = ''
       cursor_shape beam
       cursor_beam_thickness 1.8
@@ -32,8 +17,6 @@
       shell_integration enabled
       kitty_mod ctrl+shift
       font_size 11
-
-      include ${./themes/noctalia.conf}
     '';
   };
 }
