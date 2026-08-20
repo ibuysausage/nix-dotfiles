@@ -8,6 +8,5 @@
     withPython3 = true;
 
     initLua = builtins.readFile ./nvim/init.lua;
-
   };
 }

@@ -7,7 +7,8 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nur = { url = "github:nix-community/NUR";
+    nur = {
+      url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     byte-nur = {
@@ -55,7 +56,7 @@
             useGlobalPkgs = true;
             useUserPackages = true;
             extraSpecialArgs = {inherit inputs;};
-	    sharedModules = [stylix.homeModules.stylix];
+            sharedModules = [stylix.homeModules.stylix];
             users.byte = import ./home/home.nix;
           };
         }
