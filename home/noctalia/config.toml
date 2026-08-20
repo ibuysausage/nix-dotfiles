@@ -11,5 +11,6 @@ scale = 1.2
 margin_opposite_edge = 0 
 font_family = "CaskaydiaCove Nerd Font"
 
-
+[shell.shadow]
+blur = false
 
