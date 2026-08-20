@@ -1,11 +1,15 @@
 # Justfile
 
-default: fmt update rebuild clean
+default: fmt update rebuild hm clean
+
 
 rebuild:
     git add --all
     niri validate -c ./home/niri/config.kdl
     sudo nixos-rebuild switch --flake
+
+hm user="byte":
+    systemctl restart home-manager-{{user}}
 
 update:
     nix flake update
