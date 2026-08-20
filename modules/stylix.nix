@@ -1,0 +1,9 @@
+{...}:
+
+{
+
+  stylix = {
+    enable = true;
+  };
+
+}
