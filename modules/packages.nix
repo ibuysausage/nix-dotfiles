@@ -49,6 +49,7 @@
     lua-language-server
     clang-tools
     cmake-language-server
+    marksman
     inputs.byte-nur.packages.${pkgs.system}.crdl
     inputs.byte-nur.packages.${pkgs.system}.waifufetch
   ];

@@ -35,7 +35,7 @@ vim.lsp.config("nixd", {
   },
 })
 
-vim.lsp.enable({ 'lua_ls', 'nixd', 'clangd', 'cmake', })
+vim.lsp.enable({ 'lua_ls', 'nixd', 'clangd', 'cmake', 'marksman', })
 
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)
