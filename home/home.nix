@@ -10,6 +10,7 @@
     ./nvim.nix
     ./omp.nix
     ./niri.nix
+    ./btop.nix
   ];
 
   home.username = "byte";
