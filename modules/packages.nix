@@ -22,7 +22,6 @@
     feh
     yt-dlp
     btop
-    gcc
     libnotify
     fd
     unzip
