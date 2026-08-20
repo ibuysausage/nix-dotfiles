@@ -11,6 +11,7 @@
     ./nvim.nix
     ./omp.nix
     ./niri.nix
+    ./stylix.nix
   ];
 
   home.username = "byte";
