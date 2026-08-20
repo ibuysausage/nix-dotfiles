@@ -5,9 +5,16 @@
 
     targets = {
       neovim.enable = true;
+      nixos-icons.enable = true;
+      gtk.enable = true;
     };
 
     fonts = {
+      sansSerif = {
+        package = pkgs.nerd-fonts.caskaydia-cove;
+        name = "CaskaydiaCove Nerd Font";
+      };
+
       monospace = {
         package = pkgs.nerd-fonts.caskaydia-cove;
         name = "CaskaydiaCove Nerd Font";

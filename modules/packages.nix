@@ -39,6 +39,7 @@
     # lua have to be 5.1
     # lua51Packages.jsregexp
     # lua snip
+    gcc
     tree-sitter
     gnumake
     luaPackages.tree-sitter-cli

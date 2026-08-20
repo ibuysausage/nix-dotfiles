@@ -13,7 +13,7 @@
       confirm_os_window_close 0
       tab_bar_style powerline
       tab_powerline_style round
-      background_opacity 0.70
+      background_opacity 0.80
       shell_integration enabled
       kitty_mod ctrl+shift
       font_size 11
