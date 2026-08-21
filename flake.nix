@@ -33,32 +33,34 @@
     disko,
     stylix,
     ...
-  } @ inputs: let
-    # system = "x86_64-linux";
-    # pkgs = import nixpkgs { inherit system; };
-  in {
-    nixosConfigurations.wildfire = nixpkgs.lib.nixosSystem {
-      specialArgs = {
-        inherit inputs;
+  } @ inputs: {
+    nixosConfigurations = {
+      wildfire = let
+	username = "byte";
+	specialArgs = { inherit username inputs; };
+	in
+	nixpkgs.lib.nixosSystem {
+	  inherit specialArgs;
+	  system = "x86_64-linux";
+
+	  modules = [
+            ./configuration.nix
+            home-manager.nixosModules.home-manager
+            nur.modules.nixos.default
+            disko.nixosModules.disko
+            ./disko.nix
+            stylix.nixosModules.stylix
+            {
+              home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = {inherit inputs;};
+              sharedModules = [stylix.homeModules.stylix];
+              users.byte = import ./home/home.nix;
+            };
+          }
+        ];
       };
-      system = "x86_64-linux";
-      modules = [
-        ./configuration.nix
-        home-manager.nixosModules.home-manager
-        nur.modules.nixos.default
-        disko.nixosModules.disko
-        ./disko.nix
-        stylix.nixosModules.stylix
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            extraSpecialArgs = {inherit inputs;};
-            sharedModules = [stylix.homeModules.stylix];
-            users.byte = import ./home/home.nix;
-          };
-        }
-      ];
     };
   };
 }

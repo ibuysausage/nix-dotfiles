@@ -24,5 +24,9 @@
       fastfetch
       unsetopt BANG_HIST
     '';
+
+    initExtra = ''
+      export PATH="$PATH:/run/current-system/bin"
+    '';
   };
 }
