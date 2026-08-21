@@ -34,10 +34,8 @@
     stylix,
     ...
   } @ inputs: let
-    system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
-    };
+    # system = "x86_64-linux";
+    # pkgs = import nixpkgs { inherit system; };
   in {
     nixosConfigurations.wildfire = nixpkgs.lib.nixosSystem {
       specialArgs = {

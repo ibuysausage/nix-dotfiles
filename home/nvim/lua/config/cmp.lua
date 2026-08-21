@@ -29,4 +29,19 @@ cmp.setup({
     { name = 'buffer' },
     { name = 'path' },
   }),
+  window = {
+    completion = cmp.config.window.bordered({
+      border = "rounded",
+      winhighlight = "Normal:Pmenu,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None",
+    }),
+
+    documentation = cmp.config.window.bordered({
+      border = "rounded",
+      winhighlight = "Normal:Normal,FloatBorder:FloatBorder",
+    }),
+  },
+})
+
+vim.api.nvim_set_hl(0, "FloatBorder", {
+  link = "DiagnosticInfo",
 })

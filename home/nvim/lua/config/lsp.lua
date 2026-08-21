@@ -47,3 +47,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
   end,
 })
+
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  underline = true,
+  float = {
+    border = "rounded",
+    source = true,
+  },
+})
+
