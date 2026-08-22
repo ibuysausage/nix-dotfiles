@@ -24,7 +24,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     niri-flake = {
-      url = "github:sodiboo/niri-flake";
+      url = "path:/home/byte/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -35,6 +36,7 @@
     nur,
     disko,
     stylix,
+    niri-flake,
     ...
   } @ inputs: {
     nixosConfigurations = {
@@ -45,20 +47,22 @@
         nixpkgs.lib.nixosSystem {
           inherit specialArgs;
           system = "x86_64-linux";
-
           modules = [
             ./configuration.nix
+            ./disko.nix
             home-manager.nixosModules.home-manager
             nur.modules.nixos.default
             disko.nixosModules.disko
-            ./disko.nix
             stylix.nixosModules.stylix
+            {
+              nixpkgs.overlays = [inputs.niri-flake.overlays.niri];
+            }
             {
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
                 extraSpecialArgs = {inherit inputs;};
-                sharedModules = [stylix.homeModules.stylix];
+                sharedModules = [stylix.homeModules.stylix niri-flake.homeModules.niri niri-flake.homeModules.stylix];
                 users.byte = import ./home/home.nix;
               };
             }

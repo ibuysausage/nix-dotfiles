@@ -3,6 +3,7 @@ require('config.keybinds')
 require('config.lazy')
 require('config.lsp')
 require('config.cmp')
+require('after.ftplugin.nix')
 
 vim.lsp.handlers["textDocument/hover"] =
   vim.lsp.with(vim.lsp.handlers.hover, {

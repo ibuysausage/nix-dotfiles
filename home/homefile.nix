@@ -50,11 +50,6 @@
     recursive = true;
   };
 
-  xdg.configFile."niri" = {
-    source = ./niri;
-    recursive = true;
-  };
-
   xdg.configFile."noctalia" = {
     source = ./noctalia;
     recursive = true;

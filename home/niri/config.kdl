@@ -5,8 +5,6 @@
 
 // https://niri-wm.github.io/niri/Configuration:-Input
 
-// fixes focus-ring on kitty and remove top of window label
-
 input {
     mod-key "Alt"
     mod-key-nested "Super"
@@ -466,7 +464,7 @@ binds {
     // maximize-window-to-edges doesn't: the window expands to the edges of the screen.
     // This bind corresponds to normal window maximizing,
     // e.g. by double-clicking on the titlebar.
-    Mod+M { maximize-window-to-edges; }
+    // Mod+M { maximize-window-to-edges; }
 
     // Expand the focused column to space not taken up by other fully visible columns.
     // Makes the column "fill the rest of the space".

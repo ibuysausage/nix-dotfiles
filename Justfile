@@ -39,7 +39,7 @@ dry host=host: _stage
 # Build + activate right now (reverts on next reboot if not also `boot`)
 [group('deploy')]
 switch host=host: _stage
-    sudo nixos-rebuild switch --flake {{flake}}#{{host}} --print-build-logs
+    sudo nixos-rebuild switch --flake {{flake}}#{{host}} --print-build-logs --show-trace
 
 # Build + activate, but only keep it until the next reboot (safe to try risky changes)
 [group('deploy')]
