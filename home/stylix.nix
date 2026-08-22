@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   stylix = {
     enable = true;
-    base16Scheme = ./themes/uwunicorn.yaml;
+    base16Scheme = ./themes/henna.yaml;
 
     targets = {
       neovim.enable = true;
