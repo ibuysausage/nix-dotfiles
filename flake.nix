@@ -36,14 +36,14 @@
   } @ inputs: {
     nixosConfigurations = {
       wildfire = let
-	username = "byte";
-	specialArgs = { inherit username inputs; };
-	in
-	nixpkgs.lib.nixosSystem {
-	  inherit specialArgs;
-	  system = "x86_64-linux";
+        username = "byte";
+        specialArgs = {inherit username inputs;};
+      in
+        nixpkgs.lib.nixosSystem {
+          inherit specialArgs;
+          system = "x86_64-linux";
 
-	  modules = [
+          modules = [
             ./configuration.nix
             home-manager.nixosModules.home-manager
             nur.modules.nixos.default
@@ -52,15 +52,15 @@
             stylix.nixosModules.stylix
             {
               home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              extraSpecialArgs = {inherit inputs;};
-              sharedModules = [stylix.homeModules.stylix];
-              users.byte = import ./home/home.nix;
-            };
-          }
-        ];
-      };
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                extraSpecialArgs = {inherit inputs;};
+                sharedModules = [stylix.homeModules.stylix];
+                users.byte = import ./home/home.nix;
+              };
+            }
+          ];
+        };
     };
   };
 }
