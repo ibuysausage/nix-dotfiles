@@ -1,7 +1,8 @@
 {pkgs, ...}: {
   stylix = {
     enable = true;
-    base16Scheme = ./themes/henna.yaml;
+    base16Scheme = ./themes/uwunicorn.yaml;
+    image = ./wallpapers/purple-anime-girl.png;
 
     targets = {
       neovim.enable = true;

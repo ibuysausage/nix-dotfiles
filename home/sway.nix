@@ -106,10 +106,6 @@
       };
 
       output = {
-        "*" = {
-          bg = "${config.home.homeDirectory}/Pictures/Wallpapers/fractal.png fill";
-        };
-
         eDP-1 = {
           mode = "1920x1080";
         };
