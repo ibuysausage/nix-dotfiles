@@ -24,7 +24,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     niri-flake = {
-      url = "path:/home/byte/niri-flake";
+      url = "github:bugeats/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     grub2-themes = {
