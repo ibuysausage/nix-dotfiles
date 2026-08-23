@@ -5,6 +5,13 @@
     base16Scheme = ./themes/uwunicorn.yaml;
     image = ./wallpapers/purple-anime-girl.png;
 
+    icons = {
+      enable = true;
+      package = pkgs.candy-icons;
+      dark = "candy-icons";
+      light = "candy-icons";
+    };
+
     cursor = {
       name = "Adwaita";
       package = pkgs.adwaita-icon-theme;

@@ -27,6 +27,7 @@
     unzip
     adwaita-icon-theme
     papirus-icon-theme
+    candy-icons
     jellyfin-tui
     ffmpeg
     haruna
