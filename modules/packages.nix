@@ -53,6 +53,7 @@
     clang-tools
     cmake-language-server
     marksman
+    rust-analyzer
     inputs.byte-nur.packages.${pkgs.system}.crdl
     inputs.byte-nur.packages.${pkgs.system}.waifufetch
   ];
