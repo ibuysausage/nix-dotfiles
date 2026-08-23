@@ -19,6 +19,7 @@
       allow_remote_control yes
       listen_on unix:/tmp/kitty
       map ctrl+shift+a>i set_background_opacity 1
+      map ctrl+shift+a>u set_background_opacity 0.8
       kitty_mod ctrl+shift
     '';
   };
