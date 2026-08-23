@@ -19,11 +19,6 @@
     source = ./scripts/brightness.sh;
   };
 
-  xdg.configFile."rofi" = {
-    source = ./rofi;
-    recursive = true;
-  };
-
   home.file.".config/ohmyposh/omp.toml" = {
     source = ./omp/omp.toml;
   };

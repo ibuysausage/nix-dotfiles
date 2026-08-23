@@ -59,10 +59,14 @@
             }
             {
               home-manager = {
-                useGlobalPkgs = true;
                 useUserPackages = true;
                 extraSpecialArgs = {inherit inputs;};
-                sharedModules = [stylix.homeModules.stylix niri-flake.homeModules.niri niri-flake.homeModules.stylix];
+                sharedModules = [
+                  # stylix.homeModules.stylix
+                  niri-flake.homeModules.niri
+                  niri-flake.homeModules.stylix
+                  nur.modules.homeManager.default
+                ];
                 users.byte = import ./home/home.nix;
               };
             }

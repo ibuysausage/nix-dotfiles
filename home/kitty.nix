@@ -4,6 +4,7 @@
     shellIntegration.enableZshIntegration = true;
 
     extraConfig = ''
+      dynamic_background_opacity yes
       cursor_shape beam
       cursor_beam_thickness 1.8
       cursor_trail 200
@@ -15,6 +16,9 @@
       tab_powerline_style round
       background_opacity 0.80
       shell_integration enabled
+      allow_remote_control yes
+      listen_on unix:/tmp/kitty
+      map ctrl+shift+a>i set_background_opacity 1
       kitty_mod ctrl+shift
       font_size 11
     '';

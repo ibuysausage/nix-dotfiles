@@ -26,6 +26,7 @@
     fd
     unzip
     adwaita-icon-theme
+    papirus-icon-theme
     jellyfin-tui
     ffmpeg
     haruna
@@ -35,6 +36,7 @@
     lazygit
     noctalia
     alejandra
+    protonmail-desktop
     # nvim junk
     # lua have to be 5.1
     # lua51Packages.jsregexp

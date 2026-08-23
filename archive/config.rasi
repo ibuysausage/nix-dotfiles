@@ -178,4 +178,3 @@ configuration{
     kb-move-char-forward: "Control+f";
     kb-mode-complete: "Control+o";
 }
-@theme "/home/byte/.config/rofi/tokyonight.rasi"
