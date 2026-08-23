@@ -26,36 +26,36 @@
 --	end,
 --    },
 return {
-    {
-	"nvim-lualine/lualine.nvim",
-	    dependencies = {
-		"nvim-tree/nvim-web-devicons"
-	    },
-	    opts = {
-		options = {
-		    theme = "gruvbox",
-	    },
+	{
+		"nvim-lualine/lualine.nvim",
+		dependencies = {
+			"nvim-tree/nvim-web-devicons"
+		},
+		opts = {
+			options = {
+				theme = "auto",
+			},
+		},
 	},
-    },
---	"https://codeberg.org/jthvai/lavender.nvim",
---	branch = "stable",
---	lazy = false,
---	config = function ()
---	    if theme == "lavender" then
---	    	vim.cmd.colorscheme("lavender")
---		enable_transparency()
---	    end
---	end
---    },
- --   {
---	"keremimo/noctalia.nvim",
---	main = "noctalia",
---	lazy = false,
---	config = function ()
---	    if theme == "noctalia" then
---	    	vim.cmd.colorscheme("noctalia")
---		enable_transparency ()
---	    end
---	end
- --   },
+	--	"https://codeberg.org/jthvai/lavender.nvim",
+	--	branch = "stable",
+	--	lazy = false,
+	--	config = function ()
+	--	    if theme == "lavender" then
+	--	    	vim.cmd.colorscheme("lavender")
+	--		enable_transparency()
+	--	    end
+	--	end
+	--    },
+	--   {
+	--	"keremimo/noctalia.nvim",
+	--	main = "noctalia",
+	--	lazy = false,
+	--	config = function ()
+	--	    if theme == "noctalia" then
+	--	    	vim.cmd.colorscheme("noctalia")
+	--		enable_transparency ()
+	--	    end
+	--	end
+	--   },
 }
