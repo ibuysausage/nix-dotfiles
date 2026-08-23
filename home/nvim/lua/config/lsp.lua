@@ -35,7 +35,19 @@ vim.lsp.config("nixd", {
   },
 })
 
-vim.lsp.enable({ 'lua_ls', 'nixd', 'clangd', 'cmake', 'marksman', 'rust-analyzer',})
+vim.lsp.config("rust-analyzer", {
+  cmd = { 'rust-analyzer' },
+  filetypes = { 'rust' },
+  root_markers = { 'Cargo.toml', 'rust-project.json' },
+    settings = {
+      ['rust-analyzer'] = {
+	cargo = { allFeatures = true },
+	checkOnSave = { command = 'clippy' },
+      },
+    };
+})
+
+vim.lsp.enable({ 'lua_ls', 'nixd', 'clangd', 'cmake', 'marksman', 'rust-analyzer', })
 
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)

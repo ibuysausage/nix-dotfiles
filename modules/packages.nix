@@ -37,6 +37,10 @@
     noctalia
     alejandra
     protonmail-desktop
+    rustc
+    rustfmt
+    clippy
+    cargo
     # nvim junk
     # lua have to be 5.1
     # lua51Packages.jsregexp
