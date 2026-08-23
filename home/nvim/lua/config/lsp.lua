@@ -27,8 +27,7 @@ vim.lsp.config("nixd", {
           expr = '(builtins.getFlake (toString /etc/nixos)).nixosConfigurations.wildfire.options',
         },
         home_manager = {
-          -- expr = '(builtins.getFlake (toString /etc/nixos)).homeConfigurations."byte@wildfire".options',
-					expr = '(builtins.getFlake (builtins.toString /etc/nixos)).nixosConfigurations.wildfire.options.home-manager.users.type.getSubOptions []',
+	  expr = '(builtins.getFlake (builtins.toString /etc/nixos)).nixosConfigurations.wildfire.options.home-manager.users.type.getSubOptions []',
         },
       },
     },
@@ -57,6 +56,15 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
     vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+    if client and client:supports_method('textDocument/formatting') then
+      vim.api.nvim_create_autocmd('BufWritePre', {
+        buffer = args.buf,
+        callback = function()
+          vim.lsp.buf.format({ bufnr = args.buf, id = client.id })
+        end,
+      })
+    end
   end,
 })
 
