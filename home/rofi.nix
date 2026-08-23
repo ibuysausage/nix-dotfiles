@@ -1,8 +1,13 @@
-{config, ...}: let
+{
+  config,
+  pkgs,
+  ...
+}: let
   inherit (config.lib.formats.rasi) mkLiteral;
 in {
   programs.rofi = {
     enable = true;
+    terminal = "${pkgs.kitty}/bin/gnome-terminal";
 
     extraConfig = {
       modi = "drun,window,run";
