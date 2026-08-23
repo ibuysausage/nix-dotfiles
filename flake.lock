@@ -201,6 +201,26 @@
         "type": "gitlab"
       }
     },
+    "grub2-themes": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1786498865,
+        "narHash": "sha256-yvnz/8Nh4iq67X27Vf2oD181SqnYi01M6VnSxBt5qcg=",
+        "owner": "vinceliuice",
+        "repo": "grub2-themes",
+        "rev": "241d3be041c2823cf2430fe2f44bca2215331d67",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vinceliuice",
+        "repo": "grub2-themes",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -358,6 +378,7 @@
       "inputs": {
         "byte-nur": "byte-nur",
         "disko": "disko",
+        "grub2-themes": "grub2-themes",
         "home-manager": "home-manager",
         "niri-flake": "niri-flake",
         "nixpkgs": "nixpkgs",

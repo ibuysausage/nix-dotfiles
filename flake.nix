@@ -27,6 +27,10 @@
       url = "path:/home/byte/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    grub2-themes = {
+      url = "github:vinceliuice/grub2-themes";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -37,6 +41,7 @@
     disko,
     stylix,
     niri-flake,
+    grub2-themes,
     ...
   } @ inputs: {
     nixosConfigurations = {
@@ -54,6 +59,7 @@
             nur.modules.nixos.default
             disko.nixosModules.disko
             stylix.nixosModules.stylix
+            grub2-themes.nixosModules.default
             {
               nixpkgs.overlays = [inputs.niri-flake.overlays.niri];
             }
@@ -62,6 +68,7 @@
                 useUserPackages = true;
                 extraSpecialArgs = {inherit inputs;};
                 sharedModules = [
+                  # Stylix home module is auto imported
                   # stylix.homeModules.stylix
                   niri-flake.homeModules.niri
                   niri-flake.homeModules.stylix

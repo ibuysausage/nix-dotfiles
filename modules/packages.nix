@@ -38,6 +38,7 @@
     noctalia
     alejandra
     protonmail-desktop
+    quickshell
     #rustc
     #rustfmt
     #clippy

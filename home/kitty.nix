@@ -20,7 +20,6 @@
       listen_on unix:/tmp/kitty
       map ctrl+shift+a>i set_background_opacity 1
       kitty_mod ctrl+shift
-      font_size 11
     '';
   };
 }
