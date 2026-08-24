@@ -47,13 +47,7 @@ vim.lsp.config("rust-analyzer", {
 	},
 })
 
-vim.lsp.config("qmls", {
-    cmd = { 'qmls' },
-    filetyps = { 'qml'},
-})
-
-
-vim.lsp.enable({ 'lua_ls', 'nixd', 'clangd', 'cmake', 'marksman', 'rust-analyzer', 'qmls', })
+vim.lsp.enable({ 'lua_ls', 'nixd', 'clangd', 'cmake', 'marksman', 'rust-analyzer', })
 
 vim.api.nvim_create_autocmd('LspAttach', {
 	callback = function(args)

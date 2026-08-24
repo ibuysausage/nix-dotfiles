@@ -40,10 +40,6 @@ in {
     noctalia
     alejandra
     protonmail-desktop
-    quickshell
-    qt6.qt5compat
-    qt6.qtbase
-    qt5.qtbase
     #rustc
     #rustfmt
     #clippy
