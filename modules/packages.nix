@@ -3,7 +3,7 @@
   inputs,
   ...
 }: let
-  system = "stdenv.hostPlatform.system";
+  system = pkgs.stdenv.hostPlatform.system;
 in {
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
@@ -41,6 +41,9 @@ in {
     alejandra
     protonmail-desktop
     quickshell
+    qt6.qt5compat
+    qt6.qtbase
+    qt5.qtbase
     #rustc
     #rustfmt
     #clippy
@@ -62,8 +65,8 @@ in {
     cmake-language-server
     marksman
     rust-analyzer
-    inputs.byte-nur.packages.pkgs.${system}.crdl
-    inputs.byte-nur.packages.pkgs.${system}.waifufetch
+    inputs.byte-nur.packages.${system}.crdl
+    inputs.byte-nur.packages.${system}.waifufetch
   ];
 
   fonts.packages = with pkgs; [
