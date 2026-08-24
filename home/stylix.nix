@@ -24,6 +24,7 @@
       niri.enable = true;
       gtk.enable = true;
       qt.enable = true;
+      librewolf.enable = true;
 
       rofi = {
         enable = true;
