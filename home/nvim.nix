@@ -5,7 +5,7 @@
     viAlias = true;
     vimAlias = true;
     waylandSupport = true;
-    withPython3 = true;
+    extraLuaPackages = luaPkgs: [luaPkgs.jsregexp];
 
     initLua = builtins.readFile ./nvim/init.lua;
   };
