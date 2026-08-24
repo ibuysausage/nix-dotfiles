@@ -100,6 +100,7 @@ update-input input:
 [group('maintenance')]
 gc days="7d":
     sudo nix-collect-garbage --delete-older-than {{days}}
+    nix store gc
     nix store optimise
 
 # List system generations
@@ -111,6 +112,14 @@ generations:
 [group('maintenance')]
 rollback:
     sudo nixos-rebuild switch --rollback
+
+[group('maintenance')]
+permissions:
+    sudo find {{flake}}  -type d -exec chmod 0755 {} +
+    sudo find {{flake}}  -type f -name '*.sh' -exec chmod 0755 {} +
+    sudo find {{flake}} -type f ! -name '*.sh' -exec chmod 0644 {} +
+    sudo chown -R 1000:100 {{flake}}
+
 
 # ═══ checks & quality ═════════════════════════════════════════════════════
 
