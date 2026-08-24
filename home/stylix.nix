@@ -24,7 +24,11 @@
       niri.enable = true;
       gtk.enable = true;
       qt.enable = true;
-      librewolf.enable = true;
+
+      librewolf = {
+        enable = true;
+        profileNames = ["byte"];
+      };
 
       rofi = {
         enable = true;

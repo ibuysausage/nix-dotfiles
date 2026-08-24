@@ -13,6 +13,9 @@ in {
       isDefault = true;
       path = "default";
       settings = {
+        "ui.systemUsesDarkTheme" = 1;
+        "browser.theme.content-theme" = 0;
+        "browser.theme.toolbar-theme" = 0;
         toolkit.legacyUserProfileCustomizations.stylesheets = true;
         svg.context-properties.content.enabled = true;
         browser.urlbar.scotchBonnet.enableOverride = false;
