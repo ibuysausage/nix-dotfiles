@@ -1,4 +1,4 @@
-the librewolf theme is forked from [ https://github.com/nuclearcodecat/shimmer ] (https://github.com/nuclearcodecat/shimmer)
+the librewolf theme is forked from [https://github.com/nuclearcodecat/shimmer] (https://github.com/nuclearcodecat/shimmer)
 
   ### Side berry bar config
   - open sidebery settings, scroll to the bottom (help section)
