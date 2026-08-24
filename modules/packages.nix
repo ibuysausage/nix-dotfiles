@@ -17,6 +17,7 @@ in {
     kitty
     home-manager
     librewolf
+    firefox
     fzf
     oh-my-posh
     eza
