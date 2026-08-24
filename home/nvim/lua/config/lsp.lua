@@ -4,6 +4,14 @@ vim.lsp.config('*', {
 	capabilities = capabilities,
 })
 
+vim.filetype.add({ extension = { mdx = "markdown.mdx" } })
+vim.filetype.add({
+	extension = {
+		c = "c.doxygen",
+		cpp = "cpp.doxygen",
+	},
+})
+
 vim.lsp.config('lua_ls', {
 	settings = {
 		Lua = { diagnostics = { globals = { 'vim' } } },
@@ -48,6 +56,7 @@ vim.lsp.config("rust-analyzer", {
 })
 
 vim.lsp.enable({ 'lua_ls', 'nixd', 'clangd', 'cmake', 'marksman', 'rust-analyzer', })
+
 
 vim.api.nvim_create_autocmd('LspAttach', {
 	callback = function(args)
