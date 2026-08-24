@@ -39,6 +39,7 @@ in {
     just
     lazygit
     noctalia
+    quickshell
     alejandra
     kdePackages.dolphin
     kdePackages.kio-extras
