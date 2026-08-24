@@ -13,8 +13,8 @@
 
     history = {
       path = "${config.home.homeDirectory}/.histfile";
-      size = 100;
-      save = 100;
+      size = 1000;
+      save = 1000;
     };
 
     # I have no clue about the unsetopt
