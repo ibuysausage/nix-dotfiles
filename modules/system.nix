@@ -53,5 +53,18 @@
     wheelNeedsPassword = false;
   };
 
+  xdg.portal = {
+    enable = true;
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gtk
+    ];
+    config = {
+      niri = {
+        default = ["gnome"];
+        "org.freedesktop.impl.portal.FileChooser" = ["kde"];
+      };
+    };
+  };
+
   environment.variables.EDITOR = "nvim";
 }

@@ -39,7 +39,11 @@ in {
     lazygit
     noctalia
     alejandra
-    protonmail-desktop
+    kdePackages.dolphin
+    kdePackages.kio-extras
+    kdePackages.xdg-desktop-portal-kde
+    kdePackages.kconfig
+    kdePackages.kservice
     # nvim junk
     # lua have to be 5.1
     gcc

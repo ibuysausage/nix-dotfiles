@@ -1,4 +1,4 @@
-{...}: {
+{lib, ...}: {
   home.file."Pictures/Wallpapers" = {
     source = ./wallpapers;
     recursive = true;
@@ -23,23 +23,6 @@
     source = ./omp/omp.toml;
   };
 
-  home.file.".librewolf/default/chrome/walls.css" = {
-    source = ./librewolf/walls.css;
-  };
-
-  home.file.".librewolf/default/chrome/userChrome.css" = {
-    source = ./librewolf/userChrome.css;
-  };
-
-  home.file.".librewolf/default/chrome/userContent.css" = {
-    source = ./librewolf/userContent.css;
-  };
-
-  home.file.".librewolf/default/chrome/assets" = {
-    source = ./librewolf/assets;
-    recursive = true;
-  };
-
   xdg.configFile."nvim/lua" = {
     source = ./nvim/lua;
     recursive = true;
@@ -49,4 +32,9 @@
     source = ./noctalia;
     recursive = true;
   };
+
+  xdg.configFile."kdeglobals".text = lib.mkForce ''
+    [Icons]
+    Theme=candy-icons
+  '';
 }

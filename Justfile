@@ -81,7 +81,7 @@ disko-mount:
 [group('disko')]
 [confirm("This wipes the target disk(s) and installs NixOS. Continue?")]
 install host=host:
-    sudo nix run github:nix-community/disko -- --mode disko {{flake}}/disko.nix
+    sudo nix run github:nix-community/disko -- --mode destroy,format,mount {{flake}}/disko.nix
     sudo nixos-install --flake {{flake}}#{{host}} --no-root-passwd
 
 # ═══ maintenance ══════════════════════════════════════════════════════════
