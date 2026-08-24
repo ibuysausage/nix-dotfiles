@@ -1,8 +1,4 @@
-{
-  pkgs,
-  config,
-  ...
-}: let
+{pkgs, ...}: let
   shimmer = pkgs.fetchFromGitHub {
     owner = "nuclearcodecat";
     repo = "shimmer";
@@ -15,12 +11,13 @@ in {
     profiles.byte = {
       id = 0;
       isDefault = true;
-      path = "${config.home.homeDirectory}/.config/librewolf";
+      path = "default";
       settings = {
         toolkit.legacyUserProfileCustomizations.stylesheets = true;
         svg.context-properties.content.enabled = true;
         browser.urlbar.scotchBonnet.enableOverride = false;
         sidebar.revamp = false;
+        shimmer.enable-theme-aware-wallpapers = true;
       };
       userChrome = builtins.readFile "${shimmer}/userChrome.css";
       userContent = builtins.readFile "${shimmer}/userContent.css";

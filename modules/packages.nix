@@ -27,6 +27,7 @@ in {
     libnotify
     fd
     unzip
+    file
     adwaita-icon-theme
     papirus-icon-theme
     candy-icons
