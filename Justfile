@@ -120,6 +120,9 @@ permissions:
     sudo find {{flake}} -type f ! -name '*.sh' -exec chmod 0644 {} +
     sudo chown -R 1000:100 {{flake}}
 
+[group('maintenance')]
+flake-lock:
+    gh workflow run "Update flake.lock"
 
 # ═══ checks & quality ═════════════════════════════════════════════════════
 
