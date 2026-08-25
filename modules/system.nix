@@ -3,25 +3,39 @@
   inputs,
   ...
 }: {
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
+  nix = {
+    settings = {
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
 
-  nix.settings.trusted-users = ["root" "byte"];
+      trusted-users = ["root" "byte"];
 
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 7d";
+      substituters = [
+        "https://cache.nixos.org/"
+        "https://niri-epireyn.cachix.org"
+      ];
+
+      trusted-public-keys = [
+        "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+        "niri-epireyn.cachix.org-1:tlVyFN7CtsDT+ZcLPS+ekFWeT1X6X4OqvWqbBMyIzFA="
+      ];
+    };
+
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
+
+    optimise = {
+      automatic = true;
+      dates = ["12:00"];
+    };
+
+    nixPath = ["nixpkgs=${inputs.nixpkgs}"];
   };
-
-  nix.optimise = {
-    automatic = true;
-    dates = ["12:00"];
-  };
-
-  nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
 
   networking.hostName = "wildfire";
   networking.networkmanager.enable = true;
