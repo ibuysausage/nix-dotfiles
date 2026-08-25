@@ -41,3 +41,4 @@ jobs:
           gh pr merge "$PR" \
             --repo "${{ github.repository }}" \
             --squash
+            --subject "Update flake.lock (#$PR)"
