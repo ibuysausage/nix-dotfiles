@@ -67,8 +67,7 @@
                 useUserPackages = true;
                 extraSpecialArgs = {inherit inputs;};
                 sharedModules = [
-                  # Stylix home module is auto imported
-                  # stylix.homeModules.stylix
+                  # stylix home module is auto imported
                   niri-flake.homeModules.niri
                   niri-flake.homeModules.stylix
                   nur.modules.homeManager.default
