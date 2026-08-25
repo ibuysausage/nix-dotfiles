@@ -1,12 +1,12 @@
-he librewolf theme is forked from [nuclearcodecat/shimmer] (https://github.com/nuclearcodecat/shimmer)
+The librewolf theme is forked from [nuclearcodecat/shimmer](https://github.com/nuclearcodecat/shimmer).
 
-### Sideberry config is no reproducable or declarative
+### Sideberry config is not reproducable or declarative
 **:(**
 - open sidebery settings, scroll to the bottom (help section)
 - click on "import addon data"
 - select "sidebery.json" from '''./home/archive/sidebery.json'''
 - keep the toggles at default and click "import"
 
-The archive folder is for old config that is not used any more</br>
+The archive folder is for old config that is not used any more.</br>
 but I don't want to throw it away because my precious time was</br>
 spend on it :)
