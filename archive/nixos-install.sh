@@ -191,7 +191,7 @@ fi
 step "Partitioning and formatting disk via disko (${host})"
 nix run github:nix-community/disko/latest -- \
   --mode destroy,format,mount \
-  --flake "${FLAKE_REF}#${host}"
+  --flake "${FLAKE_REF}#${host}" --yes-wipe-all-disks
 success "Disk partitioned, formatted, and mounted"
 
 # ---------- clone config ----------
