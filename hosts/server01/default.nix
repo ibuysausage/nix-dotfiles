@@ -4,9 +4,9 @@
   imports = [
     ./hardware-configuration.nix
     ./disko.nix
-    ../../modules/boot.nix
-    ../../modules/packages.nix
-    ../../modules/stylix.nix
+    ../../modules/server01/boot.nix
+    ../../modules/server01/packages.nix
+    ../../modules/server01/stylix.nix
   ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
