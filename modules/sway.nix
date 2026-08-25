@@ -9,7 +9,6 @@
       swaynotificationcenter
       pulseaudio
       swaybg
-      swaylock
       playerctl
       autotiling
     ];
