@@ -46,7 +46,7 @@ banner
 
 # ---------- discover available hosts from the flake ----------
 step "Looking up available host configurations from ${FLAKE_REF}"
-info "(this asks the flake directly, no clone needed yet)"
+info "(this may take a while)"
 
 HOSTS_JSON="$(nix eval --json "${FLAKE_REF}#nixosConfigurations" --apply builtins.attrNames 2>/dev/null || true)"
 
@@ -99,8 +99,8 @@ success "Config cloned"
 # ---------- hardware config check ----------
 step "Generating hardware configuration for review"
 info "Probing the actual mounted system at /mnt (filesystems skipped — disko owns those)"
-nixos-generate-config --root /mnt --no-filesystems --dir /tmp/hwcheck
-success "Hardware check written to /tmp/hwcheck/hardware-configuration.nix"
+nixos-generate-config --root /mnt --no-filesystems --dir /mnt/etc/nixos/hosts/${host}
+success "Hardware check written to /mnt/etc/nixos/${host}/hardware-configuration.nix"
 info "Compare it against /mnt/etc/nixos/${host}/hardware-configuration.nix if that file exists"
 
 # ---------- install ----------
