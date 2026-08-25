@@ -1,4 +1,4 @@
-the librewolf theme is forked from [https://github.com/nuclearcodecat/shimmer] (https://github.com/nuclearcodecat/shimmer)
+he librewolf theme is forked from [nuclearcodecat/shimmer] (https://github.com/nuclearcodecat/shimmer)
 
 ### Sideberry config is no reproducable or declarative
 **:(**
