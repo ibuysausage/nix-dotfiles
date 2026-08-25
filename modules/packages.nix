@@ -39,6 +39,8 @@ in {
     tree
     just
     lazygit
+    git
+    gh
     noctalia
     quickshell
     alejandra
