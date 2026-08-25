@@ -38,6 +38,10 @@ jobs:
 
           echo "Merging PR #$PR"
 
+          gh pr edit "$PR" \
+            --repo "${{ github.repository }}" \
+            --title "Update flake.lock"
+
           gh pr merge "$PR" \
             --repo "${{ github.repository }}" \
             --squash
