@@ -60,6 +60,11 @@ else
   warn "Couldn't set up zram swap (module unavailable) — continuing without it"
 fi
 
+# ---------- clear out any leftovers from a previous attempt ----------
+step "Garbage-collecting any store paths from earlier attempts"
+nix-collect-garbage -d >/dev/null 2>&1 || true
+success "Store cleaned up"
+
 # ---------- discover available hosts from the flake ----------
 step "Looking up available host configurations from ${FLAKE_REF}"
 info "This evaluates the flake over the network — this may take a while on first run"
@@ -129,7 +134,7 @@ success "Config cloned"
 step "Generating hardware configuration for review"
 info "Probing the actual mounted system at /mnt (filesystems skipped — disko owns those)"
 nixos-generate-config --root /mnt --no-filesystems --dir /etc/nixos/hosts/${host}
-success "Hardware check written to /tmp/hwcheck/hardware-configuration.nix"
+success "Hardware check written to /etc/nixos/hosts/${host}/hardware-configuration.nix"
 info "Compare it against /mnt/etc/nixos/hosts/${host}/hardware-configuration.nix if that file exists"
 
 # ---------- install ----------
