@@ -4,7 +4,7 @@
 
     # Needed for cachix
     trusted-users = ["root" "byte"];
-    accept-flake-config = true;
+    settings.accept-flake-config = true;
   };
 
   networking.hostName = "server01";
