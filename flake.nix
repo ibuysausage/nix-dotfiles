@@ -88,6 +88,8 @@
           system = "x86_64-linux";
           modules = [
             disko.nixosModules.disko
+            stylix.nixosModules.stylix
+            grub2-themes.nixosModules.default
             ./hosts/server01/default.nix
           ];
         };

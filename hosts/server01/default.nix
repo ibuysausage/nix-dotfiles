@@ -1,29 +1,92 @@
 # Edit this configuration file to define what should be installed on
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
-{ config, lib, pkgs, ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./disko.nix
-    ];
+  config,
+  pkgs,
+  ...
+}: let
+  c = config.lib.stylix.colors.withHashtag;
+  mono = config.stylix.fonts.monospace.name;
+in {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./disko.nix
+  ];
 
   # Use the systemd-boot EFI boot loader.
   #boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  
+
   boot.loader.grub = {
     enable = true;
     efiSupport = true;
     device = "nodev";
+    font = "${config.stylix.fonts.monospace.package}/share/fonts/truetype/NerdFonts/CaskaydiaCove/CaskaydiaCoveNerdFontMono-Regular.ttf";
+    fontSize = 20;
   };
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  # networking.hostName = "nixos"; # Define your hostname.
+  boot.loader.grub2-theme = {
+    enable = true;
+    theme = "vimix";
+    customResolution = "1920x1080";
+
+    splashImage = config.stylix.image;
+
+    bootMenuConfig = ''
+      left = 30%
+      top = 30%
+      width = 40%
+      height = 40%
+      item_font = "${mono} 16"
+      item_color = "${c.base05}"
+      selected_item_color = "${c.base0D}"
+      icon_width = 32
+      icon_height = 32
+      item_icon_space = 20
+      item_height = 36
+      item_padding = 5
+      item_spacing = 10
+      selected_item_pixmap_style = "select_*.png"
+    '';
+
+    terminalConfig = ''
+      terminal-font: "${mono} 14"
+      terminal-box: "terminal_box_*.png"
+      terminal-width: "100%"
+      terminal-height: "100%"
+      terminal-border: "0"
+    '';
+  };
+
+  stylix = {
+    enable = true;
+    autoEnable = true;
+    image = ../../home/wallpapers/purple-anime-girl.png;
+    base16Scheme = ../../home/themes/uwunicorn.yaml;
+
+    fonts.monospace = {
+      package = pkgs.nerd-fonts.caskaydia-cove;
+      name = "CaskaydiaCove Nerd Font Mono";
+    };
+
+    targets.grub = {
+      enable = false;
+      useWallpaper = true;
+    };
+
+    icons = {
+      enable = true;
+      package = pkgs.candy-icons;
+      dark = "candy-icons";
+      light = "candy-icons";
+    };
+  };
+
+  networking.hostName = "server01";
 
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
@@ -45,9 +108,6 @@
 
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
-
-
-  
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
@@ -81,9 +141,10 @@
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
-     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-     wget
-     git
+    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    wget
+    git
+    just
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -128,6 +189,4 @@
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "26.05"; # Did you read the comment?
-
 }
-
