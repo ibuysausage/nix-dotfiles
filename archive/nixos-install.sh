@@ -32,7 +32,7 @@ banner() {
   | |\  | |>  <| |__| | ___) |
   |_| \_|_/_/\_\\____/ |____/
 EOF
-  printf "%s\n" "${RESET}${CYAN}${BOLD}       nix-dotfiles installer${RESET}"
+  printf "%s\n" "${RESET}${CYAN}${BOLD}       nixos + dotfiles installer${RESET}"
   hr
 }
 
