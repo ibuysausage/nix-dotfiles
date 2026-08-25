@@ -86,6 +86,7 @@ fi
 
 # ---------- disko: partition, format, mount ----------
 step "Partitioning and formatting disk via disko (${host})"
+nix-collect-garbage -d
 nix run github:nix-community/disko/latest -- \
   --mode destroy,format,mount \
   --flake "${FLAKE_REF}#${host}"
