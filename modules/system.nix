@@ -8,6 +8,8 @@
     "flakes"
   ];
 
+  nix.settings.trusted-users = ["root" "byte"];
+
   nix.gc = {
     automatic = true;
     dates = "weekly";
