@@ -4,10 +4,10 @@
 # ------------------------------------------------------------------
 set -euo pipefail
 
-export NIX_CONFIG="experimental-features = nix-command flakes"
+export NIX_CONFIG="experimental-features = nix-command flakes
+accept-flake-config = true"
 
-REPO_URL="https://github.com/ibuysausage/nix-dotfiles.git"
-FLAKE_REF="github:ibuysausage/nix-dotfiles"
+DEFAULT_REPO="ibuysausage/nix-dotfiles"
 
 # ---------- colors ----------
 RESET=$'\e[0m'
@@ -32,7 +32,7 @@ banner() {
   | |\  | |>  <| |__| | ___) |
   |_| \_|_/_/\_\\____/ |____/
 EOF
-  printf "%s\n" "${RESET}${CYAN}${BOLD}       nixox + dotfiles installer${RESET}"
+  printf "%s\n" "${RESET}${CYAN}${BOLD}       nixox flake installer${RESET}"
   hr
 }
 
@@ -42,7 +42,62 @@ success() { printf "%s\n" "${GREEN}${BOLD}✔ $*${RESET}"; }
 warn()    { printf "%s\n" "${YELLOW}${BOLD}⚠ $*${RESET}"; }
 error()   { printf "%s\n" "${RED}${BOLD}✘ $*${RESET}" >&2; }
 
+# Figures out REPO_URL (for git clone) and FLAKE_REF (for nix) from
+# whatever format the user typed in: owner/repo, github:owner/repo,
+# gitlab:owner/repo, sourcehut:~owner/repo, or a full git URL.
+normalize_repo() {
+  local input="$1"
+  case "${input}" in
+    github:*|gitlab:*|sourcehut:*)
+      FLAKE_REF="${input}"
+      local rest="${input#*:}"
+      case "${input}" in
+        github:*) REPO_URL="https://github.com/${rest}.git" ;;
+        gitlab:*) REPO_URL="https://gitlab.com/${rest}.git" ;;
+        sourcehut:*) REPO_URL="https://git.sr.ht/${rest}" ;;
+      esac
+      ;;
+    git+*)
+      FLAKE_REF="${input}"
+      REPO_URL="${input#git+}"
+      ;;
+    http://*|https://*|git@*)
+      REPO_URL="${input}"
+      if [[ "${input}" == *github.com* ]]; then
+        local owner_repo
+        owner_repo="$(printf '%s' "${input}" | sed -E 's#.*github\.com[:/]+([^/]+/[^/.]+)(\.git)?/?$#\1#')"
+        FLAKE_REF="github:${owner_repo}"
+      else
+        FLAKE_REF="git+${input}"
+      fi
+      ;;
+    */*)
+      FLAKE_REF="github:${input}"
+      REPO_URL="https://github.com/${input}.git"
+      ;;
+    *)
+      error "Couldn't understand '${input}' as a repo reference."
+      return 1
+      ;;
+  esac
+}
+
 banner
+
+step "Which configuration repository do you want to install?"
+info "Accepts: owner/repo, github:owner/repo, gitlab:owner/repo, or a full git URL"
+printf "%s" "${CYAN}${BOLD}Repository [${DEFAULT_REPO}]: ${RESET}"
+read -r repo_input
+repo_input="${repo_input:-${DEFAULT_REPO}}"
+
+if ! normalize_repo "${repo_input}"; then
+  exit 1
+fi
+success "Using ${FLAKE_REF}"
+info "(clone source: ${REPO_URL})"
+
+IS_OWN_REPO=false
+[[ "${FLAKE_REF}" == "github:${DEFAULT_REPO}" ]] && IS_OWN_REPO=true
 
 # ---------- give the live installer more breathing room ----------
 # On low-RAM machines the installer's root is tmpfs-backed, and evaluating
@@ -126,15 +181,21 @@ nix run github:nix-community/disko/latest -- \
 success "Disk partitioned, formatted, and mounted"
 
 # ---------- clone config ----------
-step "Cloning nix-dotfiles into /mnt/etc/nixos"
+step "Cloning configuration into /mnt/etc/nixos"
 git clone "${REPO_URL}" /mnt/etc/nixos
 success "Config cloned"
 
 # ---------- hardware config check ----------
 step "Generating hardware configuration for review"
 info "Probing the actual mounted system at /mnt (filesystems skipped — disko owns those)"
-nixos-generate-config --root /mnt --no-filesystems --dir /etc/nixos/hosts/${host}
-success "Hardware check written to /etc/nixos/hosts/${host}/hardware-configuration.nix"
+if [[ "${IS_OWN_REPO}" == true ]]; then
+  HW_DIR="/etc/nixos/hosts/${host}"
+else
+  HW_DIR="/tmp/hwcheck"
+  info "Using a neutral output dir since this isn't your own repo layout"
+fi
+nixos-generate-config --root /mnt --no-filesystems --dir "${HW_DIR}"
+success "Hardware check written to ${HW_DIR}/hardware-configuration.nix"
 info "Compare it against /mnt/etc/nixos/hosts/${host}/hardware-configuration.nix if that file exists"
 
 # ---------- install ----------
