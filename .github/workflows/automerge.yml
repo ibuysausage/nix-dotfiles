@@ -38,11 +38,11 @@ jobs:
 
           echo "Merging PR #$PR"
 
-          gh pr edit "$PR" \
-            --repo "${{ github.repository }}" \
-            --title "Update flake.lock (#$PR)"
+          gh pr update-branch "$PR" \
+            --repo "${{ github.repository }}"
 
-          gh pr merge "$PR" \
-            --repo "${{ github.repository }}" \
-            --squash
-
+          gh api \
+            --method PUT \
+            "/repos/${{ github.repository }}/pulls/$PR/merge" \
+            -f merge_method=squash \
+            -f commit_title="Update flake.lock (#$PR)"
