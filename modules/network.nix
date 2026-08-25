@@ -23,4 +23,6 @@
       setSocketVariable = true;
     };
   };
+
+  services.openssh.enable = true;
 }

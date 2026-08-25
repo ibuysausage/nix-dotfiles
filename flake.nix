@@ -53,8 +53,7 @@
           inherit specialArgs;
           system = "x86_64-linux";
           modules = [
-            ./configuration.nix
-            ./disko.nix
+            ./hosts/wildfire/default.nix
             home-manager.nixosModules.home-manager
             nur.modules.nixos.default
             disko.nixosModules.disko
@@ -74,9 +73,22 @@
                   niri-flake.homeModules.stylix
                   nur.modules.homeManager.default
                 ];
-                users.byte = import ./home/home.nix;
+                users.${username} = import ./users/${username}/home.nix;
               };
             }
+          ];
+        };
+
+      server01 = let
+        username = "root";
+        specialArgs = {inherit username inputs;};
+      in
+        nixpkgs.lib.nixosSystem {
+          inherit specialArgs;
+          system = "x86_64-linux";
+          modules = [
+            disko.nixosModules.disko
+            ./hosts/server01/default.nix
           ];
         };
     };
