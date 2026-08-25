@@ -27,7 +27,7 @@ PanelWindow {
 
   Poller {
     id: vol
-    command: "wpctl get-volume @DEFAULT_AUDIO_SINK | awk '{printf \"%d\", $2*100}'"
+    command: "wpctl get-volume $(wpctl inspect @DEFAULT_AUDIO_SINK@ | awk '/^id / {print $2; exit}') | awk '{printf \"%d\", $2*100}'"
     interval: 100
   }
 
