@@ -40,9 +40,9 @@ jobs:
 
           gh pr edit "$PR" \
             --repo "${{ github.repository }}" \
-            --title "Update flake.lock"
+            --title "Update flake.lock (#$PR)"
 
           gh pr merge "$PR" \
             --repo "${{ github.repository }}" \
             --squash
-            --subject "Update flake.lock (#$PR)"
+
