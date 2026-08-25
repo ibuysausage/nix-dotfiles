@@ -1,10 +1,11 @@
 {...}: {
   nix = {
-    experimental-features = ["nix-command" "flakes"];
-
-    # Needed for cachix
-    trusted-users = ["root" "byte"];
-    settings.accept-flake-config = true;
+    settings = {
+      experimental-features = ["nix-command" "flakes"];
+      # Needed for cachix
+      trusted-users = ["root" "byte"];
+      accept-flake-config = true;
+    };
   };
 
   networking.hostName = "server01";
