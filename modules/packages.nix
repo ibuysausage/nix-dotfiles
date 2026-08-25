@@ -35,6 +35,7 @@ in {
     ffmpeg
     haruna
     vvvvvv
+    cachix
     tree
     just
     lazygit
