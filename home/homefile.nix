@@ -33,6 +33,11 @@
     recursive = true;
   };
 
+  xdg.configFile."quickshell" = {
+    source = ./quickshell;
+    recursive = true;
+  };
+
   xdg.configFile."kdeglobals".text = lib.mkForce ''
     [Icons]
     Theme=candy-icons

@@ -98,6 +98,7 @@
 
       spawn-at-startup = [
         {argv = ["${pkgs.swaybg}/bin/swaybg" "-i" "${config.stylix.image}" "-m" "fill"];}
+        {argv = ["qs" "-c" "cheapbar"];}
       ];
 
       binds = {
