@@ -32,7 +32,7 @@ banner() {
   | |\  | |>  <| |__| | ___) |
   |_| \_|_/_/\_\\____/ |____/
 EOF
-  printf "%s\n" "${RESET}${CYAN}${BOLD}       nixox flake installer${RESET}"
+  printf "%s\n" "${RESET}${CYAN}${BOLD}       nixos + dotfiles installer${RESET}"
   hr
 }
 
@@ -114,6 +114,20 @@ if modprobe zram 2>/dev/null && [[ -e /sys/class/zram-control/hot_add ]]; then
 else
   warn "Couldn't set up zram swap (module unavailable) — continuing without it"
 fi
+
+# ---------- raise tmpfs size ceilings so they can actually use the new swap ----------
+# tmpfs mounts (root, and often a separate /nix/.rw-store overlay on the live
+# ISO) have a hard size limit set at boot, usually ~50% of RAM. Swap alone
+# doesn't raise that ceiling, so "no space left on device" can still happen
+# well before physical RAM+swap is exhausted. Bump the ceiling on every
+# tmpfs mount so it can actually take advantage of the swap we just added.
+step "Raising tmpfs size limits to use the new swap headroom"
+while read -r mnt; do
+  if mount -o remount,size=90% "${mnt}" 2>/dev/null; then
+    info "Resized tmpfs at ${mnt}"
+  fi
+done < <(findmnt -rt tmpfs -no TARGET 2>/dev/null || true)
+success "tmpfs limits raised where possible"
 
 # ---------- clear out any leftovers from a previous attempt ----------
 step "Garbage-collecting any store paths from earlier attempts"
