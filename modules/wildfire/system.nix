@@ -10,17 +10,9 @@
         "flakes"
       ];
 
+      # Needed for cachix
       trusted-users = ["root" "byte"];
-
-      substituters = [
-        "https://cache.nixos.org/"
-        "https://niri-epireyn.cachix.org"
-      ];
-
-      trusted-public-keys = [
-        "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-        "niri-epireyn.cachix.org-1:tlVyFN7CtsDT+ZcLPS+ekFWeT1X6X4OqvWqbBMyIzFA="
-      ];
+      accept-flake-config = true;
     };
 
     gc = {

@@ -6,26 +6,9 @@
     ./disko.nix
     ../../modules/server01/boot.nix
     ../../modules/server01/packages.nix
+    ../../modules/server01/system.nix
     ../../modules/server01/stylix.nix
   ];
-
-  nix.settings.experimental-features = ["nix-command" "flakes"];
-
-  networking.hostName = "server01";
-
-  networking.networkmanager.enable = true;
-
-  time.timeZone = "America/New_York";
-
-  i18n.defaultLocale = "en_US.UTF-8";
-
-  services.openssh.enable = true;
-
-  services.logind.settings.Login = {
-    HandleLidSwitch = "ignore";
-    HandleLidSwitchExternalPower = "ignore";
-    HandleLidSwitchDocked = "ignore";
-  };
 
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];

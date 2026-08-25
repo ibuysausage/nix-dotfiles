@@ -1,6 +1,18 @@
 {
   description = "My NixOS flake";
 
+  nixConfig = {
+    extra-substituters = [
+      "https://niri-epireyn.cachix.org"
+      "https://grub2-themes.cachix.org"
+    ];
+
+    extra-trusted-public-keys = [
+      "niri-epireyn.cachix.org-1:tlVyFN7CtsDT+ZcLPS+ekFWeT1X6X4OqvWqbBMyIzFA="
+      "grub2-themes.cachix.org-1:lmVtdlFNnVzVqgikQDgstzV0tdzA64pDxwEbyykfW14="
+    ];
+  };
+
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
