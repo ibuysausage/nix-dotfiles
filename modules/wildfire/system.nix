@@ -29,6 +29,10 @@
     nixPath = ["nixpkgs=${inputs.nixpkgs}"];
   };
 
+  services.udev.packages = [
+    pkgs.numworks-udev-rules
+  ];
+
   networking.hostName = "wildfire";
   networking.networkmanager.enable = true;
   time.timeZone = "America/New_York";
