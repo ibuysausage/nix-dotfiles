@@ -6,12 +6,14 @@
       "https://niri-epireyn.cachix.org"
       "https://grub2-themes.cachix.org"
       "https://ibuysausage-nur.cachix.org"
+      "https://fenix.cachix.org"
     ];
 
     extra-trusted-public-keys = [
       "niri-epireyn.cachix.org-1:tlVyFN7CtsDT+ZcLPS+ekFWeT1X6X4OqvWqbBMyIzFA="
       "grub2-themes.cachix.org-1:lmVtdlFNnVzVqgikQDgstzV0tdzA64pDxwEbyykfW14="
       "ibuysausage-nur.cachix.org-1:tqoAgFo/8AL/GhbOg9Cp9Fc46hHBnOCOw5V46knhH9I="
+      "fenix.cachix.org-1:ecJhr+RdYEdcVgUkjruiYhjbBloIEGov7bos90cZi0Q="
     ];
   };
 
