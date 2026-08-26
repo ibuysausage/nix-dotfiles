@@ -47,12 +47,6 @@ in {
     nixfmt
     # be safe :)
     clamav
-    # rust
-    rustc
-    rustfmt
-    rust-analyzer
-    cargo
-    clippy
     kdePackages.dolphin
     kdePackages.kio-extras
     kdePackages.xdg-desktop-portal-kde
