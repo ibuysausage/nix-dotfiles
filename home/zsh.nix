@@ -24,6 +24,7 @@
       fastfetch
       unsetopt BANG_HIST
       export PATH="$PATH:/run/current-system/bin"
+      export PATH="$PATH:/home/byte/.cargo/bin"
 
     '';
   };
