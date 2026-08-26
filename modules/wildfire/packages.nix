@@ -44,6 +44,9 @@ in {
     noctalia
     quickshell
     alejandra
+    nixfmt
+    # be safe :)
+    clamav
     kdePackages.dolphin
     kdePackages.kio-extras
     kdePackages.xdg-desktop-portal-kde
