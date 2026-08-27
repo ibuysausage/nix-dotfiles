@@ -34,7 +34,7 @@
     pkgs.numworks-udev-rules
   ];
 
-  services.udev.extraRules = builtins.readFile ../../50-numworks-calculator.rules;
+  # services.udev.extraRules = builtins.readFile ../../50-numworks-calculator.rules;
 
   networking.hostName = "wildfire";
   networking.networkmanager.enable = true;

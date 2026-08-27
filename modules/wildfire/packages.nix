@@ -47,7 +47,6 @@ in {
     nixfmt
     # fenix rust
     fenix.complete.toolchain
-    rust-analyzer
     # be safe :)
     clamav
     kdePackages.dolphin
