@@ -45,6 +45,7 @@ in {
     quickshell
     alejandra
     nixfmt
+    devenv
     # fenix rust
     fenix.complete.toolchain
     # be safe :)
@@ -69,6 +70,7 @@ in {
     cmake-language-server
     marksman
     rust-analyzer
+    # no overlay yet
     inputs.byte-nur.packages.${system}.crdl
     inputs.byte-nur.packages.${system}.waifufetch
   ];
