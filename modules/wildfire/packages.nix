@@ -46,6 +46,7 @@ in {
     alejandra
     nixfmt
     devenv
+    marktext
     # fenix rust
     fenix.complete.toolchain
     # be safe :)
