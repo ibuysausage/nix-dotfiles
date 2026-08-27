@@ -29,9 +29,11 @@
     nixPath = ["nixpkgs=${inputs.nixpkgs}"];
   };
 
+  # gonna make numworks calculator games
   services.udev.packages = [
     pkgs.numworks-udev-rules
   ];
+
   services.udev.extraRules = builtins.readFile ../../50-numworks-calculator.rules;
 
   networking.hostName = "wildfire";

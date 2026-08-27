@@ -81,14 +81,13 @@
             stylix.nixosModules.stylix
             grub2-themes.nixosModules.default
             {
-              nixpkgs.overlays = [inputs.niri-flake.overlays.niri];
+              nixpkgs.overlays = [niri-flake.overlays.niri fenix.overlays.default];
             }
             {
               home-manager = {
                 useUserPackages = true;
                 extraSpecialArgs = {inherit inputs;};
                 sharedModules = [
-                  # stylix home module is auto imported
                   niri-flake.homeModules.niri
                   niri-flake.homeModules.stylix
                   nur.modules.homeManager.default
