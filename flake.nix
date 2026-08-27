@@ -47,6 +47,10 @@
       url = "github:vinceliuice/grub2-themes";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    fenix = {
+      url = "github:nix-community/fenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -58,6 +62,7 @@
     stylix,
     niri-flake,
     grub2-themes,
+    fenix,
     ...
   } @ inputs: {
     nixosConfigurations = {
