@@ -47,6 +47,8 @@ in {
     nixfmt
     devenv
     marktext
+    # numworks usb
+    chromium
     # fenix rust
     fenix.complete.toolchain
     # be safe :)
