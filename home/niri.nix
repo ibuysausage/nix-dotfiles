@@ -55,6 +55,7 @@
 
         border = {
           enable = true;
+          width = 6;
         };
 
         shadow = {
