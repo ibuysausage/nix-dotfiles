@@ -34,8 +34,10 @@
       lg = "lazygit";
       vinix = "nvim --cmd 'cd /etc/nixos'";
       man = ''man -P "bat -p"'';
-      ff = "clear; fastfetch";
+      ff = "clear";
+      # No fastfetch needed because clear alias already has && fastfetch
       c = "clear";
+      clear = "clear && fastfetch";
       tree = "eza -T --icons always";
       dockerclean = "docker system prune -a --volumes";
     };
