@@ -2,8 +2,8 @@
   stylix = {
     enable = true;
     autoEnable = true;
-    base16Scheme = ./themes/ember.yaml;
-    image = ./wallpapers/ember-anime-girl.jpg;
+    base16Scheme = ./themes/uwunicorn.yaml;
+    image = ./wallpapers/purple-anime-girl.png;
 
     icons = {
       enable = true;

@@ -48,14 +48,17 @@
         gaps = 16;
         center-focused-column = "never";
 
-        #focus-ring = {
-        #  enable = true;
-        #  width = 4;
-        #};
-
         border = {
           enable = true;
           width = 6;
+
+          #active = {
+          #  gradient = {
+          #    from = "#f92622";
+          #    to = "#fd751f";
+          #    angle = 45;
+          #  };
+          #};
         };
 
         shadow = {

@@ -57,8 +57,8 @@ in {
   stylix = {
     enable = true;
     autoEnable = true;
-    image = ../../home/wallpapers/ember-anime-girl.jpg;
-    base16Scheme = ../../home/themes/ember.yaml;
+    image = ../../home/wallpapers/purple-anime-girl.png;
+    base16Scheme = ../../home/themes/uwunicorn.yaml;
 
     fonts.monospace = {
       package = pkgs.nerd-fonts.caskaydia-cove;
