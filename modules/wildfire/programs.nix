@@ -1,8 +1,18 @@
-{...}: {
+{pkgs, ...}: {
   programs.git.enable = true;
   programs.zsh.enable = true;
   programs.neovim.enable = true;
   programs.firefox.enable = true;
+
+  # numworks calculator shi
+  services.udev.packages = [
+    pkgs.numworks-udev-rules
+  ];
+
+  services.clamav = {
+    daemon.enable = true;
+    updater.enable = true;
+  };
 
   services.pipewire.wireplumber = {
     enable = true;

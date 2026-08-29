@@ -51,8 +51,6 @@ in {
     chromium
     # fenix rust
     fenix.complete.toolchain
-    # be safe :)
-    clamav
     kdePackages.dolphin
     kdePackages.kio-extras
     kdePackages.xdg-desktop-portal-kde
