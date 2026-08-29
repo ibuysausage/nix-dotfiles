@@ -12,7 +12,7 @@
       ];
 
       # Needed for cachix
-      trusted-users = ["root" "byte"];
+      trusted-users = ["byte"];
       accept-flake-config = true;
     };
 

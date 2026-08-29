@@ -15,9 +15,6 @@
       "ibuysausage-nur.cachix.org-1:tqoAgFo/8AL/GhbOg9Cp9Fc46hHBnOCOw5V46knhH9I="
       "fenix.cachix.org-1:ecJhr+RdYEdcVgUkjruiYhjbBloIEGov7bos90cZi0Q="
     ];
-
-    access-tokens = [
-    ];
   };
 
   inputs = {
