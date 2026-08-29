@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: let
+{config, ...}: let
   c = config.lib.stylix.colors.withHashtag;
   mono = config.stylix.fonts.monospace.name;
 in {
@@ -52,29 +48,5 @@ in {
 
   boot.kernel.sysctl = {
     "net.ipv4.ip_unprivileged_port_start" = 80;
-  };
-
-  stylix = {
-    enable = true;
-    autoEnable = true;
-    image = ../../home/wallpapers/purple-anime-girl.png;
-    base16Scheme = ../../home/themes/uwunicorn.yaml;
-
-    fonts.monospace = {
-      package = pkgs.nerd-fonts.caskaydia-cove;
-      name = "CaskaydiaCove Nerd Font Mono";
-    };
-
-    targets.grub = {
-      enable = false;
-      useWallpaper = true;
-    };
-
-    icons = {
-      enable = true;
-      package = pkgs.candy-icons;
-      dark = "candy-icons";
-      light = "candy-icons";
-    };
   };
 }

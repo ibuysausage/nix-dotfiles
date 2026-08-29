@@ -9,6 +9,7 @@
     ../../modules/wildfire/user.nix
     ../../modules/wildfire/network.nix
     ../../modules/wildfire/sway.nix
+    ../../modules/wildfire/stylix.nix
   ];
 
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
