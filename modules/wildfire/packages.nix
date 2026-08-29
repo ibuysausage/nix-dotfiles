@@ -47,10 +47,12 @@ in {
     nixfmt
     devenv
     marktext
+    age
     # numworks usb
     chromium
     # fenix rust
     fenix.complete.toolchain
+    # kde i think for dolphin only
     kdePackages.dolphin
     kdePackages.kio-extras
     kdePackages.xdg-desktop-portal-kde
