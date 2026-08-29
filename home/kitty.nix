@@ -5,6 +5,7 @@
 
     extraConfig = ''
       dynamic_background_opacity yes
+      enable_audio_bell no
       cursor_shape beam
       cursor_beam_thickness 1.8
       cursor_trail 200

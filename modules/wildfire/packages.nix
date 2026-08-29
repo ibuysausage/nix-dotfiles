@@ -28,6 +28,7 @@ in {
     fd
     unzip
     file
+    bat
     adwaita-icon-theme
     papirus-icon-theme
     candy-icons

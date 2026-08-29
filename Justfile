@@ -113,16 +113,25 @@ generations:
 rollback:
     sudo nixos-rebuild switch --rollback
 
+# Fix permissions if cloned as root during install
 [group('maintenance')]
 permissions:
-    sudo find {{flake}}  -type d -exec chmod 0755 {} +
-    sudo find {{flake}}  -type f -name '*.sh' -exec chmod 0755 {} +
+    sudo find {{flake}} -type d -exec chmod 0755 {} +
+    sudo find {{flake}} -type f -name '*.sh' -exec chmod 0755 {} +
     sudo find {{flake}} -type f ! -name '*.sh' -exec chmod 0644 {} +
     sudo chown -R 1000:100 {{flake}}
 
+# Runs the update flake.lock github workflow
 [group('maintenance')]
 flake-lock:
     gh workflow run "Update flake.lock"
+
+# Automaticly allows all devenv projects and garbage collects
+[group('maintenance')]
+devenv:
+    find ~ -name devenv.nix -type f -execdir sh -c 'cd "$(dirname "$1")" && devenv allow' _ {} \;
+    devenv gc
+    @rm -rf /etc/nixos/.devenv
 
 # ═══ checks & quality ═════════════════════════════════════════════════════
 
