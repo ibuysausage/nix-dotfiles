@@ -15,6 +15,9 @@
       "ibuysausage-nur.cachix.org-1:tqoAgFo/8AL/GhbOg9Cp9Fc46hHBnOCOw5V46knhH9I="
       "fenix.cachix.org-1:ecJhr+RdYEdcVgUkjruiYhjbBloIEGov7bos90cZi0Q="
     ];
+
+    access-tokens = [
+    ];
   };
 
   inputs = {
@@ -51,6 +54,10 @@
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -63,6 +70,7 @@
     niri-flake,
     grub2-themes,
     fenix,
+    sops-nix,
     ...
   } @ inputs: {
     nixosConfigurations = {
@@ -109,6 +117,7 @@
             disko.nixosModules.disko
             stylix.nixosModules.stylix
             grub2-themes.nixosModules.default
+            sops-nix.nixosModules.sops
             ./hosts/server01/default.nix
           ];
         };
