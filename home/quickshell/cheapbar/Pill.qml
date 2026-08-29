@@ -1,18 +1,19 @@
 import QtQuick
 import QtQuick.Layouts
+import qs.theme
 
 Rectangle {
   id: root
 
   property string icon: ""
   property string label: ""
-  property color iconColor: "#9c5fce"
+  property color iconColor: Theme.base03
   property int maxLabelWidth: 400
 
   implicitWidth: row.implicitWidth + 22
   implicitHeight: 35
   radius: height / 2
-  color: "#241b26"
+  color: Theme.base00
 
   RowLayout {
     id: row
@@ -28,7 +29,7 @@ Rectangle {
 
     Text {
       text: root.label
-      color: "#eed5d9"
+      color: Theme.base05
       font.family: "CaskaydiaCove Nerd Font"
       font.pixelSize: 16
       elide: Text.ElideRight

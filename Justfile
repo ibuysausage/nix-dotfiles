@@ -62,7 +62,8 @@ deploy target host=host: _stage
 # Rebuild only the home-manager profile (useful if you ever split it from the system switch)
 [group('home')]
 home host=host: _stage
-    home-manager switch --flake {{flake}}#{{user}}@{{host}} -b backup
+    #home-manager switch --flake {{flake}}#{{user}}@{{host}} -b backup
+    sudo systemctl restart home-manager-{{user}}
 
 # ═══ fresh install / disko ═══════════════════════════════════════════════
 
