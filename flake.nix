@@ -88,6 +88,7 @@
             disko.nixosModules.disko
             stylix.nixosModules.stylix
             grub2-themes.nixosModules.default
+            sops-nix.nixosModules.sops
             {
               nixpkgs.overlays = [niri-flake.overlays.niri fenix.overlays.default];
             }
@@ -117,7 +118,6 @@
             disko.nixosModules.disko
             stylix.nixosModules.stylix
             grub2-themes.nixosModules.default
-            sops-nix.nixosModules.sops
             ./hosts/server01/default.nix
           ];
         };

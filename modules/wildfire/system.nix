@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  config,
   ...
 }: {
   nix = {
@@ -28,6 +29,20 @@
 
     nixPath = ["nixpkgs=${inputs.nixpkgs}"];
   };
+
+  sops.defaultSopsFile = ../../secrets.yaml;
+  sops.defaultSopsFormat = "yaml";
+  sops.age.keyFile = "/home/byte/.config/sops/age/keys.txt";
+
+  sops.secrets.github-pat = {};
+
+  sops.templates."nix-access-tokens.conf".content = ''
+    access-tokens = github.com=${config.sops.placeholder.github-pat}
+  '';
+
+  nix.extraOptions = ''
+    !include ${config.sops.templates."nix-access-tokens.conf".path}
+  '';
 
   # numworks calculator shi
   services.udev.packages = [

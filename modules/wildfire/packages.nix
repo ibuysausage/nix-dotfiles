@@ -47,6 +47,7 @@ in {
     nixfmt
     devenv
     marktext
+    sops
     age
     # numworks usb
     chromium

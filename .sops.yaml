@@ -1,0 +1,9 @@
+# .sops.yaml
+
+keys:
+  - &byte age12t3gsgkr5c02reucrpdcx0kuk532aer20dg8l2y3l27vscqdevnqhhuewd
+creation_rules:
+  - path_regex: secrets.yaml$
+    key_groups:
+      - age:
+        - *byte
