@@ -26,11 +26,11 @@
       qt.enable = true;
 
       librewolf = {
-        enable = true;
-        profileNames = ["byte"];
-        colorTheme.enable = true;
-        fonts.enable = true;
-        colors.enable = true;
+        enable = false;
+        #profileNames = ["byte"];
+        #colorTheme.enable = true;
+        #fonts.enable = true;
+        #colors.enable = true;
       };
 
       rofi = {
