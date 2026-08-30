@@ -75,11 +75,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1788035673,
-        "narHash": "sha256-OZ5jZrzqUwCy5McXPA3462rto4P+mNUCMPXxwNNAKPU=",
+        "lastModified": 1788063174,
+        "narHash": "sha256-r6T59yOqNt0Zdbug9iMh2+2lup40RPvGE3H6rWHvEtk=",
         "owner": "ibuysausage",
         "repo": "nur-packages",
-        "rev": "bb7423e41e66bba5aa6812366175cbadda9a8f38",
+        "rev": "0545ee622b6c6c04f543b30c2a35475257771d15",
         "type": "github"
       },
       "original": {
@@ -274,11 +274,11 @@
         "xwayland-satellite-unstable": "xwayland-satellite-unstable"
       },
       "locked": {
-        "lastModified": 1788039523,
-        "narHash": "sha256-SIFhzEPHtvdx/U5h7Pvs/zxvEVjkFUL7HRNGr4xHk4Q=",
+        "lastModified": 1788067125,
+        "narHash": "sha256-W0jpi/u5XoDa7vyXxI9s7mFzGyNqybaFZXiTMsTICGQ=",
         "owner": "epireyn",
         "repo": "niri-flake",
-        "rev": "b37a40b819975e28350e2cd362094ead65e0069e",
+        "rev": "ecd0e812bd082111e518dda145c61ae0e1b300ee",
         "type": "github"
       },
       "original": {
@@ -360,11 +360,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1788049898,
-        "narHash": "sha256-mXNIrEnIwT3mYL5nCnnvz1S59WUoJZOnTz9Mfpg5cxs=",
+        "lastModified": 1788068997,
+        "narHash": "sha256-SDnGbD1n94SNf1IJifqJoCl8OKek33JAD9AQPb7clrA=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "77d85b75ef100c858e3d81a1b1e3c3efbe78e229",
+        "rev": "526b74ad45f5ebf88e0136a94f605e58a51734fe",
         "type": "github"
       },
       "original": {
