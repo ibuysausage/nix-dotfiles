@@ -73,28 +73,6 @@
       scrollbar-color: ${hex "base04"} ${hex "base00"} !important;
     }
   '';
-  # This is for if you want to change the repo to my patched version
-  # better to use the offical becuase it might be updated
-  # stylixVars = ''
-  #   :root {
-  #     --sx-base00: #${colors.base00};
-  #     --sx-base01: #${colors.base01};
-  #     --sx-base02: #${colors.base02};
-  #     --sx-base03: #${colors.base03};
-  #     --sx-base04: #${colors.base04};
-  #     --sx-base05: #${colors.base05};
-  #     --sx-base06: #${colors.base06};
-  #     --sx-base07: #${colors.base07};
-  #     --sx-base08: #${colors.base08};
-  #     --sx-base09: #${colors.base09};
-  #     --sx-base0A: #${colors.base0A};
-  #     --sx-base0B: #${colors.base0B};
-  #     --sx-base0C: #${colors.base0C};
-  #     --sx-base0D: #${colors.base0D};
-  #     --sx-base0E: #${colors.base0E};
-  #     --sx-base0F: #${colors.base0F};
-  #   }
-  # '';
 in {
   programs.librewolf = {
     enable = true;
