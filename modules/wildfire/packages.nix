@@ -61,21 +61,6 @@ in {
     kdePackages.xdg-desktop-portal-kde
     kdePackages.kconfig
     kdePackages.kservice
-    # nvim junk
-    # lua have to be 5.1
-    gcc
-    tree-sitter
-    gnumake
-    luaPackages.tree-sitter-cli
-    lua5_1
-    luarocks
-    # nvim language servers
-    nixd
-    lua-language-server
-    clang-tools
-    cmake-language-server
-    marksman
-    rust-analyzer
     # no overlay yet
     inputs.byte-nur.packages.${system}.crdl
     inputs.byte-nur.packages.${system}.waifufetch

@@ -27,11 +27,6 @@
     source = ./omp/omp.toml;
   };
 
-  xdg.configFile."nvim/lua" = {
-    source = ./nvim/lua;
-    recursive = true;
-  };
-
   xdg.configFile."noctalia" = {
     source = ./noctalia;
     recursive = true;
