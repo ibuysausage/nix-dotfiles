@@ -5,17 +5,19 @@
       id = 0;
       isDefault = true;
       path = "default";
-      extensions.force = true;
       settings = {
+        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+        "ui.systemUsesDarkTheme" = 1;
+      };
+
+      extensions = {
+        force = true;
+        packages = with pkgs.nur.repos.rycee.firefox-addons; [
+          ublock-origin
+          darkreader
+          sidebery
+        ];
       };
     };
-
-    globalExtensions = with pkgs.nur.repos.rycee.firefox-addons; [
-      ublock-origin
-      darkreader
-      sidebery
-    ];
   };
 }
-# why have to be so hard to work with nixos
-

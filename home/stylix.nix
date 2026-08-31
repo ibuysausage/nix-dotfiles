@@ -25,12 +25,20 @@
       gtk.enable = true;
       qt.enable = true;
 
+      firefox = {
+        enable = true;
+        profileNames = ["byte"];
+        colorTheme.enable = true;
+        fonts.enable = true;
+        colors.enable = true;
+      };
+
       librewolf = {
-        enable = false;
-        #profileNames = ["byte"];
-        #colorTheme.enable = true;
-        #fonts.enable = true;
-        #colors.enable = true;
+        enable = true;
+        profileNames = ["byte"];
+        colorTheme.enable = true;
+        fonts.enable = true;
+        colors.enable = true;
       };
 
       rofi = {
