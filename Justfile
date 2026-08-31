@@ -133,6 +133,10 @@ devenv:
     find ~ -name devenv.nix -type f -execdir sh -c 'cd "$(dirname "$1")" && devenv allow' _ {} \;
     devenv gc
     @rm -rf /etc/nixos/.devenv
+[group('maintenance')]
+backup:
+    tar -cvzf /tmp/{{user}}.tar.gz ~
+    tar -cvf /tmp/ssh.tar ~/.ssh
 
 # ═══ checks & quality ═════════════════════════════════════════════════════
 
