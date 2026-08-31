@@ -29,6 +29,7 @@ in {
     unzip
     file
     bat
+    bat-extras.batman
     adwaita-icon-theme
     papirus-icon-theme
     candy-icons

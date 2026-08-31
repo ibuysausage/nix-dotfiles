@@ -33,7 +33,7 @@
       v = "nvim";
       lg = "lazygit";
       vinix = "nvim --cmd 'cd /etc/nixos'";
-      man = ''man -P "bat -p"'';
+      man = "batman";
       ff = "clear";
       # No fastfetch needed because clear alias already has && fastfetch
       c = "clear";
