@@ -19,7 +19,6 @@
     };
 
     targets = {
-      neovim.enable = true;
       nixos-icons.enable = true;
       niri.enable = true;
       gtk.enable = true;

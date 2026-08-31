@@ -8,7 +8,6 @@
     ../../home/zsh.nix
     ../../home/kitty.nix
     ../../home/librewolf.nix
-    ../../home/nvim.nix
     ../../home/omp.nix
     ../../home/niri.nix
     ../../home/rofi.nix
