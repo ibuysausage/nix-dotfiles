@@ -12,6 +12,7 @@
     ../../home/omp.nix
     ../../home/niri.nix
     ../../home/rofi.nix
+    ../../home/firefox.nix
     ../../home/stylix.nix
   ];
 

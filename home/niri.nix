@@ -25,6 +25,7 @@
 
         keyboard = {
           numlock = true;
+          xkb.options = "caps:escape";
         };
       };
 

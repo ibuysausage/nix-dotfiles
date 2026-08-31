@@ -2,7 +2,6 @@
   programs.git.enable = true;
   programs.zsh.enable = true;
   programs.neovim.enable = true;
-  programs.firefox.enable = true;
 
   # numworks calculator shi
   services.udev.packages = [
