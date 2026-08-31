@@ -23,16 +23,14 @@
     };
 
     sessionVariables = {
-      EDITOR = "nvim";
+      EDITOR = "vim";
       CARAPACE_BRIDGES = "zsh,fish,bash,inshellisense";
     };
 
     shellAliases = {
       ls = "eza --icons always";
       cat = "bat";
-      v = "nvim";
       lg = "lazygit";
-      vinix = "nvim --cmd 'cd /etc/nixos'";
       man = "batman";
       ff = "clear";
       # No fastfetch needed because clear alias already has && fastfetch
