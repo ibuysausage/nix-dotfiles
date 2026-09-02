@@ -19,7 +19,7 @@
           dwt = true;
           natural-scroll = true;
           accel-profile = "flat";
-          accel-speed = 0.9;
+          accel-speed = 1;
           disabled-on-external-mouse = true;
         };
 
