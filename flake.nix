@@ -55,6 +55,9 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixvim = { 
+      url = "github:nix-community/nixvim";
+    };
   };
 
   outputs = {
@@ -68,6 +71,7 @@
     grub2-themes,
     fenix,
     sops-nix,
+    nixvim,
     ...
   } @ inputs: {
     nixosConfigurations = {
@@ -86,6 +90,7 @@
             stylix.nixosModules.stylix
             grub2-themes.nixosModules.default
             sops-nix.nixosModules.sops
+            nixvim.nixosModules.nixvim
             {
               nixpkgs.overlays = [niri-flake.overlays.niri fenix.overlays.default];
             }
@@ -96,6 +101,7 @@
                 sharedModules = [
                   niri-flake.homeModules.niri
                   niri-flake.homeModules.stylix
+                  nixvim.homeModules.nixvim
                   nur.modules.homeManager.default
                 ];
                 users.${username} = import ./users/${username}/home.nix;
