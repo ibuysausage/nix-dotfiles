@@ -1,10 +1,10 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   stylix = {
     enable = true;
     autoEnable = true;
-    base16Scheme = ./themes/uwunicorn.yaml;
-    image = ./wallpapers/purple-anime-girl.png;
-    opacity.terminal = 0.80;
+    base16Scheme = ./themes/catppuccin-mocha.yaml;
+    image = ./wallpapers/giant-cat-catppuccin.jpg;
+    opacity.terminal = 0.85;
 
     icons = {
       enable = true;
@@ -28,7 +28,7 @@
 
       firefox = {
         enable = true;
-        profileNames = [ "byte" ];
+        profileNames = ["byte"];
         colorTheme.enable = true;
         fonts.enable = true;
         colors.enable = true;
@@ -36,7 +36,7 @@
 
       librewolf = {
         enable = true;
-        profileNames = [ "byte" ];
+        profileNames = ["byte"];
         colorTheme.enable = true;
         fonts.enable = true;
         colors.enable = true;

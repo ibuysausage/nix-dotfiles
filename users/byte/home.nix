@@ -13,7 +13,7 @@
     ../../home/rofi.nix
     ../../home/firefox.nix
     ../../home/stylix.nix
-    ../../home/nixvim.nix
+    ../../home/nixvim/default.nix
   ];
 
   home.username = "byte";
