@@ -101,7 +101,6 @@ update-input input:
 [group('maintenance')]
 gc days="7d":
     sudo nix-collect-garbage --delete-older-than {{days}}
-    nix store gc
     nix store optimise
 
 # List system generations

@@ -3,7 +3,8 @@
   inputs,
   config,
   ...
-}: {
+}:
+{
   nix = {
     settings = {
       experimental-features = [
@@ -12,7 +13,7 @@
       ];
 
       # Needed for cachix
-      trusted-users = ["byte"];
+      trusted-users = [ "byte" ];
       accept-flake-config = true;
     };
 
@@ -24,17 +25,17 @@
 
     optimise = {
       automatic = true;
-      dates = ["12:00"];
+      dates = [ "12:00" ];
     };
 
-    nixPath = ["nixpkgs=${inputs.nixpkgs}"];
+    nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
   };
 
   sops.defaultSopsFile = ../../secrets.yaml;
   sops.defaultSopsFormat = "yaml";
   sops.age.keyFile = "/home/byte/.config/sops/age/keys.txt";
 
-  sops.secrets.github-pat = {};
+  sops.secrets.github-pat = { };
 
   sops.templates."nix-access-tokens.conf".content = ''
     access-tokens = github.com=${config.sops.placeholder.github-pat}
@@ -54,10 +55,12 @@
   time.timeZone = "America/New_York";
   i18n.defaultLocale = "en_US.UTF-8";
 
-  services.logind.settings.Login = {
-    HandleLidSwitch = "ignore";
-    HandleLidSwitchExternalPower = "ignore";
-    HandleLidSwitchDocked = "ignore";
+  specialisation.server.configuration = {
+    services.logind.settings.Login = {
+      HandleLidSwitch = "ignore";
+      HandleLidSwitchExternalPower = "ignore";
+      HandleLidSwitchDocked = "ignore";
+    };
   };
 
   # IDK just keep. Think it is needed
@@ -88,8 +91,8 @@
     ];
     config = {
       niri = {
-        default = ["gnome"];
-        "org.freedesktop.impl.portal.FileChooser" = ["kde"];
+        default = [ "gnome" ];
+        "org.freedesktop.impl.portal.FileChooser" = [ "kde" ];
       };
     };
   };

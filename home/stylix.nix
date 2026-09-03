@@ -4,6 +4,7 @@
     autoEnable = true;
     base16Scheme = ./themes/uwunicorn.yaml;
     image = ./wallpapers/purple-anime-girl.png;
+    opacity.terminal = 0.80;
 
     icons = {
       enable = true;
@@ -23,6 +24,7 @@
       niri.enable = true;
       gtk.enable = true;
       qt.enable = true;
+      nixvim.enable = true;
 
       firefox = {
         enable = true;
