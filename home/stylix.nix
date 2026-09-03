@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   stylix = {
     enable = true;
     autoEnable = true;
@@ -24,11 +24,11 @@
       niri.enable = true;
       gtk.enable = true;
       qt.enable = true;
-      nixvim.enable = true;
+      nixvim.enable = false;
 
       firefox = {
         enable = true;
-        profileNames = ["byte"];
+        profileNames = [ "byte" ];
         colorTheme.enable = true;
         fonts.enable = true;
         colors.enable = true;
@@ -36,7 +36,7 @@
 
       librewolf = {
         enable = true;
-        profileNames = ["byte"];
+        profileNames = [ "byte" ];
         colorTheme.enable = true;
         fonts.enable = true;
         colors.enable = true;

@@ -16,6 +16,13 @@ in
     defaultEditor = true;
     enableMan = true;
 
+    colorschemes.base16 = {
+      enable = true;
+      settings = {
+        cmp = true;
+      };
+    };
+
     globals.mapleader = " ";
 
     opts = {
@@ -155,5 +162,11 @@ in
     extraPackages = [
       inputs.fenix.packages.${system}.complete.toolchain
     ];
+
+    # Normal stylix has bugs like lualine
+    # and the linenumbers are highlighted
+    extraConfigLua = ''
+      vim.cmd('colorscheme base16-uwunicorn')
+    '';
   };
 }
