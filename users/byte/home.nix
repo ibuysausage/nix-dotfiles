@@ -1,4 +1,4 @@
-{...}: {
+{ ... }: {
   imports = [
     ../../home/homefile.nix
     ../../home/single.nix
@@ -13,7 +13,7 @@
     ../../home/rofi.nix
     ../../home/firefox.nix
     ../../home/stylix.nix
-    ../../home/nixvim/default.nix
+    ../../home/nixvim
   ];
 
   home.username = "byte";
