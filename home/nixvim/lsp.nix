@@ -56,4 +56,9 @@ in
       indent.enable = true;
     };
   };
+
+  extraPackages = [
+    inputs.fenix.packages.${system}.complete.toolchain
+  ];
+
 }
