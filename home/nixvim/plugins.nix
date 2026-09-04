@@ -2,8 +2,7 @@
   pkgs,
   lib,
   ...
-}:
-{
+}: {
   programs.nixvim.plugins = {
     lspkind.enable = true;
     highlight-colors.enable = true;
@@ -22,9 +21,9 @@
       autoEnableSources = true;
       settings = {
         sources = [
-          { name = "nvim_lsp"; }
-          { name = "path"; }
-          { name = "buffer"; }
+          {name = "nvim_lsp";}
+          {name = "path";}
+          {name = "buffer";}
         ];
       };
     };
@@ -36,7 +35,7 @@
           lsp_format = "fallback";
         };
         formatters_by_ft = {
-          nix = [ "alejandra" ];
+          nix = ["alejandra"];
         };
         formatters = {
           alejandra = {
@@ -72,7 +71,7 @@
             try_as_border = true;
           };
         };
-        surround = { };
+        surround = {};
       };
     };
   };

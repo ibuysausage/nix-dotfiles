@@ -2,11 +2,9 @@
   pkgs,
   inputs,
   ...
-}:
-let
+}: let
   system = pkgs.stdenv.hostPlatform.system;
-in
-{
+in {
   programs.nixvim = {
     plugins = {
       lsp = {
@@ -22,7 +20,7 @@ in
               nixpkgs = {
                 expr = "import <nixpkgs> {}";
                 formatting = {
-                  command = [ "alejandra" ];
+                  command = ["alejandra"];
                 };
                 options = {
                   nixos = {
