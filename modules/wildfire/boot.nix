@@ -36,14 +36,6 @@ in {
       item_spacing = 10
       selected_item_pixmap_style = "select_*.png"
     '';
-
-    terminalConfig = ''
-      terminal-font: "${mono} 14"
-      terminal-box: "terminal_box_*.png"
-      terminal-width: "100%"
-      terminal-height: "100%"
-      terminal-border: "0"
-    '';
   };
 
   boot.kernel.sysctl = {

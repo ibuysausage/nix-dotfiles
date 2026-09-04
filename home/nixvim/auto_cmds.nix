@@ -18,25 +18,6 @@
         '';
       };
     }
-    {
-      group = "indentscope";
-      event = ["FileType"];
-      pattern = [
-        "help"
-        "archlens"
-        "neo-tree"
-        "Trouble"
-        "trouble"
-        "notify"
-      ];
-      callback = {
-        __raw = ''
-          function()
-            vim.b.miniindentscope_disable = true
-          end
-        '';
-      };
-    }
     ## from NVChad https://nvchad.com/docs/recipes (this autocmd will restore the cursor position when opening a file)
     {
       group = "restore_cursor";

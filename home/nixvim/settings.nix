@@ -22,7 +22,7 @@
       smartindent = true;
       # breakindent = true;
 
-      # linenumbers
+      # line numbers
       number = true;
       relativenumber = true;
       wrap = false;
