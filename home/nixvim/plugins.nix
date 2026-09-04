@@ -63,8 +63,6 @@
     };
     telescope = {
       enable = true;
-      # I think macchiato looks better in telescope
-      highlightTheme = "catppuccin-macchiato";
       extensions = {
         fzf-native = {
           settings.case_mode = "ignore_case";
