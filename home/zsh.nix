@@ -10,8 +10,8 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     history = {
-      size = 10000;
-      save = 1000;
+      size = 100000;
+      save = 100000;
     };
     oh-my-zsh = {
       enable = true;
