@@ -51,11 +51,13 @@
     illuminate = {
       enable = true;
       settings = {
-        under_cursor = false;
         filetypes_denylist = [
           "TelescopePrompt"
         ];
       };
+    };
+    oil = {
+      enable = true;
     };
     telescope = {
       enable = true;
