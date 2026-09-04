@@ -2,8 +2,8 @@
   stylix = {
     enable = true;
     autoEnable = true;
-    image = ../../home/wallpapers/purple-anime-girl.png;
-    base16Scheme = ../../home/themes/uwunicorn.yaml;
+    image = ../../home/wallpapers/catppuccin/giant-cat.jpg;
+    base16Scheme = ../../home/themes/catppuccin-mocha.yaml;
 
     fonts.monospace = {
       package = pkgs.nerd-fonts.caskaydia-cove;
