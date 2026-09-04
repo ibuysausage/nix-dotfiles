@@ -5,7 +5,6 @@
 }:
 let
   system = pkgs.stdenv.hostPlatform.system;
-
 in
 {
   programs.nixvim = {

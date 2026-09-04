@@ -9,6 +9,7 @@
     highlight-colors.enable = true;
     lazygit.enable = true;
     lualine.enable = true;
+    web-devicons.enable = true;
 
     toggleterm = {
       enable = true;
@@ -34,7 +35,7 @@
           timeout_ms = 500;
           lsp_format = "fallback";
         };
-        formaters_by_ft = {
+        formatters_by_ft = {
           nix = [ "alejandra" ];
         };
         formatters = {
@@ -58,7 +59,6 @@
           "alpha"
           "harpoon"
           "reason"
-          "snacks_dashboard"
         ];
       };
     };

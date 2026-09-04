@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   imports = [
     ../../home/homefile.nix
     ../../home/single.nix
