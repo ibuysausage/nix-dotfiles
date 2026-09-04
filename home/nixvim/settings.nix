@@ -10,6 +10,8 @@
     opts = {
       clipboard = "unnamedplus";
       termguicolors = true;
+      spelllang = "en_us";
+      spell = true;
 
       # tab settings
       tabstop = 2;
