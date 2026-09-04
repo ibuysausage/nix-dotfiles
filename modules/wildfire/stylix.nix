@@ -2,7 +2,7 @@
   stylix = {
     enable = true;
     autoEnable = true;
-    image = ../../home/wallpapers/catppuccin/giant-cat.jpg;
+    image = ../../home/wallpapers/catppuccin/nixos.jpg;
     base16Scheme = ../../home/themes/catppuccin-mocha.yaml;
 
     fonts.monospace = {
