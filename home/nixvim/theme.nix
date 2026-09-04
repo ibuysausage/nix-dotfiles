@@ -13,7 +13,7 @@
       catppuccin = {
         enable = true;
         settings = {
-          # latte frappe macchito mocha
+          # latte frappe macchiato mocha
           flavour = "mocha";
           transparent_background = true;
         };

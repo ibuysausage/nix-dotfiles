@@ -63,9 +63,37 @@
     };
     telescope = {
       enable = true;
+      # I think macchiato looks better in telescope
+      highlightTheme = "catppuccin-macchiato";
       extensions = {
         fzf-native = {
           settings.case_mode = "ignore_case";
+        };
+      };
+      keymaps = {
+        "<leader><space>" = {
+          action = "find_files";
+          options = {
+            desc = "find project files";
+          };
+        };
+        "<leader>/" = {
+          action = "live_grep";
+          options = {
+            desc = "grep (root dir)";
+          };
+        };
+        "<leader>b" = {
+          action = "buffers";
+          options = {
+            desc = "+buffer";
+          };
+        };
+        "<leader>:" = {
+          action = "command_history";
+          options = {
+            desc = "command history";
+          };
         };
       };
     };
