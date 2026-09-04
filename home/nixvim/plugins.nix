@@ -68,6 +68,13 @@
           settings.case_mode = "ignore_case";
         };
       };
+      settings = {
+        defaults = {
+          layout_config = {
+            prompt_position = "top";
+          };
+        };
+      };
       keymaps = {
         "<leader><space>" = {
           action = "find_files";

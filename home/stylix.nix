@@ -3,7 +3,7 @@
     enable = true;
     autoEnable = true;
     base16Scheme = ./themes/catppuccin-mocha.yaml;
-    image = ./wallpapers/giant-cat-catppuccin.jpg;
+    image = ./wallpapers/catppuccin/giant-cat-catppuccin.jpg;
     opacity.terminal = 0.85;
 
     icons = {
