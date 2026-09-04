@@ -12,8 +12,6 @@
     updater.enable = true;
   };
 
-  services.displayManager.ly.enable = true;
-
   services.pipewire.wireplumber = {
     enable = true;
 
