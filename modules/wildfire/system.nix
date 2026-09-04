@@ -44,11 +44,6 @@
     !include ${config.sops.templates."nix-access-tokens.conf".path}
   '';
 
-  # numworks calculator shi
-  services.udev.packages = [
-    pkgs.numworks-udev-rules
-  ];
-
   networking.hostName = "wildfire";
   networking.networkmanager.enable = true;
   time.timeZone = "America/New_York";
@@ -62,7 +57,7 @@
     };
   };
 
-  # IDK just keep. Think it is needed
+  # just keep. Think it is needed for jellyfin or smth
   environment.sessionVariables = {
     LIBVA_DRIVER_NAME = "iHD";
   };
