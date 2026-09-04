@@ -61,6 +61,14 @@
         ];
       };
     };
+    telescope = {
+      enable = true;
+      extensions = {
+        fzf-native = {
+          settings.case_mode = "ignore_case";
+        };
+      };
+    };
     mini = {
       enable = true;
 
