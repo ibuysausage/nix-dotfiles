@@ -12,12 +12,17 @@
       }
       {
         mode = "n";
-        key = "<leader>t";
+        key = "<leader>tf";
         action = "<cmd>ToggleTerm<CR>";
         options = {
           silent = true;
           desc = "open terminal";
         };
+      }
+      {
+        mode = "n";
+        key = "<leader>tl";
+        action = "<cmd>ToggleTerm size=100 direction=vertical<CR>";
       }
       {
         mode = "n";
@@ -53,7 +58,7 @@
         };
       }
       {
-        mode = "t";
+        mode = "n";
         key = "<C-l>";
         action = "<cmd>wincmd l<cr>";
         options = {
