@@ -45,6 +45,9 @@ in {
             installCargo = false;
             installRustc = false;
           };
+          lua_ls = {
+            enable = true;
+          };
         };
       };
 

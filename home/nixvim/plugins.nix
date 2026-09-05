@@ -25,10 +25,14 @@
         };
         formatters_by_ft = {
           nix = ["alejandra"];
+          lua = ["stylua"];
         };
         formatters = {
           alejandra = {
             command = lib.getExe pkgs.alejandra;
+          };
+          stylua = {
+            command = lib.getExe pkgs.stylua;
           };
         };
       };
@@ -77,6 +81,13 @@
         };
       };
       cmp.enable = true;
+    };
+    luasnip = {
+      enable = true;
+      settings = {
+        enable_autosnippets = true;
+        store_selection_keys = "<Tab>";
+      };
     };
     mini = {
       enable = true;
