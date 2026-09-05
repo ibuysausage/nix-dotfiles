@@ -22,6 +22,8 @@
     ./lsp.nix
     ./keymaps.nix
     ./plugins.nix
+    ./telescope.nix
+    ./cmp.nix
     ./theme.nix
   ];
 }
