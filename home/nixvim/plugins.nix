@@ -49,6 +49,17 @@
         ];
       };
     };
+    trouble = {
+      enable = true;
+      settings = {
+        auto_close = true;
+        auto_preview = true;
+        auto_refresh = true;
+        focus = true;
+        follow = true;
+        multiline = true;
+      };
+    };
     lspkind = {
       enable = true;
       settings = {
