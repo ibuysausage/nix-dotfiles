@@ -34,6 +34,15 @@
         };
       }
       {
+        mode = "n";
+        key = "<leader>o";
+        action = "<cmd>Oil<CR>";
+        options = {
+          silent = true;
+          desc = "open oil";
+        };
+      }
+      {
         mode = "t";
         key = "<C-h>";
         action = "<cmd>wincmd h<cr>";

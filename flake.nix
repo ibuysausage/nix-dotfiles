@@ -67,6 +67,9 @@
       url = "github:ibuysausage/neovim-nightly-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+    };
   };
 
   outputs = {
@@ -81,6 +84,7 @@
     fenix,
     sops-nix,
     nixvim,
+    hyprland,
     ...
   } @ inputs: {
     nixosConfigurations = {
@@ -104,6 +108,7 @@
               nixpkgs.overlays = [
                 niri-flake.overlays.niri
                 fenix.overlays.default
+                hyprland.overlays.default
               ];
             }
             {
