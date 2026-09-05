@@ -4,10 +4,10 @@
   ...
 }: {
   programs.nixvim.plugins = {
-    lspkind.enable = true;
     highlight-colors.enable = true;
     lazygit.enable = true;
     lualine.enable = true;
+    oil.enable = true;
     web-devicons.enable = true;
 
     toggleterm = {
@@ -45,8 +45,38 @@
         ];
       };
     };
-    oil = {
+    lspkind = {
       enable = true;
+      settings = {
+        symbol_map = {
+          Text = "󰊄";
+          Method = " ";
+          Function = "󰡱 ";
+          Constructor = " ";
+          Field = " ";
+          Variable = "󱀍 ";
+          Class = " ";
+          Interface = " ";
+          Module = "󰕳 ";
+          Property = " ";
+          Unit = " ";
+          Value = " ";
+          Enum = " ";
+          Keyword = " ";
+          Snippet = " ";
+          Color = " ";
+          File = "";
+          Reference = " ";
+          Folder = " ";
+          EnumMember = " ";
+          Constant = " ";
+          Struct = " ";
+          Event = " ";
+          Operator = " ";
+          TypeParameter = " ";
+        };
+      };
+      cmp.enable = true;
     };
     mini = {
       enable = true;

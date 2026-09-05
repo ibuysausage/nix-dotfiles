@@ -15,7 +15,7 @@
         settings = {
           # latte frappe macchiato mocha
           flavour = "mocha";
-          transparent_background = true;
+          transparent_background = false;
         };
       };
     };
