@@ -52,6 +52,8 @@ in {
     marktext
     sops
     age
+    # needed for rustlings
+    gcc
     # numworks usb
     chromium
     # fenix rust
