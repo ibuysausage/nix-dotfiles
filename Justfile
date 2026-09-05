@@ -136,6 +136,9 @@ devenv:
 backup:
     tar -cvzf /tmp/{{user}}.tar.gz ~
     tar -cvf /tmp/ssh.tar ~/.ssh
+    @# add age
+    tar -cvf /tmp/vvvvvv.tar ~/.local/share/VVVVVV
+    tar -cvf /tmp/nvim-spell.tar ~/.local/share/nvim/site/spell
 
 # ═══ checks & quality ═════════════════════════════════════════════════════
 
