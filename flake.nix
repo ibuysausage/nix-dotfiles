@@ -6,7 +6,7 @@
       "https://niri-epireyn.cachix.org"
       "https://grub2-themes.cachix.org"
       "https://ibuysausage-nur.cachix.org"
-      "https://ibuysausage-neovim-nightly"
+      "https://ibuysausage-neovim-nightly.cachix.org"
       "https://nix-community.cachix.org"
       "https://fenix.cachix.org"
     ];
