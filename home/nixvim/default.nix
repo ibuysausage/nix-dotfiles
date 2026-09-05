@@ -15,6 +15,14 @@
     ];
     extraConfigLua = ''
       vim.opt.runtimepath:append("~/.local/share/nvim/site")
+      vim.api.nvim_create_autocmd("TermOpen", {
+        pattern = "*",
+        callback = function()
+          vim.opt_local.spell = false
+          vim.opt_local.number = false
+          vim.opt_local.relativenumber = false
+        end,
+      })
     '';
   };
   imports = [

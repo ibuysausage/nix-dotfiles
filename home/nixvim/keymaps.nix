@@ -28,6 +28,38 @@
           desc = "open lazygit";
         };
       }
+      {
+        mode = "t";
+        key = "<C-h>";
+        action = "<cmd>wincmd h<cr>";
+        options = {
+          desc = "Go to Left Window";
+        };
+      }
+      {
+        mode = "t";
+        key = "<C-j>";
+        action = "<cmd>wincmd j<cr>";
+        options = {
+          desc = "Go to Lower Window";
+        };
+      }
+      {
+        mode = "t";
+        key = "<C-k>";
+        action = "<cmd>wincmd k<cr>";
+        options = {
+          desc = "Go to Upper Window";
+        };
+      }
+      {
+        mode = "t";
+        key = "<C-l>";
+        action = "<cmd>wincmd l<cr>";
+        options = {
+          desc = "Go to Right Window";
+        };
+      }
     ];
   };
 }
