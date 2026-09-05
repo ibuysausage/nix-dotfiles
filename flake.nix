@@ -84,7 +84,6 @@
     fenix,
     sops-nix,
     nixvim,
-    hyprland,
     ...
   } @ inputs: {
     nixosConfigurations = {
@@ -108,7 +107,6 @@
               nixpkgs.overlays = [
                 niri-flake.overlays.niri
                 fenix.overlays.default
-                hyprland.overlays.default
               ];
             }
             {
