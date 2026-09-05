@@ -64,6 +64,7 @@
     };
     neovim-nightly-overlay = {
       url = "github:ibuysausage/neovim-nightly-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -79,7 +80,6 @@
     fenix,
     sops-nix,
     nixvim,
-    neovim-nightly-overlay,
     ...
   } @ inputs: {
     nixosConfigurations = {
@@ -103,7 +103,6 @@
               nixpkgs.overlays = [
                 niri-flake.overlays.niri
                 fenix.overlays.default
-                neovim-nightly-overlay.overlays.default
               ];
             }
             {

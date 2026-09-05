@@ -25,6 +25,9 @@
           {name = "path";}
           {name = "buffer";}
         ];
+        experimental = {
+          ghost_text = true;
+        };
       };
     };
     conform-nvim = {
