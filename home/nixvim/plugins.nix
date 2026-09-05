@@ -9,6 +9,7 @@
     lualine.enable = true;
     oil.enable = true;
     web-devicons.enable = true;
+    tiny-inline-diagnostic.enable = true;
 
     toggleterm = {
       enable = true;
