@@ -9,6 +9,7 @@
       "https://ibuysausage-neovim-nightly.cachix.org"
       "https://nix-community.cachix.org"
       "https://fenix.cachix.org"
+      "https://hyprland.cachix.org"
     ];
 
     extra-trusted-public-keys = [
@@ -18,6 +19,7 @@
       "ibuysausage-neovim-nightly.cachix.org-1:CcVje9KrKo6+tyVied3wfzmAmpyNPysard1GGaNoIoY="
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       "fenix.cachix.org-1:ecJhr+RdYEdcVgUkjruiYhjbBloIEGov7bos90cZi0Q="
+      "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
     ];
   };
 
@@ -67,9 +69,9 @@
       url = "github:ibuysausage/neovim-nightly-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-    };
+    #hyprland = {
+    #  url = "github:hyprwm/Hyprland";
+    #};
   };
 
   outputs = {
