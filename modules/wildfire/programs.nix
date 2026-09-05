@@ -1,11 +1,18 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   programs.git.enable = true;
   programs.zsh.enable = true;
+
   programs.hyprland = {
     enable = true;
+    package = inputs.hyprland.packages.${pkgs.system.stdenv.hostPlatform.system}.hyprland;
+    portalPackage = inputs.hyprland.packages.${pkgs.system.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
 
-  # numworks calculator shi
+  # numworks calculator
   services.udev.packages = [
     pkgs.numworks-udev-rules
   ];
