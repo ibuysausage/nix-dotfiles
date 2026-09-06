@@ -51,5 +51,19 @@
         '';
       };
     }
+    {
+      event = "BufEnter";
+      pattern = "oil://*";
+      callback = {
+        __raw = ''
+          function()
+            local dir = require("oil").get_current_dir()
+            if dir then
+              vim.cmd.lcd(dir)
+            end
+          end
+        '';
+      };
+    }
   ];
 }
