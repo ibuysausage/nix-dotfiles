@@ -1,4 +1,4 @@
-{...}: {
+{config, ...}: {
   programs.carapace = {
     enable = true;
     enableZshIntegration = true;
@@ -12,6 +12,8 @@
     history = {
       size = 100000;
       save = 100000;
+      append = true;
+      path = "${config.home.homeDirectory}/.histfile";
     };
     oh-my-zsh = {
       enable = true;
