@@ -10,6 +10,7 @@
     oil.enable = true;
     web-devicons.enable = true;
     tiny-inline-diagnostic.enable = true;
+    render-markdown.enable = true;
 
     toggleterm = {
       enable = true;
