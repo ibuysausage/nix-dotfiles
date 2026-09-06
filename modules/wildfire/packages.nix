@@ -52,6 +52,7 @@ in {
     marktext
     sops
     age
+    pkgit
     # needed for rustlings
     gcc
     # numworks usb
