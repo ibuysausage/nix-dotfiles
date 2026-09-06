@@ -13,7 +13,13 @@
       {
         mode = "n";
         key = "<leader>tf";
-        action = "<cmd>ToggleTerm<CR>";
+        action = {
+          __raw = ''
+            function()
+              vim.cmd("ToggleTerm dir=" .. vim.fn.getcwd())
+            end
+          '';
+        };
         options = {
           silent = true;
           desc = "open terminal";
@@ -22,7 +28,17 @@
       {
         mode = "n";
         key = "<leader>tl";
-        action = "<cmd>ToggleTerm size=100 direction=vertical<CR>";
+        action = {
+          __raw = ''
+            function()
+              vim.cmd("ToggleTerm size=100 direction=vertical dir=" .. vim.fn.getcwd())
+            end
+          '';
+        };
+        options = {
+          silent = true;
+          desc = "open terminal to left";
+        };
       }
       {
         mode = "n";
