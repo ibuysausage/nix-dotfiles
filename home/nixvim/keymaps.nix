@@ -35,7 +35,7 @@
       }
       {
         mode = "n";
-        key = "<leader>o";
+        key = "-";
         action = "<cmd>Oil<CR>";
         options = {
           silent = true;
