@@ -10,7 +10,6 @@
     oil.enable = true;
     web-devicons.enable = true;
     tiny-inline-diagnostic.enable = true;
-    render-markdown.enable = true;
 
     toggleterm = {
       enable = true;
@@ -113,6 +112,12 @@
           };
         };
         surround = {};
+      };
+    };
+    render-markdown = {
+      enable = true;
+      settings = {
+        anti_conceal.enabled = false;
       };
     };
   };
