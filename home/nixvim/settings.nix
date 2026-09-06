@@ -1,7 +1,7 @@
 {
   programs.nixvim = {
     viAlias = true;
-    vimAlias = true;
+    # vimAlias = true;
     defaultEditor = true;
     enableMan = true;
 
