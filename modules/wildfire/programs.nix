@@ -6,14 +6,11 @@
   services.xserver.enable = true;
   services.xserver.windowManager.oxwm.enable = true;
   services.displayManager.gdm.enable = false;
-  # ???
+  # needed for Intel ???
   services.xserver.videoDrivers = ["modesetting"];
   # tpad
   services.libinput.enable = true;
   services.libinput.touchpad.tapping = true;
-  # make qt look like gtk
-  qt.platformTheme = "gtk2";
-  qt.style = "gtk2";
 
   services.xserver.displayManager.startx = {
     enable = true;
@@ -30,6 +27,8 @@
     updater.enable = true;
   };
 
+  # Makes wireplumber work for default-sink
+  # mainly used for quickshell
   services.pipewire.wireplumber = {
     enable = true;
 
