@@ -126,12 +126,13 @@ permissions:
 flake-lock:
     gh workflow run "Update flake.lock"
 
-# Automaticly allows all devenv projects and garbage collects
+# Automatically allows all devenv projects and garbage collects
 [group('maintenance')]
 devenv:
     find ~ -name devenv.nix -type f -execdir sh -c 'cd "$(dirname "$1")" && devenv allow' _ {} \;
     devenv gc
     @rm -rf /etc/nixos/.devenv
+    @rm -rf /etc/nixos/devenv*
 [group('maintenance')]
 backup:
     tar -cvzf /tmp/{{user}}.tar.gz ~
