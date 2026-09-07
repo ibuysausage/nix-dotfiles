@@ -14,11 +14,6 @@
   # caps to esc for neovim
   services.xserver.xkb.options = "caps:escape";
 
-  services.xserver.displayManager.startx = {
-    enable = true;
-    generateScript = true;
-  };
-
   # numworks calculator
   services.udev.packages = [
     pkgs.numworks-udev-rules
