@@ -21,7 +21,6 @@
 
     targets = {
       nixos-icons.enable = true;
-      niri.enable = true;
       gtk.enable = true;
       qt.enable = true;
 

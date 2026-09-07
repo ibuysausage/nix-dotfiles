@@ -3,23 +3,19 @@
 
   nixConfig = {
     extra-substituters = [
-      "https://niri-epireyn.cachix.org"
       "https://grub2-themes.cachix.org"
       "https://ibuysausage-nur.cachix.org"
       "https://ibuysausage-neovim-nightly.cachix.org"
       "https://nix-community.cachix.org"
       "https://fenix.cachix.org"
-      "https://hyprland.cachix.org"
     ];
 
     extra-trusted-public-keys = [
-      "niri-epireyn.cachix.org-1:tlVyFN7CtsDT+ZcLPS+ekFWeT1X6X4OqvWqbBMyIzFA="
       "grub2-themes.cachix.org-1:lmVtdlFNnVzVqgikQDgstzV0tdzA64pDxwEbyykfW14="
       "ibuysausage-nur.cachix.org-1:tqoAgFo/8AL/GhbOg9Cp9Fc46hHBnOCOw5V46knhH9I="
       "ibuysausage-neovim-nightly.cachix.org-1:CcVje9KrKo6+tyVied3wfzmAmpyNPysard1GGaNoIoY="
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       "fenix.cachix.org-1:ecJhr+RdYEdcVgUkjruiYhjbBloIEGov7bos90cZi0Q="
-      "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
     ];
   };
 
@@ -45,10 +41,6 @@
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    niri-flake = {
-      url = "github:epireyn/niri-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     grub2-themes = {
       url = "github:vinceliuice/grub2-themes";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -69,9 +61,6 @@
       url = "github:ibuysausage/neovim-nightly-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-    };
   };
 
   outputs = {
@@ -81,7 +70,6 @@
     nur,
     disko,
     stylix,
-    niri-flake,
     grub2-themes,
     fenix,
     sops-nix,
@@ -107,7 +95,6 @@
             nixvim.nixosModules.nixvim
             {
               nixpkgs.overlays = [
-                niri-flake.overlays.niri
                 fenix.overlays.default
               ];
             }
@@ -116,8 +103,6 @@
                 useUserPackages = true;
                 extraSpecialArgs = {inherit inputs;};
                 sharedModules = [
-                  niri-flake.homeModules.niri
-                  niri-flake.homeModules.stylix
                   nixvim.homeModules.nixvim
                   nur.modules.homeManager.default
                 ];

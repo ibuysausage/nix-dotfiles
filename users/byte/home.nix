@@ -9,12 +9,11 @@
     ../../home/kitty.nix
     ../../home/librewolf.nix
     ../../home/omp.nix
-    ../../home/niri.nix
-    ../../home/hyprland.nix
     ../../home/rofi.nix
     ../../home/firefox.nix
     ../../home/stylix.nix
     ../../home/nixvim
+    ../../home/emacs.nix
   ];
 
   home.username = "byte";

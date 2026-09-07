@@ -1,2 +1,0 @@
--- don't want to rebuild every time for just starting out hyprland config
--- will put files here once I get a good enough config

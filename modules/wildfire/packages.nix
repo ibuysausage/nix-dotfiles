@@ -53,19 +53,13 @@ in {
     sops
     age
     pkgit
-    emacs
     # needed for rustlings
     gcc
     # numworks usb
     chromium
+    kdePackages.dolphin
     # fenix rust
     fenix.complete.toolchain
-    # kde i think for dolphin only
-    kdePackages.dolphin
-    kdePackages.kio-extras
-    kdePackages.xdg-desktop-portal-kde
-    kdePackages.kconfig
-    kdePackages.kservice
     # no overlay yet
     inputs.byte-nur.packages.${system}.crdl
     inputs.byte-nur.packages.${system}.waifufetch
