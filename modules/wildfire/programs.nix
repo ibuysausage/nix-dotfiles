@@ -11,6 +11,8 @@
   # tpad
   services.libinput.enable = true;
   services.libinput.touchpad.tapping = true;
+  # caps to esc for neovim
+  services.xserver.xkb.options = "caps:escape";
 
   services.xserver.displayManager.startx = {
     enable = true;
