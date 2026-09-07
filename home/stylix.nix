@@ -24,11 +24,7 @@
       gtk.enable = true;
       qt.enable = true;
 
-      # a lot of configuration is to be done in hyprland
-      # and I want to do it in lua and don't want to have any nix limitations
-      # also catppuccin theme is available for hyprland
       nixvim.enable = false;
-      hyprland.enable = false;
 
       firefox = {
         enable = true;
