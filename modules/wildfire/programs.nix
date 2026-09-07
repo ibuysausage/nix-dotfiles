@@ -8,6 +8,7 @@
   # display managers are bloat for weirdos
   services.displayManager.gdm.enable = false;
   services.displayManager.sddm.enable = false;
+  services.displayManager.lightdm.enable = false;
   services.displayManager.startx.enable = true;
   # needed for Intel ???
   services.xserver.videoDrivers = ["modesetting"];
