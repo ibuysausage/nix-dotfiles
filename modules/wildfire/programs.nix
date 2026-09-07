@@ -2,6 +2,24 @@
   programs.git.enable = true;
   programs.zsh.enable = true;
 
+  # x11
+  services.xserver.enable = true;
+  services.xserver.windowManager.oxwm.enable = true;
+  services.displayManager.gdm.enable = false;
+  # ???
+  services.xserver.videoDrivers = ["modesetting"];
+  # tpad
+  services.libinput.enable = true;
+  services.libinput.touchpad.tapping = true;
+  # make qt look like gtk
+  qt.platformTheme = "gtk2";
+  qt.style = "gtk2";
+
+  services.xserver.displayManager.startx = {
+    enable = true;
+    generateScript = true;
+  };
+
   # numworks calculator
   services.udev.packages = [
     pkgs.numworks-udev-rules
