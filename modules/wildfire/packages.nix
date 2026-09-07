@@ -53,6 +53,7 @@ in {
     sops
     age
     pkgit
+    emacs
     # needed for rustlings
     gcc
     # numworks usb
