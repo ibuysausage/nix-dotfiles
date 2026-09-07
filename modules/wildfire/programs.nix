@@ -6,6 +6,7 @@
   services.xserver.enable = true;
   services.xserver.windowManager.oxwm.enable = true;
   services.displayManager.gdm.enable = false;
+  services.displayManager.sddm.enable = false;
   # needed for Intel ???
   services.xserver.videoDrivers = ["modesetting"];
   # tpad
