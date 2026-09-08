@@ -5,11 +5,12 @@
     ../../modules/wildfire/packages.nix
     ../../modules/wildfire/boot.nix
     ../../modules/wildfire/system.nix
-    ../../modules/wildfire/programs.nix
+    ../../modules/wildfire/services.nix
     ../../modules/wildfire/user.nix
     ../../modules/wildfire/network.nix
     ../../modules/wildfire/sway.nix
     ../../modules/wildfire/stylix.nix
+    ../../modules/wildfire/x11.nix
   ];
 
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .

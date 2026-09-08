@@ -77,4 +77,7 @@
     enable = true;
     wheelNeedsPassword = false;
   };
+
+  # needed or error
+  programs.zsh.enable = true;
 }
