@@ -22,7 +22,6 @@ in {
     oh-my-posh
     eza
     ripgrep
-    feh
     yt-dlp
     btop
     libnotify
@@ -53,6 +52,9 @@ in {
     sops
     age
     pkgit
+    # x11
+    feh
+    xwallpaper
     # needed for rustlings
     gcc
     # numworks usb
