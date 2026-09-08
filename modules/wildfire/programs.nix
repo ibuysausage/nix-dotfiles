@@ -15,12 +15,14 @@
   # needed for Intel ???
   services.xserver.videoDrivers = ["modesetting"];
   # tpad
-  services.libinput.enable = true;
   services.libinput = {
+    enable = true;
+
     touchpad = {
       tapping = true;
       accelProfile = "flat";
       accelSpeed = "0.9";
+      naturalScrolling = true;
     };
   };
   # caps to esc for neovim
