@@ -2,7 +2,8 @@
   stylix = {
     enable = true;
     autoEnable = true;
-    image = ../../home/wallpapers/catppuccin/nixos.jpg;
+    # image = ../../home/wallpapers/catppuccin/nixos.jpg;
+    image = ../../home/wallpapers/nix-chan.webp;
     base16Scheme = ../../home/themes/catppuccin-mocha.yaml;
 
     fonts.monospace = {
