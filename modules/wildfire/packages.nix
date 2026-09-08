@@ -55,6 +55,7 @@ in {
     # x11
     feh
     xwallpaper
+    xmobar
     # needed for rustlings
     gcc
     # numworks usb
