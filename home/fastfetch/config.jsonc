@@ -3,7 +3,7 @@
     "logo": {
     	"source": "~/Pictures/Wallpapers/images/1-blue-neko.png",
     	"type": "kitty",
-      "height": 25,
+      "height": 27,
     "padding": {
         "left": 1,         // Left padding
         "top": 0,         // Left padding
