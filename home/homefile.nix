@@ -27,6 +27,11 @@
     source = ./omp/omp.toml;
   };
 
+  xdg.configFile."fastfetch" = {
+    source = ./fastfetch;
+    recursive = true;
+  };
+
   xdg.configFile."noctalia" = {
     source = ./noctalia;
     recursive = true;

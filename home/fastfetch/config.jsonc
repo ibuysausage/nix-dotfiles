@@ -1,0 +1,90 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json", // Optional: Provides IDE intelligence
+    "logo": {
+    	"source": "~/Pictures/Wallpapers/images/1-blue-neko.png",
+    	"type": "kitty",
+      "height": 25,
+    "padding": {
+        "left": 1,         // Left padding
+        "top": 0,         // Left padding
+    },
+    },
+    "display": {
+        "separator": " -> "
+    },
+
+    "modules": [
+	"break",
+        "break",
+        "break",
+        "break",
+	{
+            "type": "custom",
+            "format": "\u001b[90m\uf192  \u001b[31m\uf192  \u001b[32m\uf192  \u001b[33m\uf192  \u001b[34m\uf192  \u001b[35m\uf192  \u001b[36m\uf192  \u001b[37m\uf192 "
+        },
+	"break",
+	{
+            "type": "title",
+            "keyWidth": 10
+        },
+        "break",
+        {
+            "type": "os",
+            "key": "\uf313 ",
+            "keyColor": "34",  // = color4
+        },
+        {
+            "type": "kernel",
+            "key": "\uf013 ",
+            "keyColor": "34",
+        },
+        {
+            "type": "packages",
+            "key": " ",
+            "keyColor": "34",
+        },
+        {
+            "type": "shell",
+            "key": " ",
+            "keyColor": "34",
+        },
+        {
+            "type": "terminal",
+            "key": " ",
+            "keyColor": "34",
+        },
+        {
+            "type": "wm",
+            "key": " ",
+            "keyColor": "34",
+        },
+        {
+            "type": "cursor",
+            "key": " ",
+            "keyColor": "34",
+        },
+        {
+            "type": "terminalfont",
+            "key": " ",
+            "keyColor": "34",
+        },
+        {
+            "type": "uptime",
+            "key": " ",
+            "keyColor": "34",
+        },
+        {
+            "type": "datetime",
+            "format": "{1}-{3}-{11}",
+            "key": " ",
+            "keyColor": "34",
+        },
+        "break",
+        {
+            "type": "custom",
+            "format": "\u001b[90m\uf192  \u001b[31m\uf192  \u001b[32m\uf192  \u001b[33m\uf192  \u001b[34m\uf192  \u001b[35m\uf192  \u001b[36m\uf192  \u001b[37m\uf192 "
+        },
+        "break",
+        "break",
+    ]
+}
