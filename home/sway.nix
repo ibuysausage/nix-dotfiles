@@ -1,4 +1,4 @@
-{config, ...}: {
+{...}: {
   wayland.windowManager.sway = {
     enable = true;
     checkConfig = false;
@@ -97,6 +97,7 @@
 
         "type:keyboard" = {
           xkb_layout = "us";
+          xkb_options = "caps:escape";
         };
 
         "type:mouse" = {

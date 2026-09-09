@@ -14,6 +14,7 @@
     ../../home/stylix.nix
     ../../home/nixvim
     ../../home/emacs.nix
+    ../../home/fastfetch.nix
   ];
 
   home.username = "byte";

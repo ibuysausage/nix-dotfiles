@@ -11,7 +11,6 @@ in {
     wget
     curl
     wl-clipboard
-    fastfetch
     tuxedo
     keepassxc
     rofi
