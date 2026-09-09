@@ -12,6 +12,7 @@ in {
     curl
     wl-clipboard
     tuxedo
+    gimp
     keepassxc
     rofi
     kitty
