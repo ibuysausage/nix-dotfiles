@@ -130,6 +130,7 @@ flake-lock:
 [group('maintenance')]
 devenv:
     find ~ -name devenv.nix -type f -execdir sh -c 'cd "$(dirname "$1")" && devenv allow' _ {} \;
+    find ~ -name devenv.nix -type f -execdir sh -c 'cd "$(dirname "$1")" && devenv update' _ {} \;
     devenv gc
     @rm -rf /etc/nixos/.devenv
     @rm -rf /etc/nixos/devenv*
