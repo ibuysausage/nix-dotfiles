@@ -1,4 +1,22 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
+  programs.spicetify = let
+    spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.system};
+  in {
+    enable = true;
+    enabledExtensions = with spicePkgs.extensions; [
+      adblockify
+      adblock
+    ];
+    # MY BOY STYLIX GOT U DAWG
+    #
+    # theme = spicePkgs.themes.catppuccin;
+    # colorScheme = "mocha";
+  };
+
   # numworks calculator
   services.udev.packages = [
     pkgs.numworks-udev-rules

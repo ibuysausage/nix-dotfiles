@@ -61,6 +61,7 @@
       url = "github:ibuysausage/neovim-nightly-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
   };
 
   outputs = {
@@ -74,6 +75,7 @@
     fenix,
     sops-nix,
     nixvim,
+    spicetify-nix,
     ...
   } @ inputs: {
     nixosConfigurations = {
@@ -93,6 +95,7 @@
             grub2-themes.nixosModules.default
             sops-nix.nixosModules.sops
             nixvim.nixosModules.nixvim
+            spicetify-nix.nixosModules.spicetify
             {
               nixpkgs.overlays = [
                 fenix.overlays.default
