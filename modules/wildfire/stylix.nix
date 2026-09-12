@@ -3,7 +3,7 @@
     enable = true;
     autoEnable = true;
     # image = ../../home/wallpapers/catppuccin/nixos.jpg;
-    image = ../../home/wallpapers/nix-chan.webp;
+    image = ../../home/wallpapers/catppuccin/welcome-girl.png;
     base16Scheme = ../../home/themes/catppuccin-mocha.yaml;
 
     fonts.monospace = {
