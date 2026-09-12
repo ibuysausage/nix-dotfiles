@@ -4,6 +4,7 @@
     extraPackages = with pkgs; [
       brightnessctl
       grim
+      slurp
       swayidle
       swaylock-effects
       swaynotificationcenter
