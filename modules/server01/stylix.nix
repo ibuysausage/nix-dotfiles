@@ -5,9 +5,23 @@
     image = ../../home/wallpapers/purple-anime-girl.png;
     base16Scheme = ../../home/themes/uwunicorn.yaml;
 
-    fonts.monospace = {
-      package = pkgs.nerd-fonts.caskaydia-cove;
-      name = "CaskaydiaCove Nerd Font Mono";
+    fonts = {
+      serif = {
+        package = pkgs.nerd-fonts.caskaydia-cove;
+        name = "CaskaydiaCove Nerd Font Mono";
+      };
+      sansSerif = {
+        package = pkgs.nerd-fonts.caskaydia-cove;
+        name = "CaskaydiaCove Nerd Font Mono";
+      };
+      monospace = {
+        package = pkgs.nerd-fonts.caskaydia-cove;
+        name = "CaskaydiaCove Nerd Font Mono";
+      };
+      emoji = {
+        package = pkgs.nerd-fonts.caskaydia-cove;
+        name = "CaskaydiaCove Nerd Font Mono";
+      };
     };
 
     targets.grub = {

@@ -52,17 +52,25 @@
     };
 
     fonts = {
+      serif = {
+        package = pkgs.nerd-fonts.caskaydia-cove;
+        name = "CaskaydiaCove Nerd Font Mono";
+      };
       sansSerif = {
         package = pkgs.nerd-fonts.caskaydia-cove;
-        name = "CaskaydiaCove Nerd Font";
+        name = "CaskaydiaCove Nerd Font Mono";
       };
-
       monospace = {
         package = pkgs.nerd-fonts.caskaydia-cove;
-        name = "CaskaydiaCove Nerd Font";
+        name = "CaskaydiaCove Nerd Font Mono";
+      };
+      emoji = {
+        package = pkgs.nerd-fonts.caskaydia-cove;
+        name = "CaskaydiaCove Nerd Font Mono";
       };
 
       sizes.terminal = 11;
     };
   };
+  fonts.fontconfig.enable = true;
 }

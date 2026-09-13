@@ -7,7 +7,6 @@ in {
       enable = true;
       device = "nodev";
       efiSupport = true;
-      font = "${config.stylix.fonts.monospace.package}/share/fonts/truetype/NerdFonts/CaskaydiaCove/CaskaydiaCoveNerdFontMono-Regular.ttf";
       fontSize = 20;
     };
     efi.canTouchEfiVariables = true;

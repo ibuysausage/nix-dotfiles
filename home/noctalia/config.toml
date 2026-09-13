@@ -8,5 +8,5 @@ position = "top"
 thickness = 42
 backgroundopacity = 0
 scale = 1.2
-margin_opposite_edge = 0 
-font_family = "CaskaydiaCove Nerd Font"
+margin_opposite_edge = 0
+# font_family = "CaskaydiaCove Nerd Font"

@@ -12,9 +12,9 @@ in {
     extraConfig = {
       modi = "drun,window,run";
       icon-theme = "Papirus-Dark";
+      font = "CaskaydiaCove Nerd Font 14";
       show-icons = true;
       terminal = "kitty";
-      font = "CaskaydiaCove Nerd Font 14";
       drun-display-format = "{icon} {name}";
       location = 0;
       disable-history = false;

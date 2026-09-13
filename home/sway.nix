@@ -58,20 +58,12 @@
         };
       };
 
-      fonts = {
-        names = ["Caskaydia Nerd Font Mono"];
-        size = 10.0;
-      };
-
       bars = [
         {
           position = "top";
           statusCommand = "while ~/.config/sway/status.sh; do sleep 1; done";
 
-          fonts = {
-            names = ["CaskaydiaCove Nerd Font Mono"];
-            size = 11.0;
-          };
+          fonts.size = 11.0;
 
           colors = {
             statusline = "#ffffff";
