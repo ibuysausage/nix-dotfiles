@@ -2,7 +2,7 @@
   services.searx = {
     enable = true;
     redisCreateLocally = true;
-    # environmentFile = config.sops.secrets.searxng-env.path;
+    environmentFile = config.sops.secrets.searxng-env.path;
 
     settings.server = {
       bind_address = "0.0.0.0";
