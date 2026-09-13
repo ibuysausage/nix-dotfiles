@@ -18,6 +18,9 @@
 
   services.openssh.enable = true;
 
+  # searxng port
+  networking.firewall.allowedTCPPorts = [8080];
+
   services.logind.settings.Login = {
     HandleLidSwitch = "ignore";
     HandleLidSwitchExternalPower = "ignore";
