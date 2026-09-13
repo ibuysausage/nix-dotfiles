@@ -1,8 +1,4 @@
-{pkgs, ...}: {
-  environment.systemPackages = with pkgs; [
-    searxng
-  ];
-
+{...}: {
   services.searx = {
     enable = true;
     redisCreateLocally = true;
@@ -14,4 +10,6 @@
       # secret_key = "Your secret key.";
     };
   };
+
+  networking.firewall.allowedTCPPorts = [8080];
 }
