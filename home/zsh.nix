@@ -30,7 +30,7 @@
     };
 
     shellAliases = {
-      ls = "eza --icons always";
+      ls = "eza --icons always -alh";
       cat = "bat";
       lg = "lazygit";
       man = "batman";
