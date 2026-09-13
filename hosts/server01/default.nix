@@ -7,6 +7,7 @@
     ../../modules/server01/boot.nix
     ../../modules/server01/packages.nix
     ../../modules/server01/system.nix
+    ../../modules/server01/searxng.nix
     ../../modules/server01/stylix.nix
   ];
 
