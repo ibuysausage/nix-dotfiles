@@ -6,5 +6,6 @@
     just
     openssl
     age
+    sops
   ];
 }
