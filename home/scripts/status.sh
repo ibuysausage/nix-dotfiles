@@ -8,7 +8,7 @@ bat="/sys/class/power_supply/BAT0"
 
 date=$(date "+%a %F")
 
-time=$(date "+%r:+%H:%M:%S")
+time=$(date "+%r")
 
 sys_info=$(uname -ar | cut -d " " -f 1,3)
 
