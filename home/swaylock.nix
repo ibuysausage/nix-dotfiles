@@ -8,6 +8,8 @@
       indicator = true;
       indicator-radius = 100;
       indicator-thickness = 15;
+      font-size = 26;
+      timestr = "%r";
     };
   };
 }

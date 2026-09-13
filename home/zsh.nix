@@ -37,6 +37,7 @@
       ff = "clear";
       v = "nvim";
       no = "yes n";
+      grabs = "grim -g $(slurp)";
       # No fastfetch needed because clear alias already has && fastfetch
       c = "clear";
       clear = "clear && fastfetch";
