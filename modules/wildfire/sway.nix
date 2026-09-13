@@ -5,6 +5,7 @@
       brightnessctl
       grim
       slurp
+      swayimg
       swayidle
       swaylock-effects
       swaynotificationcenter
