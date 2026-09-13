@@ -4,6 +4,5 @@
     wget
     git
     just
-    searxng
   ];
 }
