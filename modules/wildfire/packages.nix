@@ -43,7 +43,6 @@ in {
     lazygit
     git
     gh
-    noctalia
     quickshell
     alejandra
     nixfmt

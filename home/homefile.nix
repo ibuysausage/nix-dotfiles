@@ -32,11 +32,6 @@
     recursive = true;
   };
 
-  xdg.configFile."noctalia" = {
-    source = ./noctalia;
-    recursive = true;
-  };
-
   xdg.configFile."quickshell" = {
     source = ./quickshell;
     recursive = true;
