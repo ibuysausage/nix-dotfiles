@@ -6,9 +6,9 @@
 sep='<span weight="bold" foreground="#00ff00">|</span>'
 bat="/sys/class/power_supply/BAT0"
 
-date=$(date "+%a %F") 
+date=$(date "+%a %F")
 
-time=$(date "+%H:%M:%S")
+time=$(date "+%r:+%H:%M:%S")
 
 sys_info=$(uname -ar | cut -d " " -f 1,3)
 
