@@ -81,7 +81,7 @@
         "type:touchpad" = {
           accel_profile = "flat";
           pointer_accel = "0.9";
-          dwt = "disabled";
+          dwt = "enabled";
           tap = "enabled";
           natural_scroll = "enabled";
           middle_emulation = "enabled";
