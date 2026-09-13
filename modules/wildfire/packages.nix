@@ -1,8 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: let
+{pkgs, ...}: let
   system = pkgs.stdenv.hostPlatform.system;
 in {
   # You can use https://search.nixos.org/ to find more packages (and options).
@@ -62,9 +58,8 @@ in {
     kdePackages.dolphin
     # fenix rust
     fenix.complete.toolchain
-    # no overlay yet
-    inputs.byte-nur.packages.${system}.crdl
-    inputs.byte-nur.packages.${system}.waifufetch
+    nur.repos.ibuysausage.crdl
+    nur.repos.ibuysausage.waifufetch
   ];
 
   fonts.packages = with pkgs; [
