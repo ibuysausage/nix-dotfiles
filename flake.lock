@@ -68,26 +68,6 @@
         "type": "github"
       }
     },
-    "byte-nur": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1789308579,
-        "narHash": "sha256-U+qmAt2rVX+YnixoYLJHjZEHUC3pe7klBaQVkzBr4U8=",
-        "owner": "ibuysausage",
-        "repo": "nur-packages",
-        "rev": "0d4d44a4c6a6175683919c568be284f0a0cf9e51",
-        "type": "github"
-      },
-      "original": {
-        "owner": "ibuysausage",
-        "repo": "nur-packages",
-        "type": "github"
-      }
-    },
     "disko": {
       "inputs": {
         "nixpkgs": [
@@ -441,7 +421,6 @@
     },
     "root": {
       "inputs": {
-        "byte-nur": "byte-nur",
         "disko": "disko",
         "fenix": "fenix",
         "grub2-themes": "grub2-themes",
