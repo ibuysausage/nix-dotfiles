@@ -14,8 +14,8 @@
     };
 
     cursor = {
-      name = "Adwaita";
-      package = pkgs.adwaita-icon-theme;
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Ice";
       size = 24;
     };
 

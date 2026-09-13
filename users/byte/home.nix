@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{...}: {
   imports = [
     ../../home/homefile.nix
     ../../home/single.nix
@@ -16,8 +16,6 @@
     ../../home/emacs.nix
     ../../home/fastfetch.nix
   ];
-
-  home.packages = [pkgs.nur.repos.mich-adams.afterglow-cursors];
 
   home.username = "byte";
   home.homeDirectory = "/home/byte";
