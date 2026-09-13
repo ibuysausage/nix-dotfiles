@@ -5,5 +5,6 @@
     git
     just
     openssl
+    age
   ];
 }

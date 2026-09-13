@@ -120,6 +120,7 @@
             disko.nixosModules.disko
             stylix.nixosModules.stylix
             grub2-themes.nixosModules.default
+            sops-nix.nixosModules.sops
             ./hosts/server01/default.nix
           ];
         };
