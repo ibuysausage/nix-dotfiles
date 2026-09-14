@@ -1,4 +1,9 @@
 {config, ...}: {
+  sops.secrets.searxng-env = {
+    owner = "root";
+    group = "root";
+    mode = "0400";
+  };
   services.searx = {
     enable = true;
     redisCreateLocally = true;
