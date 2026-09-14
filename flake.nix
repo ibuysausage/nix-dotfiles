@@ -55,7 +55,9 @@
       url = "github:ibuysausage/neovim-nightly-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+    };
   };
 
   outputs = {
