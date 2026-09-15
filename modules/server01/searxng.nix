@@ -7,7 +7,23 @@
   services.searx = {
     enable = true;
     redisCreateLocally = true;
+    configureNginx = true;
+    openFirewall = true;
     environmentFile = config.sops.secrets.searxng-env.path;
+
+    faviconsSettings = {
+      favicons = {
+        cfg_schema = 1;
+        cache = {
+          db_url = "/var/cache/searx/faviconcache.db";
+          HOLD_TIME = 5184000;
+          LIMIT_TOTAL_BYTES = 2147483648;
+          BLOB_MAX_BYTES = 40960;
+          MAINTENANCE_MODE = "auto";
+          MAINTENANCE_PERIOD = 600;
+        };
+      };
+    };
 
     settings = {
       server = {
@@ -19,6 +35,7 @@
         safe_search = 0;
         autocomplete = "duckduckgo";
         favicon_resolver = "duckduckgo";
+        default_lang = "en-US";
       };
 
       ui = {
@@ -32,5 +49,6 @@
   sops.defaultSopsFormat = "yaml";
   sops.age.keyFile = "/root/.config/sops/age/keys.txt";
 
-  networking.firewall.allowedTCPPorts = [8080];
+  # Already set in searxng settings
+  # networking.firewall.allowedTCPPorts = [8080];
 }
