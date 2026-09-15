@@ -8,6 +8,8 @@
       settings = {
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
         "ui.systemUsesDarkTheme" = 1;
+        # Sets font for webpage
+        "browser.display.use_document_fonts" = 0;
       };
 
       extensions = {
