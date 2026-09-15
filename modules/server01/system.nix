@@ -8,6 +8,9 @@
     };
   };
 
+  programs.sway.enable = true;
+  programs.firefox.enable = true;
+
   networking.hostName = "server01";
 
   networking.networkmanager.enable = true;
