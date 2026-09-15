@@ -96,6 +96,7 @@
         "type:mouse" = {
           accel_profile = "flat";
           pointer_accel = "0.9";
+          natural_scroll = "enabled";
         };
       };
 
