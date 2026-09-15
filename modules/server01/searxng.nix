@@ -18,6 +18,7 @@
       search = {
         safe_search = 0;
         autocomplete = "duckduckgo";
+        favicon_resolver = "duckduckgo";
       };
 
       ui = {
