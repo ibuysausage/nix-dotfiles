@@ -93,7 +93,7 @@
           xkb_options = "caps:escape";
         };
 
-        "type:mouse" = {
+        "type:pointer" = {
           accel_profile = "flat";
           pointer_accel = "0.9";
           natural_scroll = "enabled";
