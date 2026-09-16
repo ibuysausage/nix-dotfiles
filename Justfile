@@ -55,7 +55,7 @@ boot host=host: _stage
 [group('deploy')]
 deploy target host=host: _stage
     nixos-rebuild switch --flake {{flake}}#{{host}} \
-        --target-host {{target}} --elevate=sudo --build-host localhost
+        --target-host {{target}}
 
 # ═══ home-manager ════════════════════════════════════════════════════════
 
