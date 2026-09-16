@@ -95,7 +95,7 @@
 
         "type:pointer" = {
           accel_profile = "flat";
-          pointer_accel = "0.9";
+          pointer_accel = "0.7";
           natural_scroll = "enabled";
         };
       };
