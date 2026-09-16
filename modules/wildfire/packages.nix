@@ -1,6 +1,4 @@
-{pkgs, ...}: let
-  system = pkgs.stdenv.hostPlatform.system;
-in {
+{pkgs, ...}: {
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
     vim
@@ -15,6 +13,7 @@ in {
     home-manager
     librewolf
     fzf
+    ripgrep
     oh-my-posh
     eza
     ripgrep
