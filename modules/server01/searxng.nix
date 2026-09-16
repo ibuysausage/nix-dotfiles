@@ -7,7 +7,6 @@
   services.searx = {
     enable = true;
     redisCreateLocally = true;
-    configureNginx = true;
     openFirewall = true;
     environmentFile = config.sops.secrets.searxng-env.path;
 
