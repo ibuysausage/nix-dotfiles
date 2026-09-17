@@ -24,7 +24,4 @@
     HandleLidSwitchExternalPower = "ignore";
     HandleLidSwitchDocked = "ignore";
   };
-
-  # adguardhome web interface port
-  networking.firewall.allowedTCPPorts = [8888];
 }
