@@ -47,7 +47,4 @@
   sops.defaultSopsFile = ../../secrets.yaml;
   sops.defaultSopsFormat = "yaml";
   sops.age.keyFile = "/root/.config/sops/age/keys.txt";
-
-  # Already set in searxng settings
-  # networking.firewall.allowedTCPPorts = [8080];
 }

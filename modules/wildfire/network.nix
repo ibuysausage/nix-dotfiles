@@ -1,10 +1,18 @@
 {...}: {
   # Jellyfin docker ports
-  networking.firewall.allowedTCPPorts = [
-    26099
-    26101
-    8096
-  ];
+  networking = {
+    firewall.allowedTCPPorts = [
+      26099
+      26101
+      8096
+    ];
+
+    # AdGuardHome server ip
+    nameservers = ["192.168.4.30"];
+
+    # DHCP overrides in resolv.conf
+    networkmanager.dns = "none";
+  };
 
   virtualisation.docker = {
     enable = true;

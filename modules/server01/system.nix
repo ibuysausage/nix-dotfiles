@@ -24,4 +24,7 @@
     HandleLidSwitchExternalPower = "ignore";
     HandleLidSwitchDocked = "ignore";
   };
+
+  networking.firewall.allowedTCPPorts = [8080 8888 53];
+  networking.firewall.allowedUDPPorts = [53];
 }
