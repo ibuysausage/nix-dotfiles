@@ -17,7 +17,7 @@
         "Mod1+Space" = "exec rofi -show drun -show-icons --theme ~/.config/rofi/config.rasi";
         "Mod1+q" = "kill";
         "Mod1+p" = "exec grim ~/Pictures/Screenshots/$(date +%s).png";
-        "Mod1+Shift+p" = "exec grim -g $(slurp) ~/Pictures/Screenshots/$(date +%s).png";
+        "Mod1+Shift+p" = "exec grim -g \"$(slurp)\" ~/Pictures/Screenshots/$(date +%s).png";
         "Mod1+r" = "mode resize";
 
         "Mod1+Shift+c" = "reload";
