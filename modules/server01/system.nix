@@ -25,6 +25,6 @@
     HandleLidSwitchDocked = "ignore";
   };
 
-  networking.firewall.allowedTCPPorts = [8080 8888 53];
+  networking.firewall.allowedTCPPorts = [8080 3000 8888 53];
   networking.firewall.allowedUDPPorts = [53];
 }
