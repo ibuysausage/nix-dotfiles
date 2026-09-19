@@ -36,6 +36,7 @@
       man = "batman";
       ff = "clear";
       v = "nvim";
+      vnix = "nvim /etc/nixos";
       no = "yes n";
       grabs = "grim -g $(slurp)";
       # No fastfetch needed because clear alias already has && fastfetch

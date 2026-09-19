@@ -14,10 +14,10 @@
 
       keybindings = {
         "Mod1+w" = "exec kitty";
-        "Mod1+Space" = "exec rofi -show drun -show-icons --theme ~/.config/rofi/config.rasi";
+        "Mod1+Space" = "exec rofi -show drun";
         "Mod1+q" = "kill";
-        "Mod1+p" = "exec grim ~/Pictures/Screenshots/$(date +%s).png";
-        "Mod1+Shift+p" = "exec grim -g \"$(slurp)\" ~/Pictures/Screenshots/$(date +%s).png";
+        "Mod1+p" = "exec grim \"$HOME/Pictures/Screenshots/$(date +\"%Y-%m-%d %I:%M:%S %p\").png\"";
+        "Mod1+Shift+p" = "exec grim -g \"$(slurp)\" \"$HOME/Pictures/Screenshots/$(date +\"%Y-%m-%d %I:%M:%S %p\").png\"";
         "Mod1+r" = "mode resize";
 
         "Mod1+Shift+c" = "reload";
