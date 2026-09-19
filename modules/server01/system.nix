@@ -16,8 +16,12 @@
 
   i18n.defaultLocale = "en_US.UTF-8";
 
-  services.openssh.enable = true;
-  services.openssh.settings.PermitRootLogin = "yes";
+  services.openssh = {
+    enable = true;
+    settings = {
+      PermitRootLogin = "yes";
+    };
+  };
 
   services.logind.settings.Login = {
     HandleLidSwitch = "ignore";
