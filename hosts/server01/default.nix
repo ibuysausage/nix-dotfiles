@@ -7,9 +7,11 @@
     ../../modules/server01/boot.nix
     ../../modules/server01/packages.nix
     ../../modules/server01/system.nix
+    ../../modules/server01/network.nix
     ../../modules/server01/searxng.nix
     ../../modules/server01/adguardhome.nix
     ../../modules/server01/stylix.nix
+    ../../modules/server01/sops.nix
   ];
 
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
