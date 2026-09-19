@@ -1,3 +1,7 @@
+![adguardhome.png](https://github.com/ibuysausage/nix-dotfiles/blob/main/archive/adguardhome.png?raw=true)</br>
+### ALWAYS READ
+thought this would work for the AdGuardHome DNS port
+
 12 (twelve) is the natural number following 11 and preceding 13.
 
 Twelve is the 3rd superior highly composite number, the 3rd colossally abundant number, the 5th highly composite number, and is divisible by the numbers from 1 to 4, and 6, a comparatively large number of divisors.
