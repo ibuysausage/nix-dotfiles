@@ -1,11 +1,13 @@
 # .sops.yaml
 
 keys:
-  - &byte age12t3gsgkr5c02reucrpdcx0kuk532aer20dg8l2y3l27vscqdevnqhhuewd
-  - &server01 age1apdzp2lx03y3csg4l86w40xsvdxzhq6946vt3hukhuea2yan25es9dwksw
+    - &byte age10nmvj84t7mx5sk22hrvshq4z5ds0j2hug6jrjew0m5yrdahs64qq532yzz
+    - &wildfire age1v3rr6sy8suz2dvhsjhsd4xpwv9ydv65mtjdpwlulkvqkt0x3ffes3dgq0q
+    - &server01 age17sf2dhscacwl30qulr967juvdxm2xlu780h7wlqgqryzsy57v4qqajxzgw
 creation_rules:
   - path_regex: secrets.yaml$
     key_groups:
       - age:
         - *byte
+        - *wildfire
         - *server01

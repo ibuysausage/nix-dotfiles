@@ -44,7 +44,12 @@
     };
   };
 
-  sops.defaultSopsFile = ../../secrets.yaml;
-  sops.defaultSopsFormat = "yaml";
-  sops.age.keyFile = "/root/.config/sops/age/keys.txt";
+  sops = {
+    defaultSopsFile = ../../secrets.yaml;
+    defaultSopsFormat = "yaml";
+
+    age = {
+      sshKeyPaths = ["/etc/ssh/ssh_host_ed25519_key"];
+    };
+  };
 }

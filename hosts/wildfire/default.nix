@@ -12,6 +12,7 @@
     ../../modules/wildfire/stylix.nix
     ../../modules/wildfire/x11.nix
     ../../modules/wildfire/spicetify.nix
+    ../../modules/wildfire/sops.nix
   ];
 
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
