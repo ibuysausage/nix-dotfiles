@@ -15,8 +15,7 @@
     ../../home/nixvim
     ../../home/emacs.nix
     ../../home/fastfetch.nix
-    # No need to use this yet
-    # ../../home/sops.nix
+    ../../home/sops.nix
   ];
 
   home.username = "byte";

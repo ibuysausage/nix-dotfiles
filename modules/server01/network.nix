@@ -26,6 +26,6 @@
   programs.ssh.startAgent = true;
 
   users.users."root".openssh.authorizedKeys.keys = [
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBPPejJhjq8giE6tHE6p4bB2r43i+w6fMr8hBzpVX8Wi bannansmooth68@proton.me"
+    (builtins.readFile ../../keys/id_byte.pub)
   ];
 }
