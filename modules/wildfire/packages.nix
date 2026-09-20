@@ -45,6 +45,7 @@
     marktext
     sops
     age
+    ssh-to-age
     pkgit
     # x11
     feh
