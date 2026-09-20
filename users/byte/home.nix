@@ -18,10 +18,11 @@
     ../../home/sops.nix
   ];
 
-  home.username = "byte";
-  home.homeDirectory = "/home/byte";
-
-  home.stateVersion = "26.05";
+  home = {
+    username = "byte";
+    homeDirectory = "/home/byte";
+    stateVersion = "26.05";
+  };
 
   programs.home-manager.enable = true;
 }

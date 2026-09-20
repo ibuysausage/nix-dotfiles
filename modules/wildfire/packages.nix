@@ -41,6 +41,8 @@
     quickshell
     alejandra
     nixfmt
+    statix
+    deadnix
     devenv
     marktext
     sops

@@ -1,4 +1,4 @@
-{...}: {
+_: {
   # Jellyfin docker ports
   networking = {
     firewall.allowedTCPPorts = [
