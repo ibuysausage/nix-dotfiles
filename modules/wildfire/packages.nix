@@ -62,6 +62,7 @@
     fenix.complete.toolchain
     nur.repos.ibuysausage.crdl
     nur.repos.ibuysausage.waifufetch
+    nur.repos.ibuysausage.nix-reaper
   ];
 
   fonts.packages = with pkgs; [
