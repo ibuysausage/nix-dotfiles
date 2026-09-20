@@ -39,7 +39,7 @@ dry host=host: _stage
 # Build + activate right now (reverts on next reboot if not also `boot`)
 [group('deploy')]
 switch host=host: _stage
-    sudo nixos-rebuild switch --flake {{flake}}#{{host}} --print-build-logs --show-trace
+    sudo nixos-rebuild switch --flake {{flake}}#{{host}} --print-build-logs
 
 # Build + activate, but only keep it until the next reboot (safe to try risky changes)
 [group('deploy')]
@@ -121,7 +121,7 @@ permissions:
     sudo find {{flake}} -type f ! -name '*.sh' -exec chmod 0644 {} +
     sudo chown -R 1000:100 {{flake}}
 
-# Runs the update flake.lock github workflow
+# Runs the update flake.lock github action
 [group('maintenance')]
 flake-lock:
     gh workflow run "Update flake.lock"
