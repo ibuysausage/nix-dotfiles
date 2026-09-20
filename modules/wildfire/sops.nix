@@ -4,15 +4,15 @@
     defaultSopsFormat = "yaml";
 
     age = {
-      # sshKeyPaths = ["/etc/ssh/ssh_host_ed25519_key"];
-      keyFile = "/home/byte/.config/sops/age/keys.txt";
+      sshKeyPaths = ["/etc/ssh/ssh_host_ed25519_key"];
+      keyFile = "/var/lib/sops-nix/key.txt";
       generateKey = true;
     };
 
-    secrets.github-pat = {};
+    secrets.devenv-pat = {};
 
     templates."nix-access-tokens.conf".content = ''
-      access-tokens = github.com=${config.sops.placeholder.github-pat}
+      access-tokens = github.com=${config.sops.placeholder.devenv-pat}
     '';
   };
 

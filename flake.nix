@@ -104,6 +104,7 @@
                 sharedModules = [
                   nixvim.homeModules.nixvim
                   nur.modules.homeManager.default
+                  sops-nix.homeManagerModules.sops
                 ];
                 users.${username} = import ./users/${username}/home.nix;
               };
