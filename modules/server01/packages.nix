@@ -7,5 +7,6 @@
     openssl
     age
     sops
+    nur.repos.ibuysausage.nix-reaper
   ];
 }
