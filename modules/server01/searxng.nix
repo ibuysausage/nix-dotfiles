@@ -40,6 +40,7 @@
       ui = {
         theme_args.simple_style = "black";
         hotkeys = "vim";
+	results_on_new_tab = true;
       };
     };
   };
