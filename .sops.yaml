@@ -5,9 +5,11 @@ keys:
     - &byte age1c3ks3sses84q8mv769kyc28s7zzsz8d4a47l88pgr555alfazueq6nhakw
   - &hosts:
     - &wildfire age1avqq59dq3dmrd9w7uypz8yp7jvlmg0lrqknd3uv8qsxsuszezfls4gyuug
+    - &server01 age17sf2dhscacwl30qulr967juvdxm2xlu780h7wlqgqryzsy57v4qqajxzgw
 creation_rules:
   - path_regex: secrets.yaml$
     key_groups:
       - age:
         - *byte
         - *wildfire
+        - *server01
