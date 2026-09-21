@@ -27,11 +27,6 @@
 
       nixvim.enable = false;
 
-      waybar = {
-        enable = true;
-        addCss = false;
-      };
-
       firefox = {
         enable = true;
         profileNames = ["byte"];
