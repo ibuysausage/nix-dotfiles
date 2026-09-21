@@ -44,6 +44,8 @@
     statix
     deadnix
     nix-update
+    nix-prefetch
+    nix-prefetch-git
     devenv
     marktext
     sops
