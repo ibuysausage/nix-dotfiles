@@ -38,6 +38,11 @@
         recursive = true;
       };
 
+      "waybar" = {
+        source = ./waybar;
+        recursive = true;
+      };
+
       "quickshell" = {
         source = ./quickshell;
         recursive = true;
