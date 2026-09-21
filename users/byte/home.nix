@@ -16,6 +16,7 @@
     ../../home/emacs.nix
     ../../home/fastfetch.nix
     ../../home/sops.nix
+    ../../home/waybar.nix
   ];
 
   home = {
