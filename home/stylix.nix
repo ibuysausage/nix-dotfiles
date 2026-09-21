@@ -24,7 +24,6 @@
       gtk.enable = true;
       qt.enable = true;
       emacs.enable = true;
-      waybar.enable = true;
 
       nixvim.enable = false;
 
