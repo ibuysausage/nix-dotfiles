@@ -10,6 +10,7 @@
     opts = {
       clipboard = "unnamedplus";
       termguicolors = true;
+      exrc = true;
       spelllang = "en_us";
       spell = true;
 
