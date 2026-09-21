@@ -43,6 +43,7 @@
     nixfmt
     statix
     deadnix
+    nix-update
     devenv
     marktext
     sops
