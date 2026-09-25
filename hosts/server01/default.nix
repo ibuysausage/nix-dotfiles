@@ -12,6 +12,7 @@
     ../../modules/server01/adguardhome.nix
     ../../modules/server01/stylix.nix
     ../../modules/server01/sops.nix
+    ../../modules/server01/splatoon.nix
   ];
 
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
