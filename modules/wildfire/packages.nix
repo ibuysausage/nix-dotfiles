@@ -52,6 +52,7 @@
     age
     ssh-to-age
     pkgit
+    sameboy
     # x11
     feh
     xwallpaper
