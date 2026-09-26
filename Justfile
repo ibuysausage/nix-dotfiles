@@ -66,8 +66,9 @@ devenv:
 [group('maintenance')]
 backup:
     tar -cvzf /tmp/{{user}}.tar.gz ~
-    tar -cvf /tmp/ssh.tar ~/.ssh
+    tar -cvf /tmp/ssh.tar ~/.ssh /etc/ssh
     @# add age
+    tar -cvf /tmp/sops.tar ~/.config/sops
     tar -cvf /tmp/vvvvvv.tar ~/.local/share/VVVVVV
     tar -cvf /tmp/nvim-spell.tar ~/.local/share/nvim/site/spell
 
