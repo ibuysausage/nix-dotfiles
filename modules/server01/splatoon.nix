@@ -47,17 +47,17 @@
     libxkbfile
     libbsd
     xcb-util-cursor
-    xorg.xcbutil
-    xorg.xcbutilimage
-    xorg.xcbutilkeysyms
-    xorg.xcbutilrenderutil
-    xorg.xcbutilwm
-    xorg.libxcb
-    xorg.libXrandr
-    xorg.libXrender
-    xorg.libSM
-    xorg.libICE
-    xorg.libxshmfence
+    libxcb-util
+    libxcb-image
+    libxcb-keysyms
+    libxcb-render-util
+    libxcb-wm
+    libxcb
+    libxrandr
+    libxrender
+    libsm
+    libice
+    libxshmfence
     libxkbcommon
   ];
 }
