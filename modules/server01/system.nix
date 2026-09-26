@@ -29,12 +29,9 @@ _: {
     serviceConfig = {
       Type = "simple";
       ExecStart = "/root/splatoon/splatoon/bin/python /root/splatoon/splatnet3-token-util/run_s3s.py -r -M";
-      WorkingDirectory = "/root/splatnet3-token-util";
+      WorkingDirectory = "/root/splatoon/splatnet3-token-util";
       Restart = "always";
       RestartSec = 5;
-
-      # Run as your normal user instead of root, since this presumably
-      # touches your own config/cookies
     };
   };
 }
