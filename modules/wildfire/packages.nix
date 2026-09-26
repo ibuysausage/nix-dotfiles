@@ -53,6 +53,7 @@
     ssh-to-age
     pkgit
     sameboy
+    nodejs
     # x11
     feh
     xwallpaper
