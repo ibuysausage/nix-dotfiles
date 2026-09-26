@@ -35,7 +35,6 @@ _: {
 
       # Run as your normal user instead of root, since this presumably
       # touches your own config/cookies
-      User = "root";
     };
   };
 }
