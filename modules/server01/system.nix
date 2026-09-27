@@ -1,4 +1,4 @@
-_: {
+{pkgs, ...}: {
   nix = {
     settings = {
       experimental-features = ["nix-command" "flakes"];
@@ -30,6 +30,7 @@ _: {
       Type = "simple";
       ExecStart = "/root/splatoon/splatoon/bin/python /root/splatoon/splatnet3-token-util/run_s3s.py -r -M";
       WorkingDirectory = "/root/splatoon/splatnet3-token-util";
+      Environment = "LD_LIBRARY_PATH=${pkgs.stdenv.cc.cc.lib}/lib";
       Restart = "always";
       RestartSec = 5;
     };
