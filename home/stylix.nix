@@ -23,7 +23,7 @@
       nixos-icons.enable = true;
       gtk.enable = true;
       qt.enable = true;
-      emacs.enable = true;
+      emacs.enable = false;
 
       nixvim.enable = false;
 
