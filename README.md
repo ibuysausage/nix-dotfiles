@@ -1,4 +1,4 @@
-I got lots of inspiration for my nixvim config from [dc-tec/nixvim](https://github.com/de-tec/nixvim).</br>
+I got lots of inspiration for my nixvim config from [dc-tec/nixvim](https://github.com/dc-tec/nixvim).</br>
 go star the repo :)
 
 Here is a useful wallpaper theme switcher [NotNeelPatel/WallpaperThemeConverter](https://github.com/NotNeelPael/WallpaperThemeConverter).</br>
