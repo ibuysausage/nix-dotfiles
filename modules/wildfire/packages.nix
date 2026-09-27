@@ -54,6 +54,7 @@
     pkgit
     sameboy
     nodejs
+    kitty.terminfo
     # x11
     feh
     xwallpaper
