@@ -11,7 +11,7 @@ in {
 
     extraConfig = {
       modi = "drun,window,run";
-      font = "CaskaydiaCove Nerd Font 14";
+      font = "JetBrainsMono Nerd Font 14";
       show-icons = true;
       terminal = "kitty";
       drun-display-format = "{icon} {name}";

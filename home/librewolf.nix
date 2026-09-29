@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  lib,
+  pkgs,
+  ...
+}: {
   programs.librewolf = {
     enable = true;
     profiles.byte = {
@@ -10,6 +14,10 @@
         "ui.systemUsesDarkTheme" = 1;
         # Sets font for webpage
         "browser.display.use_document_fonts" = 0;
+        "font.name.serif.x-western" = "Literata";
+        "font.name.sans-serif.x-western" = "Inter";
+        "font.name.monospace.x-western" = lib.mkForce "JetBrains Mono";
+        "font.default.x-western" = "sans-serif";
       };
 
       extensions = {
