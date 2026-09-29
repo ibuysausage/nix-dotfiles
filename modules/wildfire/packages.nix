@@ -43,6 +43,7 @@
     nixfmt
     statix
     deadnix
+    nixd
     nix-update
     nix-prefetch
     nix-prefetch-git
