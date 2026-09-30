@@ -6,6 +6,7 @@
       "https://grub2-themes.cachix.org"
       "https://ibuysausage-neovim-nightly.cachix.org"
       "https://nix-community.cachix.org"
+      "https://ibuysausage-nur.cachix.org"
       "https://fenix.cachix.org"
     ];
 
@@ -13,6 +14,7 @@
       "grub2-themes.cachix.org-1:lmVtdlFNnVzVqgikQDgstzV0tdzA64pDxwEbyykfW14="
       "ibuysausage-neovim-nightly.cachix.org-1:CcVje9KrKo6+tyVied3wfzmAmpyNPysard1GGaNoIoY="
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+      "ibuysausage-nur.cachix.org-1:tqoAgFo/8AL/GhbOg9Cp9Fc46hHBnOCOw5V46knhH9I="
       "fenix.cachix.org-1:ecJhr+RdYEdcVgUkjruiYhjbBloIEGov7bos90cZi0Q="
     ];
   };
