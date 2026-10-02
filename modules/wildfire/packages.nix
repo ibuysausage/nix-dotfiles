@@ -51,6 +51,7 @@
     nix-prefetch-git
     devenv
     marktext
+    dmenu
     sops
     age
     ssh-to-age
