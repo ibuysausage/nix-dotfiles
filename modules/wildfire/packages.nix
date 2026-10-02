@@ -73,11 +73,6 @@
     nur.repos.ibuysausage.crdl
     nur.repos.ibuysausage.waifufetch
     nur.repos.ibuysausage.nix-reaper
-    # Emacs pkgs
-    emacsPackages.esh-autosuggest
-    emacsPackages.eshell-syntax-highlighting
-    emacsPackages.pcmpl-args
-    emacsPackages.consult
   ];
 
   fonts.packages = with pkgs; [
