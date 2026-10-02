@@ -4,6 +4,10 @@ _: {
     fzf.enable = true;
     lazygit.enable = true;
     yazi.enable = true;
+    anki = {
+      enable = true;
+      theme = "dark";
+    };
   };
 
   dconf.enable = true;

@@ -24,6 +24,7 @@
       gtk.enable = true;
       qt.enable = true;
       emacs.enable = false;
+      anki.enable = true;
 
       nixvim.enable = false;
 

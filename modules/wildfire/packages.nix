@@ -9,6 +9,7 @@
     gimp
     keepassxc
     rofi
+    anki
     kitty
     home-manager
     librewolf
