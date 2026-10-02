@@ -1,4 +1,4 @@
-_: {
+{pkgs, ...}: {
   programs = {
     btop.enable = true;
     fzf.enable = true;
@@ -7,6 +7,11 @@ _: {
     anki = {
       enable = true;
       theme = "dark";
+      addons = [
+        (pkgs.ankiAddons.recolor.withConfig {
+          config = builtins.fromJSON (builtins.readFile ./anki/catppuccin-mocha.json);
+        })
+      ];
     };
   };
 
