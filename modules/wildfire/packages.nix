@@ -12,7 +12,6 @@
     kitty
     home-manager
     librewolf
-    haskell-language-server
     fzf
     ripgrep
     oh-my-posh
@@ -73,6 +72,15 @@
     nur.repos.ibuysausage.crdl
     nur.repos.ibuysausage.waifufetch
     nur.repos.ibuysausage.nix-reaper
+    # Lsp emacs pkgs
+    # Haskell pkgs
+    ghc
+    stack
+    hlint
+    haskell-language-server
+    haskellPackages.hlint
+    haskellPackages.ghc
+    haskellPackages.stack
   ];
 
   fonts.packages = with pkgs; [
