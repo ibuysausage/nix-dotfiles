@@ -1,5 +1,6 @@
 _: {
   services = {
+    picom.enable = true;
     xserver = {
       enable = true;
       windowManager.xmonad = {
@@ -27,9 +28,14 @@ _: {
       sddm.enable = false;
     };
 
-    # tpad
+    # tpad + mouse
     libinput = {
       enable = true;
+      mouse = {
+        accelProfile = "flat";
+        accelSpeed = "0.6";
+        naturalScrolling = true;
+      };
 
       touchpad = {
         tapping = true;

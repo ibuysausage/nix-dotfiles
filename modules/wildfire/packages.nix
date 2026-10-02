@@ -20,6 +20,8 @@
     yt-dlp
     btop
     libnotify
+    xmobar
+    picom
     fd
     unzip
     file
