@@ -4,15 +4,6 @@
     fzf.enable = true;
     lazygit.enable = true;
     yazi.enable = true;
-    anki = {
-      enable = true;
-      theme = "dark";
-      addons = [
-        (pkgs.ankiAddons.recolor.withConfig {
-          config = builtins.fromJSON (builtins.readFile ./anki/catppuccin-mocha.json);
-        })
-      ];
-    };
   };
 
   dconf.enable = true;
