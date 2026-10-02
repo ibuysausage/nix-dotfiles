@@ -36,7 +36,7 @@
     tree
     just
     lazygit
-    git
+    mpv
     gh
     quickshell
     alejandra
