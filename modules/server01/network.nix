@@ -50,7 +50,7 @@
           };
           ipv4 = {
             method = "manual";
-            address1 = "192.168.1.30/24,10.157.166.152";
+            address1 = "192.168.1.30/22,192.168.4.1";
             ignore-auto-dns = "true";
           };
           ipv6.method = "disabled";
