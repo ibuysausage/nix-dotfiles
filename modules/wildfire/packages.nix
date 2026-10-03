@@ -7,8 +7,6 @@
     wl-clipboard
     tuxedo
     gimp
-    gcc
-    clang
     keepassxc
     rofi
     kitty
@@ -73,7 +71,8 @@
     nur.repos.ibuysausage.crdl
     nur.repos.ibuysausage.waifufetch
     nur.repos.ibuysausage.nix-reaper
-    # Haskell pkgs
+    # Language servers
+    # Haskell
     ghc
     stack
     hlint
@@ -81,6 +80,12 @@
     haskellPackages.hlint
     haskellPackages.ghc
     haskellPackages.stack
+    # C/C++
+    # libclang insted of clang for full clang
+    # including clangd
+    gcc
+    libclang
+    cppcheck
   ];
 
   fonts.packages = with pkgs; [
