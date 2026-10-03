@@ -81,11 +81,12 @@
     haskellPackages.ghc
     haskellPackages.stack
     # C/C++
-    # libclang insted of clang for full clang
-    # including clangd
     gcc
-    libclang
+    gnumake
+    clang
+    clang-tools
     cppcheck
+    gdb
   ];
 
   fonts.packages = with pkgs; [
