@@ -7,6 +7,8 @@
     wl-clipboard
     tuxedo
     gimp
+    gcc
+    clang
     keepassxc
     rofi
     kitty
@@ -63,8 +65,6 @@
     feh
     xwallpaper
     xmobar
-    # needed for rustlings
-    gcc
     # numworks usb
     chromium
     kdePackages.dolphin
@@ -73,7 +73,6 @@
     nur.repos.ibuysausage.crdl
     nur.repos.ibuysausage.waifufetch
     nur.repos.ibuysausage.nix-reaper
-    # Lsp emacs pkgs
     # Haskell pkgs
     ghc
     stack
