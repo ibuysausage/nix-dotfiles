@@ -1,0 +1,60 @@
+[normal]
+
+# Navigation
+cursor_down    = "Ctrl+n"
+cursor_up      = "Ctrl+p"
+cursor_top     = "Alt+<"
+cursor_bottom  = "Alt+>"
+half_page_down = "Ctrl+v"
+half_page_up   = "Alt+v"
+
+# Editing
+begin_add            = "n"
+begin_edit           = "e"
+begin_edit_insert    = "i"
+toggle_complete      = "x"
+delete               = "dd"
+reschedule           = "r"
+cycle_priority       = "p"
+move_task_down       = "J"
+move_task_up         = "K"
+begin_prompt_context = "c"
+copy_line            = "yy"
+copy_body            = "yb"
+undo                 = "u"
+# begin_prompt_project defaults to "+", which can't be written here (the
+# parser reads "+" as a modifier separator). Pick another key to move it, e.g.
+# begin_prompt_project = "P"
+
+# Filtering, sort, view
+begin_search        = "/"
+arm_f               = "f"        # leader for the fp / fc / ff / fs chords
+pick_project        = "fp"
+pick_context        = "fc"
+pick_saved_filter   = "ff"
+save_current_filter = "fs"
+cycle_sort          = "S"
+toggle_visual       = "v"
+toggle_selected     = "space"
+go_list             = "l"
+toggle_archive_view = "a"
+archive_completed   = "A"
+toggle_show_done    = "H"
+toggle_show_future  = "F"
+
+# Layout & theme
+toggle_left_pane  = "["
+toggle_right_pane = "]"
+open_theme_picker = "T"
+cycle_density     = "D"
+toggle_line_num   = "L"
+# cycle_theme has no default — bind a key to cycle themes without the picker:
+# cycle_theme = "Ctrl-t"
+
+# System
+open_command_palette = ":"
+open_share           = "s"
+open_help            = "?"
+open_settings        = ","
+escape_stack         = "Esc"
+quit                 = "q"
