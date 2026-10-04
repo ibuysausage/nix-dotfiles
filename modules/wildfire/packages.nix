@@ -89,6 +89,7 @@
     gdb
     # Lua for embedding in C/C++
     lua
+    luarocks
   ];
 
   fonts.packages = with pkgs; [
