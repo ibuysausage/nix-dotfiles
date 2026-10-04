@@ -87,6 +87,8 @@
     clang-tools
     cppcheck
     gdb
+    # Lua for embedding in C/C++
+    lua
   ];
 
   fonts.packages = with pkgs; [
