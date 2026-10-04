@@ -38,10 +38,10 @@
         recursive = true;
       };
 
-      # "waybar" = {
-      #   source = ./waybar;
-      #   recursive = true;
-      # };
+      "tuxedo" = {
+        source = ./tuxedo;
+        recursive = true;
+      };
 
       "quickshell" = {
         source = ./quickshell;
