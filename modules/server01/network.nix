@@ -81,10 +81,6 @@
   };
 
   programs.ssh.startAgent = true;
-  programs.mosh = {
-    enable = true;
-    openFirewall = true;
-  };
 
   users.users."root".openssh.authorizedKeys.keys = [
     (builtins.readFile ../../keys/id_byte.pub)

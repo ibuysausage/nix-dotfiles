@@ -34,8 +34,4 @@ _: {
 
   services.openssh.enable = true;
   programs.ssh.startAgent = true;
-  programs.mosh = {
-    enable = true;
-    openFirewall = true;
-  };
 }
