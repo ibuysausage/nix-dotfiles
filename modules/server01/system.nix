@@ -19,7 +19,7 @@ _: {
     HandleLidSwitchExternalPower = "ignore";
     HandleLidSwitchDocked = "ignore";
   };
-
+  hardware.graphics.enable = true;
   systemd.services.splatnet3-token-util = {
     description = "SplatNet3 token util";
     wantedBy = ["multi-user.target"];
