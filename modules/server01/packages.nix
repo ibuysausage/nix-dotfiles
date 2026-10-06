@@ -8,5 +8,12 @@
     age
     sops
     nur.repos.ibuysausage.nix-reaper
+    # C/C++
+    gcc
+    gnumake
+    clang
+    clang-tools
+    cppcheck
+    gdb
   ];
 }
