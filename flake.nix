@@ -121,12 +121,25 @@
           inherit specialArgs;
           system = "x86_64-linux";
           modules = [
+            home-manager.nixosModules.home-manager
+            spicetify-nix.nixosModules.spicetify
             disko.nixosModules.disko
             stylix.nixosModules.stylix
             grub2-themes.nixosModules.default
             sops-nix.nixosModules.sops
             nur.modules.nixos.default
             ./hosts/server01/default.nix
+            {
+              home-manager = {
+                useUserPackages = true;
+                extraSpecialArgs = {inherit inputs;};
+                sharedModules = [
+                  nur.modules.homeManager.default
+                  sops-nix.homeManagerModules.sops
+                ];
+                users.${username} = import ./users/${username}/home.nix;
+              };
+            }
           ];
         };
     };
