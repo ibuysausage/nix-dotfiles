@@ -2,7 +2,7 @@
   imports = [
     ../../home/homefile.nix
     ../../home/single.nix
-    ../../home/sway.nix
+    ../../home/sway-01.nix
     ../../home/swaylock.nix
     ../../home/git.nix
     ../../home/zsh.nix
