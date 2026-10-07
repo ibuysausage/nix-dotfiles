@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     vim
-    nixd
     wget
     git
     just
@@ -12,7 +11,13 @@
     libnotify
     oh-my-posh
     eza
+    devenv
     nur.repos.ibuysausage.nix-reaper
+    # Nix
+    statix
+    deadnix
+    nixd
+    alejandra
     # C/C++
     gcc
     gnumake
