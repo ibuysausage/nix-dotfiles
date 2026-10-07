@@ -1,29 +1,31 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    vim
-    wget
+    age
+    bat
+    bat-extras.batman
+    brightnessctl
+    devenv
+    eza
     git
     just
-    openssl
-    age
-    sops
-    brightnessctl
     libnotify
     oh-my-posh
-    eza
-    devenv
+    openssl
+    sops
+    vim
+    wget
     nur.repos.ibuysausage.nix-reaper
     # Nix
-    statix
+    alejandra
     deadnix
     nixd
-    alejandra
+    statix
     # C/C++
-    gcc
-    gnumake
     clang
     clang-tools
     cppcheck
+    gcc
     gdb
+    gnumake
   ];
 }

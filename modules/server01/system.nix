@@ -21,7 +21,14 @@
   };
 
   hardware = {
-    graphics.enable = true;
+    graphics = {
+      enable = true;
+      extraPackages = with pkgs; [
+        intel-media-driver # Intel (newer)
+        intel-vaapi-driver # Intel (older)
+        libvdpau-va-gl # fallback
+      ];
+    };
     enableRedistributableFirmware = true;
     firmware = [pkgs.sof-firmware];
   };
