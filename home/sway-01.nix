@@ -91,7 +91,7 @@ _: {
       bars = [
         {
           position = "top";
-          statusCommand = "while ~/.config/sway/status.sh; do sleep 1; done";
+          statusCommand = "while ~/.config/sway/status-01.sh; do sleep 1; done";
 
           fonts.size = 11.0;
 
