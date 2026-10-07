@@ -13,6 +13,8 @@
     ../../modules/server01/stylix.nix
     ../../modules/server01/sops.nix
     ../../modules/server01/splatoon.nix
+    ../../modules/server01/sway.nix
+    ../../modules/server01/chromebook.nix
     ../../modules/wildfire/spicetify.nix
   ];
 
