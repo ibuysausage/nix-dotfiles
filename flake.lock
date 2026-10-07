@@ -68,6 +68,18 @@
         "type": "github"
       }
     },
+    "cros-keyboard-map": {
+      "locked": {
+        "lastModified": 1791253246,
+        "narHash": "sha256-8dVFa0YXm6eVkxwFvDFef3koukMq+t54TzMTv32OH+k=",
+        "path": "/root/Downloads/cros-keyboard-map-main",
+        "type": "path"
+      },
+      "original": {
+        "path": "/root/Downloads/cros-keyboard-map-main",
+        "type": "path"
+      }
+    },
     "disko": {
       "inputs": {
         "nixpkgs": [
@@ -421,6 +433,7 @@
     },
     "root": {
       "inputs": {
+        "cros-keyboard-map": "cros-keyboard-map",
         "disko": "disko",
         "fenix": "fenix",
         "grub2-themes": "grub2-themes",

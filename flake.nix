@@ -60,6 +60,7 @@
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
     };
+    cros-keyboard-map.url = "/root/Downloads/cros-keyboard-map-main";
   };
 
   outputs = {
@@ -73,6 +74,7 @@
     sops-nix,
     nixvim,
     spicetify-nix,
+    cros-keyboard-map,
     ...
   } @ inputs: {
     nixosConfigurations = {
@@ -127,6 +129,7 @@
             stylix.nixosModules.stylix
             grub2-themes.nixosModules.default
             sops-nix.nixosModules.sops
+            cros-keyboard-map.nixosModules.default
             nur.modules.nixos.default
             ./hosts/server01/default.nix
             {

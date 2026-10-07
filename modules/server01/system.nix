@@ -8,6 +8,30 @@
     };
   };
 
+  hardware.chromebook-keyboard = {
+    enable = true;
+    physmap = ["EA" "E9" "E7" "91" "92" "94" "95" "A0" "AE" "B0"]; # your output
+    # invert = true;     # F-keys by default, media keys with Search held
+    # model = "pixel";   # Nocturne/Atlas/Eve; "sarien" for Sarien/Arcada
+  };
+
+  programs.sway = {
+    enable = true;
+    extraPackages = with pkgs; [
+      brightnessctl
+      grim
+      slurp
+      swayimg
+      swayidle
+      swaylock-effects
+      swaynotificationcenter
+      pulseaudio
+      swaybg
+      playerctl
+      autotiling
+    ];
+  };
+
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -60,6 +84,7 @@
     HandleLidSwitchExternalPower = "ignore";
     HandleLidSwitchDocked = "ignore";
   };
+
   hardware.graphics.enable = true;
   systemd.services.splatnet3-token-util = {
     description = "SplatNet3 token util";

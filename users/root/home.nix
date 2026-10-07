@@ -6,6 +6,7 @@
     ../../home/swaylock.nix
     ../../home/git.nix
     ../../home/zsh.nix
+    ../../home/omp.nix
     ../../home/kitty.nix
     ../../home/rofi.nix
     ../../home/firefox.nix
