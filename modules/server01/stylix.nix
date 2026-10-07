@@ -2,8 +2,8 @@
   stylix = {
     enable = true;
     autoEnable = true;
-    image = ../../home/wallpapers/purple-anime-girl.png;
-    base16Scheme = ../../home/themes/uwunicorn.yaml;
+    image = ../../home/wallpapers/catppuccin/welcome-girl.png;
+    base16Scheme = ../../home/themes/catppuccin-mocha.yaml;
 
     fonts = {
       serif = {

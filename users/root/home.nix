@@ -1,18 +1,18 @@
 {...}: {
   imports = [
-    ../../home/homefile.nix
-    ../../home/single.nix
-    ../../home/sway-01.nix
-    ../../home/swaylock.nix
-    ../../home/git.nix
-    ../../home/zsh.nix
-    ../../home/omp.nix
-    ../../home/kitty.nix
-    ../../home/rofi.nix
-    ../../home/firefox.nix
-    ../../home/stylix.nix
     ../../home/emacs.nix
     ../../home/fastfetch.nix
+    ../../home/firefox.nix
+    ../../home/git.nix
+    ../../home/homefile.nix
+    ../../home/kitty.nix
+    ../../home/omp.nix
+    ../../home/rofi.nix
+    ../../home/single.nix
+    ../../home/stylix.nix
+    ../../home/sway-01.nix
+    ../../home/swaylock.nix
+    ../../home/zsh.nix
   ];
 
   home = {

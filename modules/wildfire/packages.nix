@@ -1,64 +1,60 @@
 {pkgs, ...}: {
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
-    vim
-    wget
-    curl
-    wl-clipboard
-    tuxedo
-    gimp
-    keepassxc
-    rofi
-    kitty
-    home-manager
-    librewolf
-    fzf
-    ripgrep
-    oh-my-posh
-    eza
-    ripgrep
-    yt-dlp
-    btop
-    libnotify
-    xmobar
-    picom
-    fd
-    unzip
-    file
+    adwaita-icon-theme
+    age
     bat
     bat-extras.batman
-    adwaita-icon-theme
-    papirus-icon-theme
-    candy-icons
-    jellyfin-tui
-    ffmpeg
-    haruna
-    vvvvvv
+    btop
     cachix
-    tree
-    just
-    lazygit
-    mpv
-    gh
-    quickshell
-    alejandra
-    nixfmt
-    statix
+    candy-icons
+    curl
     deadnix
-    nixd
-    nix-update
+    devenv
+    dmenu
+    eza
+    fd
+    ffmpeg
+    file
+    fzf
+    gh
+    gimp
+    haruna
+    home-manager
+    jellyfin-tui
+    just
+    keepassxc
+    kitty
+    kitty.terminfo
+    lazygit
+    libnotify
+    librewolf
+    marktext
+    mpv
     nix-prefetch
     nix-prefetch-git
-    devenv
-    marktext
-    dmenu
-    sops
-    age
-    ssh-to-age
-    pkgit
-    sameboy
+    nix-update
+    nixfmt
     nodejs
-    kitty.terminfo
+    oh-my-posh
+    papirus-icon-theme
+    picom
+    pkgit
+    quickshell
+    ripgrep
+    ripgrep
+    rofi
+    sameboy
+    sops
+    ssh-to-age
+    tree
+    tuxedo
+    unzip
+    vim
+    vvvvvv
+    wget
+    wl-clipboard
+    yt-dlp
     # x11
     feh
     xwallpaper
@@ -90,6 +86,10 @@
     # Lua for embedding in C/C++
     lua
     luarocks
+    # Nix
+    nixd
+    alejandra
+    statix
   ];
 
   fonts.packages = with pkgs; [
