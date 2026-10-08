@@ -28,4 +28,12 @@
     gdb
     gnumake
   ];
+
+  fonts.packages = with pkgs; [
+    nerd-fonts.caskaydia-cove
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.iosevka
+    iosevka
+    material-symbols
+  ];
 }

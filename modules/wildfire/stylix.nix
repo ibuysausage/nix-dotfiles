@@ -8,20 +8,20 @@
 
     fonts = {
       serif = {
-        package = pkgs.nerd-fonts.caskaydia-cove;
-        name = "CaskaydiaCove Nerd Font Mono";
+        package = pkgs.inter;
+        name = "Inter";
       };
       sansSerif = {
-        package = pkgs.nerd-fonts.caskaydia-cove;
-        name = "CaskaydiaCove Nerd Font Mono";
+        package = pkgs.inter;
+        name = "Inter";
       };
       monospace = {
-        package = pkgs.nerd-fonts.caskaydia-cove;
-        name = "CaskaydiaCove Nerd Font";
+        package = pkgs.iosevka;
+        name = "Iosevka Nerd Font";
       };
       emoji = {
-        package = pkgs.nerd-fonts.caskaydia-cove;
-        name = "CaskaydiaCove Nerd Font";
+        package = pkgs.noto-fonts-color-emoji;
+        name = "Noto Color Emoji";
       };
     };
 

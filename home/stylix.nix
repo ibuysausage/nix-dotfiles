@@ -54,21 +54,22 @@
 
     fonts = {
       serif = {
-        package = pkgs.literata;
-        name = "Literata";
+        package = pkgs.inter;
+        name = "Inter";
       };
       sansSerif = {
         package = pkgs.inter;
         name = "Inter";
       };
       monospace = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetBrainsMono Nerd Font";
+        package = pkgs.nerd-fonts.iosevka;
+        name = "Iosevka Nerd Font";
       };
       emoji = {
         package = pkgs.noto-fonts-color-emoji;
         name = "Noto Color Emoji";
       };
+
       sizes.terminal = 11;
     };
   };
