@@ -30,7 +30,7 @@ Rectangle {
     Text {
       text: root.label
       color: Theme.base05
-      font.family: "JetBrainsMono Nerd Font"
+      font.family: "Iosevka Nerd Font"
       font.pixelSize: 16
       elide: Text.ElideRight
       Layout.maximumWidth: root.maxLabelWidth
