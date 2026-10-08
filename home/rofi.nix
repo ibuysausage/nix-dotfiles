@@ -11,7 +11,7 @@ in {
 
     extraConfig = {
       modi = "drun,window,run";
-      font = "JetBrainsMono Nerd Font 14";
+      font = "Iosevka Nerd Font 14";
       show-icons = true;
       terminal = "kitty";
       drun-display-format = "{icon} {name}";
@@ -73,6 +73,7 @@ in {
         border-radius = mkLiteral "0px 0px 6px 6px";
         dynamic = false;
       };
+
       element = {
         padding = mkLiteral "2px";
         vertical-align = mkLiteral "1";
