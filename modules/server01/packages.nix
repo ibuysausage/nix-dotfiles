@@ -15,6 +15,8 @@
     sops
     vim
     wget
+    rofi-network-manager
+    dmenu-wayland
     wl-clipboard
     cliphist
     nur.repos.ibuysausage.nix-reaper
