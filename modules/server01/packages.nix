@@ -9,6 +9,7 @@
     git
     just
     libnotify
+    keepassxc
     oh-my-posh
     openssl
     sops
