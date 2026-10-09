@@ -64,17 +64,17 @@
   };
 
   outputs = {
-    nixpkgs,
-    home-manager,
-    nur,
-    disko,
-    stylix,
-    grub2-themes,
-    fenix,
-    sops-nix,
-    nixvim,
-    spicetify-nix,
     cros-keyboard-map,
+    disko,
+    fenix,
+    grub2-themes,
+    home-manager,
+    nixpkgs,
+    nixvim,
+    nur,
+    sops-nix,
+    spicetify-nix,
+    stylix,
     ...
   } @ inputs: {
     nixosConfigurations = {
@@ -88,13 +88,13 @@
           modules = [
             ./hosts/wildfire/default.nix
             home-manager.nixosModules.home-manager
-            nur.modules.nixos.default
             disko.nixosModules.disko
-            stylix.nixosModules.stylix
             grub2-themes.nixosModules.default
-            sops-nix.nixosModules.sops
             nixvim.nixosModules.nixvim
+            nur.modules.nixos.default
+            sops-nix.nixosModules.sops
             spicetify-nix.nixosModules.spicetify
+            stylix.nixosModules.stylix
             {
               nixpkgs.overlays = [
                 fenix.overlays.default
@@ -116,7 +116,7 @@
         };
 
       server01 = let
-        username = "root";
+        username = "zinc";
         specialArgs = {inherit username inputs;};
       in
         nixpkgs.lib.nixosSystem {
@@ -124,13 +124,13 @@
           system = "x86_64-linux";
           modules = [
             home-manager.nixosModules.home-manager
-            spicetify-nix.nixosModules.spicetify
-            disko.nixosModules.disko
-            stylix.nixosModules.stylix
-            grub2-themes.nixosModules.default
-            sops-nix.nixosModules.sops
             cros-keyboard-map.nixosModules.default
+            disko.nixosModules.disko
+            grub2-themes.nixosModules.default
             nur.modules.nixos.default
+            sops-nix.nixosModules.sops
+            spicetify-nix.nixosModules.spicetify
+            stylix.nixosModules.stylix
             ./hosts/server01/default.nix
             {
               home-manager = {

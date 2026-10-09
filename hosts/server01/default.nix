@@ -6,7 +6,6 @@
     ./disko.nix
     ../../modules/server01/adguardhome.nix
     ../../modules/server01/boot.nix
-    ../../modules/server01/chrome-user.nix
     ../../modules/server01/chromebook.nix
     ../../modules/server01/network.nix
     ../../modules/server01/packages.nix
@@ -16,6 +15,7 @@
     ../../modules/server01/stylix.nix
     ../../modules/server01/sway.nix
     ../../modules/server01/system.nix
+    ../../modules/server01/user.nix
     ../../modules/wildfire/spicetify.nix
   ];
 

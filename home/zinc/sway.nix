@@ -144,8 +144,6 @@ _: {
     };
 
     extraConfig = ''
-      exec sh -c 'pipewire & sleep 1; pipewire-pulse & wireplumber'
-
       bindsym Mod1+1 workspace number 1
       bindsym Mod1+2 workspace number 2
       bindsym Mod1+3 workspace number 3
