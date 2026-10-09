@@ -60,7 +60,7 @@
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
     };
-    cros-keyboard-map.url = "/root/Downloads/cros-keyboard-map-main";
+    cros-keyboard-map.url = "github:ibuysausage/cros-keyboard-map";
   };
 
   outputs = {
