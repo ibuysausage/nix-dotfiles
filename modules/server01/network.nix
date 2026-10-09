@@ -86,5 +86,9 @@
     (builtins.readFile ../../keys/id_byte.pub)
   ];
 
+  users.users."zinc".openssh.authorizedKeys.keys = [
+    (builtins.readFile ../../keys/id_byte.pub)
+  ];
+
   sops.secrets.wifi_env = {};
 }
