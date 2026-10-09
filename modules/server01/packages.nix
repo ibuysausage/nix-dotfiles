@@ -14,7 +14,12 @@
     sops
     vim
     wget
+    wl-clipboard
     nur.repos.ibuysausage.nix-reaper
+    # Audio
+    pavucontrol
+    wireplumber
+    alsa-utils
     # Nix
     alejandra
     deadnix

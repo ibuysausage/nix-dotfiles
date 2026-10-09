@@ -1,5 +1,9 @@
 {...}: {
   imports = [
+    # ../../home/librewolf.nix
+    # ../../home/nixvim
+    # ../../home/sops.nix
+    ../../home/chromium.nix
     ../../home/emacs.nix
     ../../home/fastfetch.nix
     ../../home/firefox.nix
@@ -10,14 +14,14 @@
     ../../home/rofi.nix
     ../../home/single.nix
     ../../home/stylix.nix
-    ../../home/sway-01.nix
     ../../home/swaylock.nix
+    ../../home/zinc/sway.nix
     ../../home/zsh.nix
   ];
 
   home = {
-    username = "root";
-    homeDirectory = "/root";
+    username = "zinc";
+    homeDirectory = "/home/zinc";
     stateVersion = "26.05";
   };
 

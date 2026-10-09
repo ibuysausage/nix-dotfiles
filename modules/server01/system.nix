@@ -8,35 +8,21 @@
     };
   };
 
-  security.rtkit.enable = true;
-  services = {
-    pulseaudio.enable = false;
-    pipewire = {
+  security = {
+    rtkit.enable = true;
+    sudo = {
       enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true; # lets pavucontrol, Spotify, etc. work
-      wireplumber.enable = true;
+      wheelNeedsPassword = false;
     };
   };
-
-  hardware = {
-    graphics = {
-      enable = true;
-      extraPackages = with pkgs; [
-        intel-media-driver # Intel (newer)
-        intel-vaapi-driver # Intel (older)
-        libvdpau-va-gl # fallback
-      ];
-    };
-    enableRedistributableFirmware = true;
-    firmware = [pkgs.sof-firmware];
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    # If you want to use JACK applications, uncomment the following
+    #jack.enable = true;
   };
-
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  # alsa-utils provides amixer/alsamixer/speaker-test
-  environment.systemPackages = with pkgs; [pavucontrol wireplumber alsa-utils];
 
   networking.hostName = "server01";
 
