@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ../../home/chromium.nix
     ../../home/emacs.nix
     ../../home/fastfetch.nix
     ../../home/firefox.nix

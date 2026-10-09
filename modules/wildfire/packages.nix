@@ -59,8 +59,6 @@
     feh
     xwallpaper
     xmobar
-    # numworks usb
-    chromium
     kdePackages.dolphin
     # fenix rust
     fenix.complete.toolchain
