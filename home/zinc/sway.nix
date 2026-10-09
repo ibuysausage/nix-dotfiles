@@ -144,6 +144,8 @@ _: {
     };
 
     extraConfig = ''
+      exec wl-paste --watch cliphist store
+
       bindsym Mod1+1 workspace number 1
       bindsym Mod1+2 workspace number 2
       bindsym Mod1+3 workspace number 3

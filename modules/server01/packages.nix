@@ -16,6 +16,7 @@
     vim
     wget
     wl-clipboard
+    cliphist
     nur.repos.ibuysausage.nix-reaper
     # Audio
     pavucontrol
