@@ -15,6 +15,7 @@
     ../../home/single.nix
     ../../home/stylix.nix
     ../../home/swaylock.nix
+    ../../home/zinc/sops.nix
     ../../home/zinc/sway.nix
     ../../home/zsh.nix
   ];
