@@ -8,10 +8,10 @@ _: {
     ];
 
     # AdGuardHome server ip
-    # nameservers = ["192.168.4.30"];
+    nameservers = ["192.168.4.30"];
 
     # DHCP overrides nameservers in resolv.conf
-    # networkmanager.dns = "none";
+    networkmanager.dns = "none";
   };
 
   virtualisation.docker = {
