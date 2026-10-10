@@ -66,14 +66,6 @@
     nur.repos.ibuysausage.waifufetch
     nur.repos.ibuysausage.nix-reaper
     # Language servers
-    # Haskell
-    ghc
-    stack
-    hlint
-    haskell-language-server
-    haskellPackages.hlint
-    haskellPackages.ghc
-    haskellPackages.stack
     # C/C++
     gcc
     gnumake
