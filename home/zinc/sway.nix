@@ -46,7 +46,7 @@
       };
 
       keybindings = {
-        "Mod1+Return" = "exec emacsclient -c -e '(eshell)'";
+        "Mod1+Return" = "exec emacsclient -c -e '(vterm)'";
         "Mod1+Space" = "exec rofi -show drun";
         "Mod1+q" = "kill";
         "Mod1+p" = "exec grim \"$HOME/Pictures/Screenshots/$(date +\"%Y-%m-%d %I:%M:%S %p\").png\"";
@@ -92,7 +92,7 @@
       bars = [
         {
           position = "top";
-          statusCommand = "while ~/.config/sway/status-01.sh; do sleep 1; done";
+          statusCommand = "while ~/.config/sway/status.sh; do sleep 1; done";
 
           fonts.size = 11.0;
 
@@ -146,7 +146,6 @@
 
     extraConfig = ''
       bindswitch --reload --locked lid:on exec swaylock -f
-      exec wl-paste --watch cliphist store
 
       bindsym Mod1+1 workspace number 1
       bindsym Mod1+2 workspace number 2
@@ -170,11 +169,13 @@
       bindsym Mod1+Shift+0 move container to workspace number 10
 
       blur enable
-      blur_xray enable
+      blur_xray disable
+      shadows enable
+      corner_radius 10
     '';
   };
 
-  home.package = with pkgs; [
+  home.packages = with pkgs; [
     brightnessctl
     grim
     slurp

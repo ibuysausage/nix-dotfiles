@@ -170,6 +170,8 @@
 
       blur enable
       blur_xray disable
+      shadows enable
+      corner_radius 10
     '';
   };
 

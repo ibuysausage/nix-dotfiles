@@ -63,6 +63,7 @@ devenv:
     devenv gc
     @rm -rf /etc/nixos/.devenv
     @rm -rf /etc/nixos/devenv*
+	
 [group('maintenance')]
 backup:
     tar -cvzf /tmp/{{user}}.tar.gz ~
