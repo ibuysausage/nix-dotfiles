@@ -1,7 +1,8 @@
-_: {
+{pkgs, ...}: {
   wayland.windowManager.sway = {
     enable = true;
     checkConfig = false;
+    package = pkgs.swayfx;
 
     config = {
       modifier = "Mod1";
@@ -144,6 +145,7 @@ _: {
     };
 
     extraConfig = ''
+      bindswitch --reload --locked lid:on exec swaylock -f
       exec wl-paste --watch cliphist store
 
       bindsym Mod1+1 workspace number 1
@@ -166,6 +168,23 @@ _: {
       bindsym Mod1+Shift+8 move container to workspace number 8
       bindsym Mod1+Shift+9 move container to workspace number 9
       bindsym Mod1+Shift+0 move container to workspace number 10
+
+      blur enable
+      blur_xray enable
     '';
   };
+
+  home.package = with pkgs; [
+    brightnessctl
+    grim
+    slurp
+    swayimg
+    swayidle
+    swaylock-effects
+    swaynotificationcenter
+    pulseaudio
+    swaybg
+    playerctl
+    autotiling
+  ];
 }
