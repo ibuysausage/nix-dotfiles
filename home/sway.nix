@@ -45,7 +45,7 @@ _: {
       };
 
       keybindings = {
-        "Mod4+w" = "exec kitty";
+        "Mod4+Return" = "exec kitty";
         "Mod4+Space" = "exec rofi -show drun";
         "Mod4+q" = "kill";
         "Mod4+p" = "exec grim \"$HOME/Pictures/Screenshots/$(date +\"%Y-%m-%d %I:%M:%S %p\").png\"";
