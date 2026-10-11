@@ -45,7 +45,7 @@ _: {
       };
 
       keybindings = {
-        "Mod1+w" = "exec kitty";
+        "Mod1+Return" = "exec emacsclient -c -e '(eshell)'";
         "Mod1+Space" = "exec rofi -show drun";
         "Mod1+q" = "kill";
         "Mod1+p" = "exec grim \"$HOME/Pictures/Screenshots/$(date +\"%Y-%m-%d %I:%M:%S %p\").png\"";
