@@ -6,7 +6,8 @@ _: {
   services.emacs = {
     enable = true;
     client.enable = true;
-    client.arguments = ["-c" "-e" "\"(fancy-startup-screen)\""];
+    # Opens fancy dashboard
+    # client.arguments = ["-c" "-e" "\"(fancy-startup-screen)\""];
     startWithUserSession = true;
     defaultEditor = true;
   };
