@@ -1,7 +1,8 @@
-_: {
+{pkgs, ...}: {
   wayland.windowManager.sway = {
     enable = true;
     checkConfig = false;
+    package = pkgs.swayfx;
 
     config = {
       modifier = "Mod4";
@@ -45,7 +46,7 @@ _: {
       };
 
       keybindings = {
-        "Mod4+Return" = "exec emacsclient -c -e '(eshell)'";
+        "Mod4+Return" = "exec emacsclient -c -e '(vterm)'";
         "Mod4+Space" = "exec rofi -show drun";
         "Mod4+q" = "kill";
         "Mod4+p" = "exec grim \"$HOME/Pictures/Screenshots/$(date +\"%Y-%m-%d %I:%M:%S %p\").png\"";
@@ -166,6 +167,23 @@ _: {
       bindsym Mod4+Shift+8 move container to workspace number 8
       bindsym Mod4+Shift+9 move container to workspace number 9
       bindsym Mod4+Shift+0 move container to workspace number 10
+
+      blur enable
+      blur_xray disable
     '';
   };
+
+  home.packages = with pkgs; [
+    brightnessctl
+    grim
+    slurp
+    swayimg
+    swayidle
+    swaylock-effects
+    swaynotificationcenter
+    pulseaudio
+    swaybg
+    playerctl
+    autotiling
+  ];
 }

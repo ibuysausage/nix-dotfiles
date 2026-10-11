@@ -80,6 +80,10 @@
     nixd
     alejandra
     statix
+    # Emacs vterm
+    cmake
+    libtool
+    libvterm
   ];
 
   fonts.packages = with pkgs; [
