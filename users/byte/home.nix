@@ -2,6 +2,7 @@
   imports = [
     ../../home/chromium.nix
     ../../home/emacs.nix
+    ../../home/emacs-wrap.nix
     ../../home/fastfetch.nix
     ../../home/firefox.nix
     ../../home/git.nix
