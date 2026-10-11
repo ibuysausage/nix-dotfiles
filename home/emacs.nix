@@ -7,5 +7,6 @@ _: {
     enable = true;
     client.enable = true;
     startWithUserSession = true;
+    defaultEditor = true;
   };
 }
