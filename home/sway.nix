@@ -42,6 +42,12 @@
               class = "jetbrains-studio";
             };
           }
+          {
+            command = "opacity 0.85";
+            criteria = {
+              app_id = "^Emacs$";
+            };
+          }
         ];
       };
 

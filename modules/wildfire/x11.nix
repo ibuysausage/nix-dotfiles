@@ -3,9 +3,8 @@ _: {
     picom.enable = true;
     xserver = {
       enable = true;
-      windowManager.xmonad = {
+      windowManager.awesome = {
         enable = true;
-        enableContribAndExtras = true;
       };
 
       displayManager.startx = {

@@ -145,8 +145,6 @@
     };
 
     extraConfig = ''
-      bindswitch --reload --locked lid:on exec swaylock -f
-
       bindsym Mod1+1 workspace number 1
       bindsym Mod1+2 workspace number 2
       bindsym Mod1+3 workspace number 3

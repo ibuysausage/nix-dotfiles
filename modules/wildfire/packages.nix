@@ -38,7 +38,6 @@
     nodejs
     oh-my-posh
     papirus-icon-theme
-    picom
     pkgit
     quickshell
     ripgrep
@@ -58,7 +57,6 @@
     # x11
     feh
     xwallpaper
-    xmobar
     kdePackages.dolphin
     # fenix rust
     fenix.complete.toolchain
