@@ -42,6 +42,7 @@
       c = "clear";
       clear = "clear && fastfetch";
       tree = "eza -T --icons always";
+      restarte = "systemctl --user restart emacs";
       dockerclean = "docker system prune -a --volumes";
     };
 
