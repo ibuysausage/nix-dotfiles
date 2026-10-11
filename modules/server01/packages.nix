@@ -36,6 +36,10 @@
     gcc
     gdb
     gnumake
+    # Emacs vterm
+    cmake
+    libtool
+    libvterm
   ];
 
   fonts.packages = with pkgs; [

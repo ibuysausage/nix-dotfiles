@@ -16,6 +16,7 @@
     ../../modules/server01/system.nix
     ../../modules/server01/user.nix
     ../../modules/wildfire/spicetify.nix
+    ../../modules/server01/x11.nix
   ];
 
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
