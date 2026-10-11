@@ -2,7 +2,8 @@
   programs.nixvim = {
     viAlias = true;
     # vimAlias = true;
-    defaultEditor = true;
+    # EMACS!! EMACS!! EMACS!!
+    defaultEditor = false;
     enableMan = true;
 
     globals.mapleader = " ";
