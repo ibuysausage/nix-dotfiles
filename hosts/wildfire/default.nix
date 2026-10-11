@@ -10,7 +10,6 @@
     ../../modules/wildfire/spicetify.nix
     ../../modules/wildfire/splatoon.nix
     ../../modules/wildfire/stylix.nix
-    ../../modules/wildfire/sway.nix
     ../../modules/wildfire/system.nix
     ../../modules/wildfire/user.nix
     ../../modules/wildfire/x11.nix
