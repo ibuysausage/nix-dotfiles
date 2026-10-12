@@ -15,9 +15,9 @@
         source = ./scripts/status.sh;
       };
 
-      ".config/sway/status-01.sh" = {
+      ".config/sway/status-server01.sh" = {
         executable = true;
-        source = ./scripts/status-01.sh;
+        source = ./scripts/status-server01.sh;
       };
 
       ".config/sway/volume.sh" = {

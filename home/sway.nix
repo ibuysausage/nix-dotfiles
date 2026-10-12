@@ -151,8 +151,6 @@
     };
 
     extraConfig = ''
-      bindswitch --reload --locked lid:on exec swaylock -f
-
       bindsym Mod4+1 workspace number 1
       bindsym Mod4+2 workspace number 2
       bindsym Mod4+3 workspace number 3
@@ -182,16 +180,16 @@
   };
 
   home.packages = with pkgs; [
+    autotiling
     brightnessctl
     grim
+    playerctl
+    pulseaudio
     slurp
-    swayimg
+    swaybg
     swayidle
+    swayimg
     swaylock-effects
     swaynotificationcenter
-    pulseaudio
-    swaybg
-    playerctl
-    autotiling
   ];
 }

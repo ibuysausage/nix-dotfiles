@@ -17,7 +17,7 @@ disk_info=$(df -h | grep '/' | head -1 | awk -F' ' '{print $5, $3}')
 if [[ $OSTYPE == "freebsd"* ]]; then
     battery_status="$(acpiconf -i 0 | grep 'Remaining capacity' | awk -F' ' '{print $3}') <span weight=\"bold\">$(acpiconf -i 0 | grep 'State' | awk -F' ' '{print $2}')</span>"
 else
-		battery_status="$(cat $bat/capacity)% <span weight=\"bold\">$(cat $bat/status)</span>"
+	battery_status="$(cat $bat/capacity)% <span weight=\"bold\">$(cat $bat/status)</span>"
 fi
 
 if [[ $OSTYPE == "freebsd"* ]]; then

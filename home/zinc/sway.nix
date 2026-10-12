@@ -92,7 +92,7 @@
       bars = [
         {
           position = "top";
-          statusCommand = "while ~/.config/sway/status-01.sh do sleep 1; done";
+          statusCommand = "while ~/.config/sway/status-server01.sh; do sleep 1; done";
 
           fonts.size = 11.0;
 
@@ -174,16 +174,16 @@
   };
 
   home.packages = with pkgs; [
+    autotiling
     brightnessctl
     grim
+    playerctl
+    pulseaudio
     slurp
-    swayimg
+    swaybg
     swayidle
+    swayimg
     swaylock-effects
     swaynotificationcenter
-    pulseaudio
-    swaybg
-    playerctl
-    autotiling
   ];
 }
