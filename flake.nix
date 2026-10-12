@@ -61,6 +61,7 @@
       url = "github:Gerg-L/spicetify-nix";
     };
     cros-keyboard-map.url = "github:ibuysausage/cros-keyboard-map";
+    self.submodules = true;
   };
 
   outputs = {
