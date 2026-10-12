@@ -62,18 +62,29 @@ while read -r _ path; do
 
     git -C "$PARENT" add -- "$path"
 
-    if [[ "$last_msg" == "$msg" ]]; then
-        git -C "$PARENT" commit -m "fixup! $msg" -- "$path"
-    else
-        git -C "$PARENT" commit -m "$msg" -- "$path"
+    if git -C "$PARENT" diff --cached --quiet; then
+        echo "No parent changes to commit for $path"
+        continue
     fi
+
+    git -C "$PARENT" commit -m "$msg" -- "$path"
+
+    # Combine consecutive commits with the same submodule-update message.
+    while [[ "$(git -C "$PARENT" log -1 --format=%s)" == "$msg" ]] &&
+          [[ "$(git -C "$PARENT" log -2 --format=%s | tail -n 1)" == "$msg" ]]; do
+        echo "Squashing consecutive '$msg' commits..."
+
+        # Preserve the combined changes and retain the common message.
+        git -C "$PARENT" reset --soft HEAD~2
+        git -C "$PARENT" commit -m "$msg"
+    done
 
     echo "Recorded $path at $head"
 done < <(git -C "$PARENT" config -f .gitmodules \
     --get-regexp '^submodule\..*\.path$' || true)
 
-# Push parent repo update if a commit was created
-if ! git diff --quiet HEAD@{1} HEAD 2>/dev/null; then
+# Push parent repo update if a commit was created.
+if ! git -C "$PARENT" diff --quiet HEAD@{1} HEAD 2>/dev/null; then
     echo "Pushing parent repository..."
-    git push
+    git -C "$PARENT" push
 fi
