@@ -6,7 +6,7 @@
       windowManager.dwm = {
         enable = true;
         package = pkgs.dwm.overrideAttrs {
-          src = ./dwm-6.8;
+          src = ../../dwm-config;
         };
       };
 
