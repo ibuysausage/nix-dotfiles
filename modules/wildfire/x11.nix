@@ -10,9 +10,6 @@ _: {
       displayManager.startx = {
         enable = true;
         generateScript = true;
-        extraCommands = ''
-          xwallpaper --zoom ~/Pictures/Wallpapers/catppuccin/giant-cat.jpg
-        '';
       };
 
       # needed for Intel ???
