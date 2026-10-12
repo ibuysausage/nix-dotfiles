@@ -1,66 +1,73 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO="$(git rev-parse --show-toplevel)"
-cd "$REPO"
+PARENT="/etc/nixos"
+PREFIX="chore(submodule): update"
 
-MSG_PREFIX="chore(submodule): update"
+cd "$PARENT"
 
-# Make sure submodule metadata exists
-git submodule update --init --recursive
+# Don't accidentally commit while a merge or rebase is in progress.
+if [[ -d "$(git rev-parse --git-path rebase-merge)" ||
+      -d "$(git rev-parse --git-path rebase-apply)" ||
+      -f "$(git rev-parse --git-path MERGE_HEAD)" ]]; then
+    echo "Parent repository is rebasing or merging; skipping."
+    exit 1
+fi
 
-while IFS= read -r submodule; do
-    echo "Checking $submodule..."
+while read -r _ path; do
+    [[ -n "$path" ]] || continue
+    sub="$PARENT/$path"
 
-    pushd "$submodule" >/dev/null
+    [[ -e "$sub/.git" ]] || continue
 
-    # Ignore dirty submodules
-    if [[ -n "$(git status --porcelain)" ]]; then
-        echo "Skipping dirty submodule: $submodule"
-        popd >/dev/null
-        continue
-    fi
+    # Only update submodules with a branch and an upstream.
+    branch="$(git -C "$sub" symbolic-ref --quiet --short HEAD || true)"
+    [[ -n "$branch" ]] || continue
 
-    branch="$(git symbolic-ref --short HEAD 2>/dev/null || true)"
-
-    if [[ -z "$branch" ]]; then
-        echo "Skipping detached submodule: $submodule"
-        popd >/dev/null
-        continue
-    fi
-
-    git fetch origin "$branch" >/dev/null 2>&1 || {
-        echo "Failed fetching $submodule"
-        popd >/dev/null
+    upstream="$(git -C "$sub" rev-parse --abbrev-ref \
+        --symbolic-full-name '@{upstream}' 2>/dev/null || true)"
+    [[ -n "$upstream" ]] || {
+        echo "Skipping $path: no upstream configured."
         continue
     }
 
-    local_rev="$(git rev-parse HEAD)"
-    remote_rev="$(git rev-parse "origin/$branch")"
+    # Refresh remote-tracking refs after the push.
+    git -C "$sub" fetch --quiet || {
+        echo "Fetch failed for $path"
+        continue
+    }
 
-    if [[ "$local_rev" == "$remote_rev" ]]; then
-        popd >/dev/null
+    head="$(git -C "$sub" rev-parse HEAD)"
+    remote="$(git -C "$sub" rev-parse "$upstream")"
+    recorded="$(git -C "$PARENT" rev-parse ":$path" 2>/dev/null || true)"
+
+    # Only record a cleanly pushed branch tip that differs from the parent.
+    if [[ "$head" != "$remote" ]]; then
+        echo "Skipping $path: HEAD is not the upstream tip."
         continue
     fi
 
-    echo "$submodule has new commits"
-
-    popd >/dev/null
-
-    # Update gitlink in parent
-    git add "$submodule"
-
-    name="$(basename "$submodule")"
-    msg="$MSG_PREFIX $name"
-
-    last_msg="$(git log -1 --pretty=%s || true)"
-
-    if [[ "$last_msg" == "$msg" ]]; then
-        git commit \
-            -m "fixup! $msg"
-    else
-        git commit \
-            -m "$msg"
+    if [[ "$head" == "$recorded" ]]; then
+        continue
     fi
 
-done < <(git config --file .gitmodules --get-regexp path | awk '{print $2}')
+    if [[ -n "$(git -C "$sub" status --porcelain)" ]]; then
+        echo "Skipping $path: submodule has uncommitted changes."
+        continue
+    fi
+
+    name="$(basename "$path")"
+    msg="$PREFIX $name"
+    last_msg="$(git -C "$PARENT" log -1 --format=%s)"
+
+    git -C "$PARENT" add -- "$path"
+
+    if [[ "$last_msg" == "$msg" ]]; then
+        git -C "$PARENT" commit -m "fixup! $msg" -- "$path"
+    else
+        git -C "$PARENT" commit -m "$msg" -- "$path"
+    fi
+
+    echo "Recorded $path at $head"
+done < <(git -C "$PARENT" config -f .gitmodules \
+    --get-regexp '^submodule\..*\.path$' || true)
