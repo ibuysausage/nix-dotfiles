@@ -83,8 +83,27 @@ while read -r _ path; do
 done < <(git -C "$PARENT" config -f .gitmodules \
     --get-regexp '^submodule\..*\.path$' || true)
 
-# Push parent repo update if a commit was created.
-if ! git -C "$PARENT" diff --quiet HEAD@{1} HEAD 2>/dev/null; then
-    echo "Pushing parent repository..."
-    git -C "$PARENT" push
+echo "Pushing parent repository..."
+
+if git -C "$PARENT" push; then
+    echo "Push successful."
+else
+    echo "Push failed. Attempting to pull and rebase remote changes..."
+
+    if git -C "$PARENT" pull --rebase; then
+        echo "Pull/rebase successful. Retrying push..."
+
+        if git -C "$PARENT" push; then
+            echo "Push successful after rebase."
+        else
+            echo "ERROR: Push still failed after pulling remote changes." >&2
+            echo "Please resolve manually in: $PARENT" >&2
+            exit 1
+        fi
+    else
+        echo "ERROR: Pull/rebase failed." >&2
+        echo "Please resolve the issue manually in: $PARENT" >&2
+        echo "Check the repository with: git -C \"$PARENT\" status" >&2
+        exit 1
+    fi
 fi
