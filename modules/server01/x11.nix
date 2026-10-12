@@ -3,7 +3,7 @@ _: {
     picom.enable = true;
     xserver = {
       enable = true;
-      windowManager.awesome = {
+      windowManager.dwm = {
         enable = true;
       };
 

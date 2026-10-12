@@ -11,7 +11,6 @@
     curl
     deadnix
     devenv
-    dmenu
     eza
     fd
     ffmpeg
@@ -54,12 +53,14 @@
     wget
     wl-clipboard
     yt-dlp
+    kdePackages.dolphin
     # x11
     feh
     xwallpaper
-    kdePackages.dolphin
+    dmenu
     # fenix rust
     fenix.complete.toolchain
+    # Nur pkgs
     nur.repos.ibuysausage.crdl
     nur.repos.ibuysausage.waifufetch
     nur.repos.ibuysausage.nix-reaper

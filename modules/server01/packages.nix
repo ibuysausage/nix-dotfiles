@@ -16,7 +16,6 @@
     vim
     wget
     rofi-network-manager
-    dmenu-wayland
     wl-clipboard
     cliphist
     nur.repos.ibuysausage.nix-reaper
@@ -40,6 +39,10 @@
     cmake
     libtool
     libvterm
+    # X11
+    feh
+    xwallpaper
+    dmenu
   ];
 
   fonts.packages = with pkgs; [
