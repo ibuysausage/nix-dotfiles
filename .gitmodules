@@ -1,0 +1,3 @@
+[submodule "dwm-config"]
+	path = dwm-config
+	url = git@github.com:ibuysausage/dwm-config.git
