@@ -71,3 +71,9 @@ while read -r _ path; do
     echo "Recorded $path at $head"
 done < <(git -C "$PARENT" config -f .gitmodules \
     --get-regexp '^submodule\..*\.path$' || true)
+
+# Push parent repo update if a commit was created
+if ! git diff --quiet HEAD@{1} HEAD 2>/dev/null; then
+    echo "Pushing parent repository..."
+    git push
+fi
