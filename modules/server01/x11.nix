@@ -1,10 +1,17 @@
-_: {
+{
+  pkgs,
+  ...
+}: {
   services = {
     picom.enable = true;
     xserver = {
       enable = true;
       windowManager.dwm = {
         enable = true;
+        package = pkgs.dwm.overrideAttrs {
+          src = ./dwm-config;
+          };
+        };
       };
 
       displayManager.startx = {
