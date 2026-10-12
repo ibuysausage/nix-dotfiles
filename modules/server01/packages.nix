@@ -52,4 +52,6 @@
     iosevka
     material-symbols
   ];
+
+  nixpkgs.config.allowUnfree = true;
 }
