@@ -2,3 +2,6 @@
 	path = dwm-config
 	url = https://github.com/ibuysausage/dwm-config.git
 
+[submodule "slstatus-config"]
+	path = slstatus-config
+	url = https://github.com/ibuysausage/slstatus-config.git
