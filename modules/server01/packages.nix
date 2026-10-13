@@ -18,6 +18,7 @@
     rofi-network-manager
     wl-clipboard
     cliphist
+    mpv
     nur.repos.ibuysausage.nix-reaper
     # Audio
     pavucontrol
