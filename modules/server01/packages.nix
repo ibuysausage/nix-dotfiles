@@ -45,6 +45,7 @@
     xwallpaper
     dmenu
     j4-dmenu-desktop
+    slstatus
   ];
 
   fonts.packages = with pkgs; [

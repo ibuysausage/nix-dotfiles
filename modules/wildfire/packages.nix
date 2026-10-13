@@ -59,6 +59,7 @@
     xwallpaper
     dmenu
     j4-dmenu-desktopk
+    slstatus
     # fenix rust
     fenix.complete.toolchain
     # Nur pkgs
