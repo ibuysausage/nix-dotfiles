@@ -59,7 +59,9 @@
     xwallpaper
     dmenu
     j4-dmenu-desktopk
-    slstatus
+    (pkgs.slstatus.overrideAttrs (old: {
+      src = ../../slstatus-config;
+    }))
     # fenix rust
     fenix.complete.toolchain
     # Nur pkgs

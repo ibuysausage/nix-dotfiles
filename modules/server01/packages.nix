@@ -45,7 +45,9 @@
     xwallpaper
     dmenu
     j4-dmenu-desktop
-    slstatus
+    (pkgs.slstatus.overrideAttrs (old: {
+      src = ../../slstatus-config;
+    }))
   ];
 
   fonts.packages = with pkgs; [
