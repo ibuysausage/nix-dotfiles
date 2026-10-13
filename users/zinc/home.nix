@@ -18,7 +18,7 @@
     ../../home/swaylock.nix
     ../../home/zinc/sops.nix
     ../../home/zinc/sway.nix
-    ../../home/zsh.nix
+    ../../home/zinc/zsh.nix
   ];
 
   home = {
