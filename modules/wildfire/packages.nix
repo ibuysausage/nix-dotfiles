@@ -58,6 +58,7 @@
     feh
     xwallpaper
     dmenu
+    j4-dmenu-desktopk
     # fenix rust
     fenix.complete.toolchain
     # Nur pkgs

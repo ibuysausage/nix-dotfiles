@@ -44,6 +44,7 @@
     feh
     xwallpaper
     dmenu
+    j4-dmenu-desktop
   ];
 
   fonts.packages = with pkgs; [
