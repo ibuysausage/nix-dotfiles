@@ -50,6 +50,7 @@
     # swallow patch
     libxcb
     libxcb-util
+    xcbproto
     # other
     feh
     xwallpaper
