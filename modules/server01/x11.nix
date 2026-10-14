@@ -46,7 +46,7 @@
     };
   };
 
-  environment.systemPackage = with pkgs; [
+  environment.systemPackages = with pkgs; [
     # swallow patch
     libxcb
     libxcb-util
