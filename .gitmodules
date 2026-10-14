@@ -1,7 +1,6 @@
 [submodule "dwm-config"]
 	path = dwm-config
 	url = https://github.com/ibuysausage/dwm-config.git
-	branch = pre-patch
 
 [submodule "slstatus-config"]
 	path = slstatus-config
