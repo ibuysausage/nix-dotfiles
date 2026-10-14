@@ -45,4 +45,18 @@
       };
     };
   };
+
+  environment.systemPackage = with pkgs; [
+    # swallow patch
+    libxcb
+    libxcb-util
+    # other
+    feh
+    xwallpaper
+    dmenu
+    j4-dmenu-desktop
+    (pkgs.slstatus.overrideAttrs (old: {
+      src = ../../slstatus-config;
+    }))
+  ];
 }

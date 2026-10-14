@@ -40,14 +40,6 @@
     cmake
     libtool
     libvterm
-    # X11
-    feh
-    xwallpaper
-    dmenu
-    j4-dmenu-desktop
-    (pkgs.slstatus.overrideAttrs (old: {
-      src = ../../slstatus-config;
-    }))
   ];
 
   fonts.packages = with pkgs; [
