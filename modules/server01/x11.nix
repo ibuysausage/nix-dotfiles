@@ -58,8 +58,10 @@
   environment.systemPackages = with pkgs; [
     feh
     xwallpaper
-    dmenu
     j4-dmenu-desktop
+    (pkgs.dmenu.overrideAttrs (old: {
+      src = ../../dmenu-config;
+    }))
     (pkgs.slstatus.overrideAttrs (old: {
       src = ../../slstatus-config;
     }))
