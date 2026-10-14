@@ -5,9 +5,18 @@
       enable = true;
       windowManager.dwm = {
         enable = true;
-        package = pkgs.dwm.overrideAttrs {
+        package = pkgs.dwm.overrideAttrs (old: {
           src = ../../dwm-config;
-        };
+
+          buildInputs =
+            (old.buildInputs or [])
+            ++ (with pkgs; [
+              libxcb
+              libxcb-util
+              libxcb-wm
+              libxres
+            ]);
+        });
       };
 
       displayManager.startx = {
@@ -47,11 +56,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    # swallow patch
-    libxcb
-    libxcb-util
-    xcbproto
-    # other
     feh
     xwallpaper
     dmenu
@@ -59,5 +63,13 @@
     (pkgs.slstatus.overrideAttrs (old: {
       src = ../../slstatus-config;
     }))
+    # swallow patch
+    libxcb
+    libxcb-util
+    libxcb-wm
+    libx11
+    libxft
+    libxinerama
+    libxres
   ];
 }
