@@ -63,13 +63,5 @@
     (pkgs.slstatus.overrideAttrs (old: {
       src = ../../slstatus-config;
     }))
-    # swallow patch
-    libxcb
-    libxcb-util
-    libxcb-wm
-    libx11
-    libxft
-    libxinerama
-    libxres
   ];
 }
