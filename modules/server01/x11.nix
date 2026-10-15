@@ -58,6 +58,7 @@
   environment.systemPackages = with pkgs; [
     feh
     xwallpaper
+    tiramisu
     (pkgs.dmenu.overrideAttrs (old: {
       src = ../../dmenu-config;
     }))
