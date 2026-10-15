@@ -1,10 +1,22 @@
-_: {
+{pkgs, ...}: {
   services = {
     picom.enable = true;
     xserver = {
       enable = true;
       windowManager.dwm = {
         enable = true;
+        package = pkgs.dwm.overrideAttrs (old: {
+          src = ../../dwm-config;
+
+          buildInputs =
+            (old.buildInputs or [])
+            ++ (with pkgs; [
+              libxcb
+              libxcb-util
+              libxcb-wm
+              libxres
+            ]);
+        });
       };
 
       displayManager.startx = {
@@ -42,4 +54,15 @@ _: {
       };
     };
   };
+
+  environment.systemPackages = with pkgs; [
+    feh
+    xwallpaper
+    (pkgs.dmenu.overrideAttrs (old: {
+      src = ../../dmenu-config;
+    }))
+    (pkgs.slstatus.overrideAttrs (old: {
+      src = ../../slstatus-config;
+    }))
+  ];
 }
