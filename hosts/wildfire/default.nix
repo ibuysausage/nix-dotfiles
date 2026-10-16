@@ -5,6 +5,7 @@
     ../../modules/wildfire/boot.nix
     ../../modules/wildfire/network.nix
     ../../modules/wildfire/packages.nix
+    ../../modules/wildfire/python312.nix
     ../../modules/wildfire/services.nix
     ../../modules/wildfire/sops.nix
     ../../modules/wildfire/spicetify.nix
