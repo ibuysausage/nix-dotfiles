@@ -2,9 +2,10 @@
   environment.systemPackages = with pkgs; [
     python312
     ninja
+    android-studio
   ];
 
-  documentation.doc.enable = false;
+  nixpkgs.config.android_sdk.accept_license = true;
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [

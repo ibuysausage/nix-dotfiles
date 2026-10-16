@@ -18,6 +18,10 @@ switch host=host: _stage
     sudo nixos-rebuild switch --flake {{flake}}#{{host}} --print-build-logs
 
 [group('deploy')]
+build host=host: _stage
+    sudo nixos-rebuild build --flake {{flake}}#{{host}} --print-build-logs
+
+[group('deploy')]
 test host=host: _stage
     sudo nixos-rebuild test --flake {{flake}}#{{host}} --print-build-logs
 

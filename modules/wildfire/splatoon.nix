@@ -6,7 +6,6 @@
   ];
 
   nixpkgs.config.android_sdk.accept_license = true;
-  documentation.doc.enable = false;
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [

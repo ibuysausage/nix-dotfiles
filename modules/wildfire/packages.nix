@@ -54,14 +54,6 @@
     wl-clipboard
     yt-dlp
     kdePackages.dolphin
-    # x11
-    feh
-    xwallpaper
-    dmenu
-    j4-dmenu-desktopk
-    (pkgs.slstatus.overrideAttrs (old: {
-      src = ../../slstatus-config;
-    }))
     # fenix rust
     fenix.complete.toolchain
     # Nur pkgs

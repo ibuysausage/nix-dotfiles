@@ -5,6 +5,7 @@
     ./hardware-configuration.nix
     ./disko.nix
     ../../modules/server01/adguardhome.nix
+    ../../modules/server01/python312.nix
     ../../modules/server01/boot.nix
     ../../modules/server01/splatoon.nix
     ../../modules/server01/chromebook.nix
