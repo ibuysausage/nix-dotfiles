@@ -1,4 +1,4 @@
-_: {
+{pkgs, ...}: {
   nix = {
     settings = {
       experimental-features = ["nix-command" "flakes"];
@@ -34,5 +34,19 @@ _: {
     HandleLidSwitch = "ignore";
     HandleLidSwitchExternalPower = "ignore";
     HandleLidSwitchDocked = "ignore";
+  };
+
+  hardware.graphics = {
+    enable = true;
+
+    # OpenGL / EGL compatibility libraries
+    enable32Bit = true;
+
+    # Intel VA-API video acceleration
+    extraPackages = with pkgs; [
+      intel-media-driver
+      intel-vaapi-driver
+      libvdpau-va-gl
+    ];
   };
 }
