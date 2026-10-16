@@ -1,7 +1,7 @@
 {...}: {
   imports = [
     # ../../home/librewolf.nix
-    # ../../home/nixvim
+    ../../home/nixvim
     # ../../home/sops.nix
     ../../home/chromium.nix
     ../../home/emacs.nix

@@ -126,6 +126,7 @@
           modules = [
             home-manager.nixosModules.home-manager
             cros-keyboard-map.nixosModules.default
+            nixvim.nixosModules.nixvim
             disko.nixosModules.disko
             grub2-themes.nixosModules.default
             nur.modules.nixos.default
@@ -140,6 +141,7 @@
                 sharedModules = [
                   nur.modules.homeManager.default
                   sops-nix.homeManagerModules.sops
+                  nixvim.homeModules.nixvim
                 ];
                 users.${username} = import ./users/${username}/home.nix;
               };

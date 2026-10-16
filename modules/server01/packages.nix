@@ -1,5 +1,8 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    nix-prefetch-git
+    nix-prefetch
+    nix-update
     age
     bat
     bat-extras.batman
