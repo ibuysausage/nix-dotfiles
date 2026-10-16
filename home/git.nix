@@ -9,6 +9,8 @@ _: {
       pull.rebase = true;
       init.defaultBranch = "main";
       push.autoSetupRemote = true;
+
+      credential.helper = "store";
     };
   };
 }
