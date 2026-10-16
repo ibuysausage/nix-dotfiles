@@ -89,16 +89,16 @@
         "XF86AudioNext" = "exec playerctl next";
         "XF86AudioPrev" = "exec playerctl previous";
         "XF86AudioStop" = "exec playerctl stop";
-        "XF86AudioLowerVolume" = "exec ~/.config/sway/volume.sh down";
-        "XF86AudioRaiseVolume" = "exec ~/.config/sway/volume.sh up";
-        "XF86MonBrightnessDown" = "exec ~/.config/sway/brightness.sh down";
-        "XF86MonBrightnessUp" = "exec ~/.config/sway/brightness.sh up";
+        "XF86AudioLowerVolume" = "exec ~/.config/dwm/volume.sh down";
+        "XF86AudioRaiseVolume" = "exec ~/.config/dwm/volume.sh up";
+        "XF86MonBrightnessDown" = "exec ~/.config/dwm/brightness.sh down";
+        "XF86MonBrightnessUp" = "exec ~/.config/dwm/brightness.sh up";
       };
 
       bars = [
         {
           position = "top";
-          statusCommand = "while ~/.config/sway/status.sh; do sleep 1; done";
+          statusCommand = "while ~/.config/dwm/status.sh; do sleep 1; done";
 
           fonts.size = 11.0;
 

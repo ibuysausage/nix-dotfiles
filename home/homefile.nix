@@ -10,24 +10,29 @@
         recursive = true;
       };
 
-      ".config/sway/status.sh" = {
+      ".config/dwm/status.sh" = {
         executable = true;
         source = ./scripts/status.sh;
       };
 
-      ".config/sway/status-server01.sh" = {
+      ".config/dwm/status-server01.sh" = {
         executable = true;
         source = ./scripts/status-server01.sh;
       };
 
-      ".config/sway/volume.sh" = {
+      ".config/dwm/volume.sh" = {
         executable = true;
         source = ./scripts/volume.sh;
       };
 
-      ".config/sway/brightness.sh" = {
+      ".config/dwm/brightness.sh" = {
         executable = true;
         source = ./scripts/brightness.sh;
+      };
+
+      ".config/dwm/polytiramisu.sh" = {
+        executable = true;
+        source = ./scripts/polytiramisu.sh;
       };
 
       ".config/ohmyposh/omp.toml" = {
