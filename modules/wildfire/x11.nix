@@ -59,6 +59,7 @@
     feh
     xwallpaper
     tiramisu
+    xclip
     (pkgs.dmenu.overrideAttrs (old: {
       src = ../../dmenu-config;
     }))
