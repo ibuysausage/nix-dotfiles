@@ -64,14 +64,14 @@
     xwallpaper
     tiramisu
     xclip
+    (pkgs.surf.overrideAttrs (old: {
+      src = ../../surf-config;
+    }))
     (pkgs.dmenu.overrideAttrs (old: {
       src = ../../dmenu-config;
     }))
     (pkgs.slstatus.overrideAttrs (old: {
       src = ../../slstatus-config;
-    }))
-    (pkgs.surf.overrideAttrs (old: {
-      src = ../../surf-config;
     }))
   ];
 }
