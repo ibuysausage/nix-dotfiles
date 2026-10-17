@@ -1,6 +1,5 @@
 {...}: {
   imports = [
-    ../../home/chromium.nix
     ../../home/emacs.nix
     ../../home/git.nix
     ../../home/homefile.nix
