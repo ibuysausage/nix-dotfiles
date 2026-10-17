@@ -8,6 +8,3 @@
 [submodule "dmenu-config"]
 	path = dmenu-config
 	url = https://github.com/ibuysausage/dmenu-config.git
-[submodule "surf-config"]
-	path = surf-config
-	url = https://github.com/ibuysausage/surf-config.git
