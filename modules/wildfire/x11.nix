@@ -70,5 +70,8 @@
     (pkgs.slstatus.overrideAttrs (old: {
       src = ../../slstatus-config;
     }))
+    (pkgs.surf.overrideAttrs (old: {
+      src = ../../surf-config;
+    }))
   ];
 }
