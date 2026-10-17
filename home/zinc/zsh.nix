@@ -38,12 +38,9 @@
       vnix = "nvim /etc/nixos";
       no = "yes n";
       grabs = "grim -g $(slurp)";
-      # No fastfetch needed because clear alias already has && fastfetch
       c = "clear";
-      clear = "clear && fastfetch";
       tree = "eza -T --icons always";
       restarte = "systemctl --user restart emacs";
-      dockerclean = "docker system prune -a --volumes";
     };
 
     initContent = ''
