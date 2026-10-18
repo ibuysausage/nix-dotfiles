@@ -11,7 +11,7 @@
       left = "h";
       right = "l";
       menu = "rofi -show-drun -show-icons --theme ~/.config/rofi/config.rasi";
-      terminal = "kitty";
+      terminal = "st";
 
       floating = {
         modifier = "Mod4";
