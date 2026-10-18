@@ -7,13 +7,13 @@
 in {
   programs.rofi = {
     enable = true;
-    terminal = "${pkgs.kitty}/bin/gnome-terminal";
+    terminal = "${pkgs.st}/bin/gnome-terminal";
 
     extraConfig = {
       modi = "drun,window,run";
       font = "Iosevka Nerd Font 14";
       show-icons = true;
-      terminal = "kitty";
+      terminal = "st";
       drun-display-format = "{icon} {name}";
       location = 0;
       disable-history = false;

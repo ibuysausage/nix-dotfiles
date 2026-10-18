@@ -7,7 +7,6 @@
     ../../home/firefox.nix
     ../../home/git.nix
     ../../home/homefile.nix
-    ../../home/kitty.nix
     ../../home/librewolf.nix
     ../../home/nixvim
     ../../home/omp.nix

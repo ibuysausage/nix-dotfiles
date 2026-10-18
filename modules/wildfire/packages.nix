@@ -23,8 +23,7 @@
     jellyfin-tui
     just
     keepassxc
-    kitty
-    kitty.terminfo
+    st.terminfo
     lazygit
     libnotify
     librewolf

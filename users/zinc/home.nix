@@ -3,7 +3,6 @@
     ../../home/emacs.nix
     ../../home/git.nix
     ../../home/homefile.nix
-    ../../home/kitty.nix
     ../../home/omp.nix
     ../../home/stylix.nix
     ../../home/zinc/single.nix
