@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  slstatusInterface,
+  ...
+}: {
   services = {
     picom.enable = true;
     xserver = {
@@ -75,6 +79,13 @@
     }))
     (pkgs.slstatus.overrideAttrs (old: {
       src = ../../slstatus-config;
+
+      postPatch =
+        (old.postPatch or "")
+        + ''
+          substituteInPlace config.h \
+            --replace-fail '"wlo1"' '"${slstatusInterface}"'
+        '';
     }))
   ];
 }
