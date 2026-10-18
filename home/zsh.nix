@@ -29,7 +29,7 @@
     };
 
     shellAliases = {
-      ls = "eza --icons always --total-size -alh";
+      ls = "eza --icons always --total-size -lh";
       cat = "bat";
       lg = "lazygit";
       man = "batman";
