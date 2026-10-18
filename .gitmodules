@@ -11,3 +11,6 @@
 [submodule "surf-config"]
 	path = surf-config
 	url = https://github.com/ibuysausage/surf-config.git
+[submodule "st-config"]
+	path = st-config
+	url = https://github.com/ibuysausage/st-config.git

@@ -64,6 +64,9 @@
     xwallpaper
     tiramisu
     xclip
+    (pkgs.st.overrideAttrs (old: {
+      src = ../../st-config;
+    }))
     (pkgs.surf.overrideAttrs (old: {
       src = ../../surf-config;
     }))
