@@ -23,24 +23,11 @@
       nixos-icons.enable = true;
       gtk.enable = true;
       qt.enable = true;
-      emacs.enable = false;
 
+      # Have builtin custom themes
+      emacs.enable = false;
       anki.enable = false;
       nixvim.enable = false;
-
-      librewolf = {
-        enable = true;
-        colorTheme.enable = true;
-        fonts.enable = true;
-        colors.enable = true;
-      };
-
-      rofi = {
-        enable = true;
-        opacity = {
-          enable = true;
-        };
-      };
     };
 
     fonts = {
