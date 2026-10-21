@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# The Sway configuration file in ~/.config/sway/config calls this script.
+# The Dwm configuration file in ~/.config/dwm/config calls this script.
 # You should see changes to the status bar after saving this script.
-# If not, do "killall swaybar" and $mod+Shift+c to reload the configuration.
+# If not, do "killall slstatus" and $mod+Shift+c to reload the configuration.
 
 sep='<span weight="bold" foreground="#00ff00">|</span>'
 bat="/sys/class/power_supply/BAT0"
