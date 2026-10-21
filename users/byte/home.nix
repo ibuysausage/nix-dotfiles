@@ -4,7 +4,6 @@
     ../../home/emacs-wrap.nix
     ../../home/emacs.nix
     ../../home/fastfetch.nix
-    ../../home/firefox.nix
     ../../home/git.nix
     ../../home/homefile.nix
     ../../home/librewolf.nix

@@ -28,17 +28,8 @@
       anki.enable = false;
       nixvim.enable = false;
 
-      firefox = {
-        enable = true;
-        profileNames = ["byte"];
-        colorTheme.enable = true;
-        fonts.enable = true;
-        colors.enable = true;
-      };
-
       librewolf = {
         enable = true;
-        profileNames = ["byte"];
         colorTheme.enable = true;
         fonts.enable = true;
         colors.enable = true;
