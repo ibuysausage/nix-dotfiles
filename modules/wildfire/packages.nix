@@ -39,8 +39,6 @@
     pkgit
     quickshell
     ripgrep
-    ripgrep
-    rofi
     sameboy
     sops
     ssh-to-age

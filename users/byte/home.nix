@@ -10,12 +10,9 @@
     ../../home/librewolf.nix
     ../../home/nixvim
     ../../home/omp.nix
-    ../../home/rofi.nix
     ../../home/single.nix
     ../../home/sops.nix
     ../../home/stylix.nix
-    ../../home/sway.nix
-    ../../home/swaylock.nix
     ../../home/zsh.nix
   ];
 
