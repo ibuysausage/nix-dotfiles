@@ -4,6 +4,7 @@
     configPath = ".librewolf";
     profiles.byte = {
       settings = {
+        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
         "signon.rememberSignons" = true;
       };
 
