@@ -28,6 +28,7 @@
       emacs.enable = false;
       anki.enable = false;
       nixvim.enable = false;
+      librewolf.enable = false;
     };
 
     fonts = {
