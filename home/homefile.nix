@@ -10,6 +10,10 @@
         recursive = true;
       };
 
+      ".xinitrc" = {
+        source = ./xinitrc;
+      };
+
       ".config/dwm/status.sh" = {
         executable = true;
         source = ./scripts/status.sh;
@@ -45,6 +49,11 @@
     configFile = {
       "fastfetch" = {
         source = ./fastfetch;
+        recursive = true;
+      };
+
+      "picom" = {
+        source = ./picom;
         recursive = true;
       };
 

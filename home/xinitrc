@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+xwallpaper --zoom ~/Pictures/Wallpapers/catppuccin/giant-cat.jpg
+
+slstatus &
+exec dwm
