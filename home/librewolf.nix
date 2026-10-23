@@ -9,9 +9,6 @@
       };
 
       userChrome = ''
-        #TabsToolbar { display: none !important; }
-        #sidebar-panel-header { display: none !important; }
-        #sidebar-box { padding-inline-start: 0px !important; }
         * { border-radius: 0px !important; }
       '';
       extensions = {
