@@ -30,8 +30,6 @@
 
       # needed for Intel ???
       videoDrivers = ["modesetting"];
-      # caps to esc for neovim
-      xkb.options = "caps:escape";
 
       desktopManager = {
         xterm.enable = false;

@@ -30,8 +30,9 @@
 
       # needed for Intel ???
       videoDrivers = ["modesetting"];
-      # caps to esc for neovim
-      xkb.options = "caps:escape";
+      # chromebook layout has super in caps spot
+      # when doing stuff it messes with me
+      xkb.options = "caps:super";
 
       desktopManager = {
         xterm.enable = false;
