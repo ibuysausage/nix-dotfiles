@@ -1,7 +1,6 @@
 {...}: {
   imports = [
     ../../home/chromium.nix
-    ../../home/emacs-wrap.nix
     ../../home/emacs.nix
     ../../home/fastfetch.nix
     ../../home/git.nix
