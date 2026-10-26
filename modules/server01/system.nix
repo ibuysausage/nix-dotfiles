@@ -8,6 +8,11 @@
     };
   };
 
+  systemd.coredump.settings.Coredump = {
+    Storage = "none";
+    ProcessSizeMax = "0";
+  };
+
   security = {
     rtkit.enable = true;
     sudo = {
