@@ -1,75 +1,31 @@
 {config, ...}: {
   networking = {
-    # Set static ipv4
-    useDHCP = false;
-
-    networkmanager = {
+    wireless = {
       enable = true;
-      dns = "none";
-      ensureProfiles.environmentFiles = [
-        config.sops.secrets.wifi_env.path
-      ];
+      secretsFile = config.sops.templates."networking/wifi_psk_wpa".path;
 
-      ensureProfiles.profiles = {
-        hotspot = {
-          connection = {
-            id = "hotspot";
-            type = "wifi";
-            interface-name = "wlp1s0";
-            autoconnect-priority = 10;
-          };
-          wifi = {
-            mode = "infrastructure";
-            ssid = "$HOTSPOT_SSID";
-          };
-          wifi-security = {
-            key-mgmt = "wpa-psk";
-            psk = "$HOTSPOT_PSK";
-          };
-          ipv4 = {
-            method = "auto";
-            ignore-auto-dns = "true";
-          };
-          ipv6.method = "disabled";
-        };
-
-        home = {
-          connection = {
-            id = "home";
-            type = "wifi";
-            interface-name = "wlp1s0";
-            autoconnect-priority = 5;
-          };
-          wifi = {
-            mode = "infrastructure";
-            ssid = "$HOME_SSID";
-          };
-          wifi-security = {
-            key-mgmt = "wpa-psk";
-            psk = "$HOME_PSK";
-          };
-          ipv4 = {
-            method = "manual";
-            address1 = "192.168.1.30/22,192.168.4.1";
-            ignore-auto-dns = "true";
-          };
-          ipv6.method = "disabled";
+      # pskRaw is faster and has more security
+      networks = {
+        "TMOBILE-EERO" = {
+          pskRaw = "ext:WIFI_PSK";
         };
       };
     };
 
-    # Don't let NixOS generate resolv.conf
-    resolvconf.enable = false;
+    defaultGateway = "192.168.4.1";
+    nameservers = ["127.0.0.1"];
+
+    interfaces.wlp1s0.ipv4.addresses = [
+      {
+        address = "192.168.4.30";
+        prefixLength = 24;
+      }
+    ];
 
     # Extra ports for SearXNG and AdGuardHome
     firewall.allowedTCPPorts = [8080 3000 8888 53];
     firewall.allowedUDPPorts = [53];
   };
-
-  # Set nameservers in resolv.conf
-  environment.etc."resolv.conf".text = ''
-    nameserver 127.0.0.1
-  '';
 
   services.openssh = {
     enable = true;
@@ -90,5 +46,16 @@
     (builtins.readFile ../../keys/id_byte.pub)
   ];
 
-  sops.secrets.wifi_env = {};
+  sops = {
+    secrets."networking/wifi_psk" = {
+      owner = "wpa_supplicant";
+      mode = "0400";
+    };
+
+    templates."networking/wifi_psk_wpa" = {
+      content = ''WIFI_PSK=${config.sops.placeholder."networking/wifi_psk"}'';
+      owner = "wpa_supplicant";
+      mode = "0400";
+    };
+  };
 }
