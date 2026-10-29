@@ -42,6 +42,11 @@
         hotkeys = "vim";
         results_on_new_tab = true;
       };
+
+      outgoing = {
+        request_timeout = 5.0;
+        max_request_timeout = 10.0;
+      };
     };
   };
 }
