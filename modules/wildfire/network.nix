@@ -12,6 +12,10 @@ _: {
 
     # DHCP overrides nameservers in resolv.conf
     networkmanager.dns = "none";
+
+    hosts = {
+      "192.168.4.30" = ["server01"];
+    };
   };
 
   virtualisation.docker = {
