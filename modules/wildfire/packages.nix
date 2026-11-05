@@ -16,6 +16,7 @@
     ffmpeg
     file
     fzf
+    metronome
     gh
     gimp
     haruna
