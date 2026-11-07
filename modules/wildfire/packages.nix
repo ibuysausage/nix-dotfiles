@@ -16,7 +16,6 @@
     ffmpeg
     file
     fzf
-    metronome
     gh
     gimp
     haruna
@@ -24,11 +23,11 @@
     jellyfin-tui
     just
     keepassxc
-    st.terminfo
     lazygit
     libnotify
     librewolf
     marktext
+    metronome
     mpv
     nix-prefetch
     nix-prefetch-git
@@ -43,6 +42,8 @@
     sameboy
     sops
     ssh-to-age
+    st.terminfo
+    tmux
     tree
     tuxedo
     unzip
