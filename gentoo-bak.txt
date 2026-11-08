@@ -1,0 +1,6 @@
+searxng /etc/searxng
+uwsgi /etc/conf.d/uwsgi.searxng
+net.d /etc/conf.d/net
+wpa_supplicant /etc/wpa_supplicant/wpa_supplicant.conf
+portage /etc/portage/
+ssh /etc/ssh && ~/.ssh # mostly sshd and authorized keys
