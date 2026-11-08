@@ -21,7 +21,6 @@
     haruna
     home-manager
     iw
-    jellyfin-tui
     just
     keepassxc
     lazygit

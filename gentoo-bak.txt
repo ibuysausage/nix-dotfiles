@@ -1,6 +1,12 @@
-searxng /etc/searxng
-uwsgi /etc/conf.d/uwsgi.searxng
+searxng /etc/searxng/*
+uwsgi /etc/conf.d/uwsgi.searxng && ??? /etc/conf.d/uwsgi
 net.d /etc/conf.d/net
+OpenRC /etc/rc.conf
 wpa_supplicant /etc/wpa_supplicant/wpa_supplicant.conf
 portage /etc/portage/
 ssh /etc/ssh && ~/.ssh # mostly sshd and authorized keys
+worldfile /var/lib/portage/world
+
+
+# use genfstab from arch iso
+# use arch-chroot insted of mkdir random stuff
