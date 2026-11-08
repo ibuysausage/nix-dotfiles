@@ -11,6 +11,7 @@
     ../../home/single.nix
     ../../home/sops.nix
     ../../home/stylix.nix
+    ../../home/tmux.nix
     ../../home/zsh.nix
   ];
 
