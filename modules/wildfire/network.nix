@@ -1,4 +1,4 @@
-_: {
+{pkgs, ...}: {
   # Jellyfin docker ports
   networking = {
     firewall.allowedTCPPorts = [
@@ -16,6 +16,10 @@ _: {
     hosts = {
       "192.168.4.30" = ["server01"];
     };
+
+    localCommands = ''
+      ${pkgs.iw}/bin/iw dev wlo1 set power_save off
+    '';
   };
 
   virtualisation.docker = {

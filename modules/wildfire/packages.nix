@@ -2,7 +2,6 @@
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
     adwaita-icon-theme
-    obs-studio
     age
     bat
     bat-extras.batman
@@ -21,6 +20,7 @@
     gimp
     haruna
     home-manager
+    iw
     jellyfin-tui
     just
     keepassxc
@@ -35,6 +35,7 @@
     nix-update
     nixfmt
     nodejs
+    obs-studio
     oh-my-posh
     papirus-icon-theme
     pkgit
