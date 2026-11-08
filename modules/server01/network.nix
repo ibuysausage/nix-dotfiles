@@ -31,7 +31,7 @@
     firewall.allowedUDPPorts = [53];
 
     localCommands = ''
-      ${pkgs.iw}/bin/iw dev wlo1 set power_save off
+      ${pkgs.iw}/bin/iw dev wlp1s0 set power_save off
     '';
   };
 
