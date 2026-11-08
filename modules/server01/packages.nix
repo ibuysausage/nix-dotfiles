@@ -7,15 +7,16 @@
     devenv
     eza
     git
+    iw
     just
-    libnotify
     keepassxc
+    libnotify
+    mpv
     oh-my-posh
     openssl
     sops
     vim
     wget
-    mpv
     nur.repos.ibuysausage.nix-reaper
     # Audio
     pavucontrol

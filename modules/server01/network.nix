@@ -1,4 +1,8 @@
-{config, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   networking = {
     wireless = {
       enable = true;
@@ -25,6 +29,10 @@
     # Extra ports for SearXNG and AdGuardHome
     firewall.allowedTCPPorts = [8080 3000 8888 53];
     firewall.allowedUDPPorts = [53];
+
+    localCommands = ''
+      ${pkgs.iw}/bin/iw dev wlo1 set power_save off
+    '';
   };
 
   services.openssh = {
