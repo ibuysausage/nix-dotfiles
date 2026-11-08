@@ -21,6 +21,7 @@
 
     targets = {
       nixos-icons.enable = true;
+      tmux.enable = true;
       gtk.enable = true;
       qt.enable = true;
 

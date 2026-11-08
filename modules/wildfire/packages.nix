@@ -45,7 +45,6 @@
     sops
     ssh-to-age
     st.terminfo
-    tmux
     tree
     tuxedo
     unzip
