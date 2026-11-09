@@ -1,7 +1,7 @@
 _: {
   programs.tmux = {
     enable = true;
-    prefix = "C-x";
+    prefix = "C-a";
     baseIndex = 1;
     historyLimit = 10000;
 
