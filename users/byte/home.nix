@@ -9,6 +9,7 @@
     ../../home/nixvim
     ../../home/omp.nix
     ../../home/single.nix
+    ../../home/mpv.nix
     ../../home/sops.nix
     ../../home/stylix.nix
     ../../home/tmux.nix

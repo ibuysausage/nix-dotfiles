@@ -27,7 +27,6 @@
     librewolf
     marktext
     metronome
-    mpv
     nix-prefetch
     nix-prefetch-git
     nix-update

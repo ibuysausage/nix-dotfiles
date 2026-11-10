@@ -11,7 +11,6 @@
     just
     keepassxc
     libnotify
-    mpv
     oh-my-posh
     openssl
     sops

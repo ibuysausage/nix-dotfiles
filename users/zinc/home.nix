@@ -5,6 +5,7 @@
     ../../home/homefile.nix
     ../../home/omp.nix
     ../../home/stylix.nix
+    ../../home/mpv.nix
     ../../home/zinc/single.nix
     ../../home/zinc/sops.nix
     ../../home/zinc/zsh.nix
