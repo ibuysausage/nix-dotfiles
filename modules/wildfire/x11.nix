@@ -64,6 +64,14 @@
     };
   };
 
+  xdg.mime = {
+    enable = true;
+    defaultApplications = {
+      "inode/directory" = "dolphin.desktop";
+      "image/*" = "feh.desktop";
+    };
+  };
+
   environment.systemPackages = with pkgs; [
     feh
     xwallpaper
