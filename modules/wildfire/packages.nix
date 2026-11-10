@@ -18,7 +18,6 @@
     fzf
     gh
     gimp
-    haruna
     home-manager
     iw
     just
