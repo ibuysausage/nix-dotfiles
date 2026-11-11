@@ -21,7 +21,6 @@
 
     targets = {
       nixos-icons.enable = true;
-      tmux.enable = true;
       gtk.enable = true;
       qt.enable = true;
 
@@ -30,6 +29,7 @@
       anki.enable = false;
       nixvim.enable = false;
       librewolf.enable = false;
+      tmux.enable = false;
     };
 
     fonts = {
