@@ -77,6 +77,10 @@
               printf "\e]%s\e\\" "$1"
           fi
       }
+
+      if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+         exec tmux
+      fi
     '';
   };
 }
