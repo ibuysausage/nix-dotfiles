@@ -47,10 +47,11 @@
     };
 
     initContent = ''
-      fastfetch
+      if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ "$TERM" != linux ]] && [[ -z "$INSIDE_EMACS" ]] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+         exec tmux new-session -A -s main
+      fi
+
       unsetopt BANG_HIST
-
-
       export PATH="$PATH:/run/current-system/bin"
 
       export PATH="$PATH:/home/byte/.cargo/bin"
@@ -78,14 +79,12 @@
           fi
       }
 
-      if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-         exec tmux new-session -A -s main
-      fi
-
       nvim() {
         command nvim "$@"
         echo -ne "\e[6 q"
       }
+
+      fastfetch
     '';
   };
 }
