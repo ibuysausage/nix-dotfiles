@@ -6,7 +6,7 @@
     ../../home/git.nix
     ../../home/homefile.nix
     ../../home/librewolf.nix
-    ../../home/nixvim
+    # ../../home/nixvim
     ../../home/omp.nix
     ../../home/single.nix
     ../../home/mpv.nix
