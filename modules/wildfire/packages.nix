@@ -13,6 +13,7 @@
     devenv
     eza
     fd
+    pulseaudio
     ffmpeg
     file
     fzf

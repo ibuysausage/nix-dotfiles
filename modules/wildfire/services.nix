@@ -10,28 +10,11 @@
       updater.enable = true;
     };
 
-    # Makes wireplumber work for default-sink
-    # mainly used for quickshell
-    pipewire.wireplumber = {
+    pipewire = {
       enable = true;
-
-      extraConfig."51-default-sink" = {
-        "monitor.alsa.rules" = [
-          {
-            matches = [
-              {
-                "node.name" = "alsa_output.pci-0000_00_1f.3-platform-skl_hda_dsp_generic.HiFi__Speaker__sink";
-              }
-            ];
-
-            actions = {
-              update-props = {
-                "priority.session" = 2000;
-              };
-            };
-          }
-        ];
-      };
+      alsa.enable = true;
+      pulse.enable = true;
+      wireplumber.enable = true;
     };
   };
 }
