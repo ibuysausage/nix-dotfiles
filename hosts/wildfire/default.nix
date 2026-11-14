@@ -2,6 +2,7 @@
   imports = [
     ./disko.nix
     ./hardware-configuration.nix
+    ../../modules/wildfire/audio.nix
     ../../modules/wildfire/boot.nix
     ../../modules/wildfire/network.nix
     ../../modules/wildfire/packages.nix

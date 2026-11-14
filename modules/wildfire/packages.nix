@@ -13,13 +13,11 @@
     devenv
     eza
     fd
-    pulseaudio
     ffmpeg
     file
     fzf
     gh
     gimp
-    home-manager
     iw
     just
     keepassxc
@@ -66,9 +64,6 @@
     clang-tools
     cppcheck
     gdb
-    # Lua for embedding in C/C++
-    lua
-    luarocks
     # Nix
     nixd
     alejandra
