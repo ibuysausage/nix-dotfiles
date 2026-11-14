@@ -4,7 +4,7 @@
     prefix = "C-a";
     baseIndex = 1;
     historyLimit = 10000;
-    disableConfirmationPrompt = false;
+    disableConfirmationPrompt = true;
 
     plugins = with pkgs; [
       {
