@@ -23,6 +23,9 @@
       }
       {
         plugin = tmuxPlugins.resurrect;
+        extraConfig = ''
+          set -g @resurrect-processes 'ssh'
+        '';
       }
     ];
 
