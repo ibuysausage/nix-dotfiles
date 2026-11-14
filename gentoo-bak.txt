@@ -6,7 +6,7 @@ wpa_supplicant /etc/wpa_supplicant/wpa_supplicant.conf
 portage /etc/portage/
 ssh /etc/ssh && ~/.ssh # mostly sshd and authorized keys
 worldfile /var/lib/portage/world
-
+immich ~/immich
 
 # use genfstab from arch iso
 # use arch-chroot insted of mkdir random stuff
