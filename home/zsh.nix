@@ -59,9 +59,6 @@
       setopt NO_CASE_GLOB
       zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
-      # Add devenv
-      eval "$(devenv hook zsh)"
-
       # Fzf history search
       source <(fzf --zsh)
 
@@ -79,12 +76,34 @@
           fi
       }
 
+      fastfetch
+
+      # Add devenv
+      eval "$(devenv hook zsh)"
+
       nvim() {
         command nvim "$@"
         echo -ne "\e[6 q"
       }
 
-      fastfetch
+      function cd() {
+        builtin cd "$@"
+        
+        if [[ -z "$VIRTUAL_ENV" ]] ; then
+          ## If env folder is found then activate the vitualenv
+            if [[ -d ./splatoon ]] ; then
+              source ./splatoon/bin/activate
+            fi
+        else
+          ## check the current folder belong to earlier VIRTUAL_ENV folder
+          # if yes then do nothing
+          # else deactivate
+            parentdir="$(dirname "$VIRTUAL_ENV")"
+            if [[ "$PWD"/ != "$parentdir"/* ]] ; then
+              deactivate
+            fi
+        fi
+      }        
     '';
   };
 }
