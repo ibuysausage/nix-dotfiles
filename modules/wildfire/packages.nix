@@ -19,6 +19,8 @@
     gh
     gimp
     iw
+    jellyfin-desktop
+    jellyfin-tui
     just
     keepassxc
     lazygit
