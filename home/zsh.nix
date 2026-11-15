@@ -86,24 +86,20 @@
         echo -ne "\e[6 q"
       }
 
-      function cd() {
-        builtin cd "$@"
-        
-        if [[ -z "$VIRTUAL_ENV" ]] ; then
-          ## If env folder is found then activate the vitualenv
-            if [[ -d ./splatoon ]] ; then
-              source ./splatoon/bin/activate
-            fi
-        else
-          ## check the current folder belong to earlier VIRTUAL_ENV folder
-          # if yes then do nothing
-          # else deactivate
-            parentdir="$(dirname "$VIRTUAL_ENV")"
-            if [[ "$PWD"/ != "$parentdir"/* ]] ; then
-              deactivate
-            fi
+      _splatoon_venv() {
+        local venv="$HOME/splatoon/splatoon"
+        if [[ "$PWD" == "$HOME/splatoon" || "$PWD" == "$HOME/splatoon/"* ]]; then
+          # inside ~/splatoon or any subdir: make sure our venv is active
+          [[ "$VIRTUAL_ENV" != "$venv" ]] && source "$venv/bin/activate"
+        elif [[ "$VIRTUAL_ENV" == "$venv" ]] && (( $+functions[deactivate] )); then
+          # left the tree: deactivate, but only if it's this venv
+          deactivate
         fi
-      }        
+      }
+        
+      autoload -U add-zsh-hook
+      add-zsh-hook chpwd _splatoon_venv
+      _splatoon_venv   # also run once at shell startup
     '';
   };
 }
