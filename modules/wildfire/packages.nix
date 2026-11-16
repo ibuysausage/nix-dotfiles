@@ -2,6 +2,7 @@
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
     adwaita-icon-theme
+    flameshot
     age
     bat
     bat-extras.batman
