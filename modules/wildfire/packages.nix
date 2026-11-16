@@ -5,6 +5,7 @@
     age
     bat
     bat-extras.batman
+    brightnessctl
     btop
     cachix
     candy-icons
