@@ -3,4 +3,4 @@ xwallpaper --zoom ~/Pictures/Wallpapers/catppuccin/giant-cat.jpg
 
 slstatus &
 picom -b
-exec dwm
+exec ~/.xsession

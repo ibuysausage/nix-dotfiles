@@ -8,4 +8,7 @@ _: {
   dconf.enable = true;
   gtk.enable = true;
   qt.enable = true;
+
+  xsession.enable = true;
+  xsession.windowManager.command = "dwm";
 }
