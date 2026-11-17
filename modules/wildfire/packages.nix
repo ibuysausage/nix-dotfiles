@@ -36,6 +36,7 @@
     nodejs
     obs-studio
     oh-my-posh
+    p7zip
     papirus-icon-theme
     pkgit
     quickshell
