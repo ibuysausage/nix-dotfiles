@@ -19,6 +19,7 @@
     fzf
     gh
     gimp
+    immich-cli
     iw
     jellyfin-desktop
     jellyfin-tui
