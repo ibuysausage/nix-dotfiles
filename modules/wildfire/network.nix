@@ -28,8 +28,7 @@
     # jellyfin
     daemon.settings = {
       dns = [
-        "1.1.1.1"
-        "1.0.0.1"
+        "192.168.4.30"
       ];
       ipv6 = false;
     };
