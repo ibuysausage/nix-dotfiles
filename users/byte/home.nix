@@ -3,6 +3,7 @@
     ../../home/chromium.nix
     ../../home/emacs.nix
     ../../home/fastfetch.nix
+    ../../home/flameshot.nix
     ../../home/git.nix
     ../../home/homefile.nix
     ../../home/librewolf.nix
