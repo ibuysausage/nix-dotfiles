@@ -43,7 +43,6 @@
       clear = "clear && fastfetch";
       tree = "eza -T --icons always";
       restarte = "systemctl --user restart emacs";
-      dockerclean = "docker system prune -a --volumes";
     };
 
     initContent = ''
@@ -100,6 +99,17 @@
       autoload -U add-zsh-hook
       add-zsh-hook chpwd _splatoon_venv
       _splatoon_venv   # also run once at shell startup
+
+      docker() {
+          case "$1" in
+              clean)
+                  command docker system prune -af
+                  ;;
+              *)
+                  command docker "$@"
+                  ;;
+          esac
+      }
     '';
   };
 }
