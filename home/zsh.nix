@@ -43,6 +43,7 @@
       clear = "clear && fastfetch";
       tree = "eza -T --icons always";
       restarte = "systemctl --user restart emacs";
+      cursor = "echo -ne '\e[6 q'";
     };
 
     initContent = ''
@@ -95,7 +96,7 @@
           deactivate
         fi
       }
-        
+      
       autoload -U add-zsh-hook
       add-zsh-hook chpwd _splatoon_venv
       _splatoon_venv   # also run once at shell startup
