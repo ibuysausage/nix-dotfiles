@@ -96,7 +96,7 @@
           deactivate
         fi
       }
-      
+          
       autoload -U add-zsh-hook
       add-zsh-hook chpwd _splatoon_venv
       _splatoon_venv   # also run once at shell startup
@@ -111,6 +111,8 @@
                   ;;
           esac
       }
+
+      alias cursor='echo -ne "\e[6 q"'
     '';
   };
 }
