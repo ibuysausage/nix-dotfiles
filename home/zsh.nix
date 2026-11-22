@@ -96,7 +96,7 @@
           deactivate
         fi
       }
-          
+        
       autoload -U add-zsh-hook
       add-zsh-hook chpwd _splatoon_venv
       _splatoon_venv   # also run once at shell startup
@@ -110,6 +110,10 @@
                   command docker "$@"
                   ;;
           esac
+      }
+
+      gtoken() {
+        cat "''${1:-config}.txt" | grep "gtoken" | cut -d'"' -f4 | xclip -selection clipboard               
       }
 
       alias cursor='echo -ne "\e[6 q"'
