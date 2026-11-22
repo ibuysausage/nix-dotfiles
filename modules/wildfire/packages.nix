@@ -51,6 +51,7 @@
     unzip
     vim
     vvvvvv
+    weechat
     wget
     wl-clipboard
     yt-dlp
