@@ -30,6 +30,7 @@
       nixvim.enable = false;
       librewolf.enable = false;
       tmux.enable = false;
+      wayprompt.enable = false;
     };
 
     fonts = {
