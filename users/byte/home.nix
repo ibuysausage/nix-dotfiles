@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ../../home/cava.nix
     ../../home/chromium.nix
     ../../home/emacs.nix
     ../../home/fastfetch.nix

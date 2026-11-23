@@ -9,7 +9,6 @@
     btop
     cachix
     candy-icons
-    cava
     curl
     deadnix
     devenv

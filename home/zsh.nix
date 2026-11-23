@@ -1,4 +1,8 @@
-{config, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   programs.carapace = {
     enable = true;
     enableZshIntegration = true;
@@ -47,7 +51,7 @@
     };
 
     initContent = ''
-      if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ "$TERM" != linux ]] && [[ -z "$INSIDE_EMACS" ]] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+      if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ -z "$NO_TMUX" ]] && [[ "$TERM" != linux ]] && [[ -z "$INSIDE_EMACS" ]] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
          exec tmux new-session -A -s main
       fi
 
@@ -119,4 +123,16 @@
       alias cursor='echo -ne "\e[6 q"'
     '';
   };
+
+  # Makes things like cava run without tmux because
+  # since no shell is started no tmux happens
+  # Alslo NO_TMUX=1 can be set for st+shell but no tmux
+  home.packages = [
+    (pkgs.writeShellScriptBin "st-plain" ''
+      NO_TMUX=1 exec st -c st-256color-plain "$@"
+    '')
+    # (pkgs.writeShellScriptBin "cava-st" ''
+    #   exec st -c st-256color-plain -e cava "$@"
+    # '')
+  ];
 }
