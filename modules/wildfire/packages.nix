@@ -51,9 +51,9 @@
     unzip
     vim
     vvvvvv
-    weechat
     wget
     wl-clipboard
+    xonotic
     yt-dlp
     kdePackages.dolphin
     # fenix rust
