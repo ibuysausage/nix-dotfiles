@@ -42,6 +42,10 @@
       ".config/ohmyposh/omp.toml" = {
         source = ./omp/omp.toml;
       };
+
+      ".config/ohmyposh/mocha.omp.json" = {
+        source = ./omp/mocha.omp.json;
+      };
     };
   };
 
