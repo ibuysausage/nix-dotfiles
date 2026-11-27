@@ -58,9 +58,15 @@
     ];
   };
 
-  security.sudo = {
-    enable = true;
-    wheelNeedsPassword = false;
+  security = {
+    sudo = {
+      enable = true;
+      wheelNeedsPassword = false;
+    };
+    doas = {
+      enable = true;
+      wheelNeedsPassword = false;
+    };
   };
 
   # needed or error
