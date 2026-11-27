@@ -1,11 +1,8 @@
-{
-  inputs,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   services.flameshot = {
     enable = true;
-    package = inputs.nixpkgs-flameshot.legacyPackages.${pkgs.system}.flameshot;
+    package = pkgs.flameshot;
+
     #settings = {
     #
     #};
