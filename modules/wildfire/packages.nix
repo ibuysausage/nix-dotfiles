@@ -27,9 +27,7 @@
     keepassxc
     lazygit
     libnotify
-    librewolf
     marktext
-    metronome
     nix-prefetch
     nix-prefetch-git
     nix-update
