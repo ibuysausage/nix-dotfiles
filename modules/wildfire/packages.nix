@@ -74,6 +74,18 @@
     # Emacs vterm
     cmake
     raylib
+
+    gtk4
+    glib
+    gsettings-desktop-schemas
+    adwaita-icon-theme
+    pkg-config
+    bear
+    clang-tools
+    wrapGAppsHook4
+
+    gsettings-desktop-schemas
+    adwaita-icon-theme
     libtool
     libvterm
   ];
