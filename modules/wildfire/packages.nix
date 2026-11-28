@@ -74,6 +74,7 @@
     statix
     # Emacs vterm
     cmake
+    raylib
     libtool
     libvterm
   ];

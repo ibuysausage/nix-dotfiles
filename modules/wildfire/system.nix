@@ -29,6 +29,8 @@
     nixPath = ["nixpkgs=${inputs.nixpkgs}"];
   };
 
+  environment.pathsToLink = ["/include"];
+
   networking.hostName = "wildfire";
   networking.networkmanager.enable = true;
   time.timeZone = "America/New_York";
