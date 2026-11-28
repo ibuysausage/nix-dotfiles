@@ -3,7 +3,6 @@
   environment.systemPackages = with pkgs; [
     adwaita-icon-theme
     age
-    bat
     bat-extras.batman
     brightnessctl
     btop

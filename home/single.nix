@@ -3,6 +3,7 @@ _: {
     btop.enable = true;
     fzf.enable = true;
     lazygit.enable = true;
+    bat.enable = true;
   };
 
   dconf.enable = true;
